@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="FighterState" format=3 uid="uid://m6lyvybvjhw"]
+
+[ext_resource type="Script" uid="uid://bf60srwkccsm8" path="res://Scripts/SakugaEngine/Resources/FighterState.cs" id="1_bhdhx"]
+[ext_resource type="Script" uid="uid://5you05l2efnd" path="res://Scripts/SakugaEngine/Resources/StatePhysics.cs" id="2_kncu8"]
+
+[sub_resource type="Resource" id="Resource_pvqg3"]
+script = ExtResource("2_kncu8")
+UseLateralSpeed = true
+LateralSpeed = -17000
+UseVerticalSpeed = true
+
+[resource]
+script = ExtResource("1_bhdhx")
+Type = 1
+Duration = 80
+Loop = true
+LoopFrames = Vector2i(0, 79)
+TurnState = 0
+stateProperties = null
+statePhysics = Array[Object]([SubResource("Resource_pvqg3")])
+hitboxStates = null
+animationEvents = null
+throwPivot = null
+stateTransitions = Array[Object]([])
+animationSettings = null
