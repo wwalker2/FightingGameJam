@@ -1,0 +1,68 @@
+[gd_resource type="Resource" script_class="HitboxSettings" format=3 uid="uid://5gm8jl2xgsn3"]
+
+[ext_resource type="Script" uid="uid://c0y740kryylcs" path="res://Scripts/SakugaEngine/Resources/HitboxElement.cs" id="1_mcsjy"]
+[ext_resource type="Script" uid="uid://dxuwyhds75mce" path="res://Scripts/SakugaEngine/Resources/HitboxSettings.cs" id="2_8c66w"]
+
+[sub_resource type="Resource" id="Resource_ag0vk"]
+script = ExtResource("1_mcsjy")
+Center = Vector2i(1840, 6000)
+Size = Vector2i(5000, 12000)
+SelfSuperGaugeGain = 25
+OpponentSuperGaugeGain = 10
+HitEffectIndex = 1
+BlockEffectIndex = 2
+ClashEffectIndex = 3
+ArmorHitEffectIndex = 4
+AirHitKnockbackGravity = 300000
+AirBlockKnockbackGravity = 30
+SelfPushbackForce = 0
+SelfPushbackDuration = 0
+BounceXIntensity = 0
+BounceXState = 0
+BounceYIntensity = 0
+BounceYState = 0
+
+[sub_resource type="Resource" id="Resource_oilei"]
+script = ExtResource("1_mcsjy")
+Center = Vector2i(3400, 12600)
+Size = Vector2i(3000, 3000)
+SelfSuperGaugeGain = 25
+OpponentSuperGaugeGain = 10
+HitEffectIndex = 1
+BlockEffectIndex = 2
+ClashEffectIndex = 3
+ArmorHitEffectIndex = 4
+AirHitKnockbackGravity = 300000
+AirBlockKnockbackGravity = 30
+SelfPushbackForce = 0
+SelfPushbackDuration = 0
+BounceXIntensity = 0
+BounceXState = 0
+BounceYIntensity = 0
+BounceYState = 0
+
+[sub_resource type="Resource" id="Resource_y64oa"]
+script = ExtResource("1_mcsjy")
+Center = Vector2i(5900, 10000)
+Size = Vector2i(3000, 1500)
+HitboxType = 4
+HitType = 3
+BaseDamage = 0
+KillingBlow = false
+SelfSuperGaugeGain = 25
+OpponentSuperGaugeGain = 10
+ArmorDamage = 0
+AirHitKnockbackGravity = 300000
+AirBlockKnockbackGravity = 300000
+GroundThrow = true
+ThrowHitReaction = 14
+AllowSelfPushback = false
+SelfPushbackForce = 0
+SelfPushbackDuration = 0
+HitConfirmState = 60
+
+[resource]
+script = ExtResource("2_8c66w")
+PushboxCenter = Vector2i(0, 6000)
+PushboxSize = Vector2i(4000, 12000)
+Hitboxes = [SubResource("Resource_ag0vk"), SubResource("Resource_oilei"), SubResource("Resource_y64oa")]

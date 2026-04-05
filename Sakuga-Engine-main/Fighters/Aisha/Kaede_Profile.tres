@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="FighterProfile" format=3 uid="uid://bwehxfu2g08t8"]
+
+[ext_resource type="Texture2D" uid="uid://buabjn68pbgqw" path="res://Fighters/Aisha/Sprites/9000-1.png" id="1_5qlk5"]
+[ext_resource type="Texture2D" uid="uid://bjyq4wiy1ltxt" path="res://Fighters/Aisha/Sprites/Kaede_Render.png" id="2_4lq08"]
+[ext_resource type="Script" uid="uid://c5w04j5my3h8p" path="res://Scripts/SakugaEngine/Resources/FighterProfile.cs" id="3_mj2t0"]
+
+[resource]
+script = ExtResource("3_mj2t0")
+FighterName = "Kaede Hioh"
+ShortName = "Kaede"
+Render = ExtResource("2_4lq08")
+Portrait = ExtResource("1_5qlk5")
