@@ -12,8 +12,8 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(943, -251)
 script = ExtResource("1_tt5f1")
-firstButton = NodePath("MainMenu/VBoxContainer/Button_Online")
 matchSettings = ExtResource("2_853f1")
+firstButton = NodePath("MainMenu/VBoxContainer/Button_Online")
 InputSelectMenu = NodePath("InputSelection")
 DeviceWidgetKeyboard1 = NodePath("InputSelection/Widget_Key1")
 DeviceWidgetKeyboard2 = NodePath("InputSelection/Widget_Key2")
@@ -80,7 +80,7 @@ text = "Versus mode"
 [node name="Button_Training" type="Button" parent="MainMenu/VBoxContainer" unique_id=1210790888]
 layout_mode = 2
 size_flags_vertical = 11
-text = "Training mode"
+text = "It's the training mode!"
 
 [node name="Button_Replay" type="Button" parent="MainMenu/VBoxContainer" unique_id=1424355848]
 layout_mode = 2
