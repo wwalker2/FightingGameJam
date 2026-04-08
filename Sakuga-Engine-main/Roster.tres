@@ -10,7 +10,10 @@
 [ext_resource type="PackedScene" uid="uid://clhsbniudqcvl" path="res://Fighters/Dummy/Instances/Dummy_Fighter_Alt2.tscn" id="8_hd0eg"]
 [ext_resource type="PackedScene" uid="uid://mn2wng8jaovw" path="res://Fighters/Kaede/Instances/Fighter_Kaede_Alt.tscn" id="8_yn7sm"]
 [ext_resource type="PackedScene" uid="uid://bloh87idirh84" path="res://Fighters/Dummy/Instances/Dummy_Fighter_Alt3.tscn" id="9_w00mg"]
+[ext_resource type="Resource" uid="uid://bwehxfu2g08t8" path="res://Fighters/Aisha/Aisha_Profile.tres" id="11_hd0eg"]
+[ext_resource type="PackedScene" uid="uid://bsbv07br0uqxw" path="res://Fighters/Aisha/Instances/Fighter_Aisha.tscn" id="11_q6gag"]
 [ext_resource type="PackedScene" uid="uid://3reeyb4tcc1i" path="res://Fighters/Dummy/Instances/Dummy_Fighter_Default.tscn" id="12_f2d14"]
+[ext_resource type="PackedScene" uid="uid://ft3djmgf3rvq" path="res://Fighters/Aisha/Instances/Fighter_Aisha_Alt.tscn" id="12_yn7sm"]
 
 [sub_resource type="Resource" id="Resource_q6gag"]
 script = ExtResource("2_w00mg")
@@ -24,7 +27,7 @@ PaletteName = "Alternative"
 Instance = ExtResource("8_yn7sm")
 metadata/_custom_type_script = "uid://dg21wno6w513c"
 
-[sub_resource type="Resource" id="Resource_ug4c5"]
+[sub_resource type="Resource" id="Resource_w00mg"]
 script = ExtResource("3_m8lbm")
 Profile = ExtResource("7_w00mg")
 ColorPalettes = Array[Object]([SubResource("Resource_q6gag"), SubResource("Resource_yn7sm")])
@@ -54,12 +57,30 @@ PaletteName = "Alternative 3"
 Instance = ExtResource("9_w00mg")
 metadata/_custom_type_script = "uid://dg21wno6w513c"
 
-[sub_resource type="Resource" id="Resource_r4w1x"]
+[sub_resource type="Resource" id="Resource_a306g"]
 script = ExtResource("3_m8lbm")
 Profile = ExtResource("5_mamio")
 ColorPalettes = Array[Object]([SubResource("Resource_f2d14"), SubResource("Resource_df8sf"), SubResource("Resource_hc8t8"), SubResource("Resource_fbx8u")])
 metadata/_custom_type_script = "uid://dclkxgxahdy5l"
 
+[sub_resource type="Resource" id="Resource_4cevj"]
+script = ExtResource("2_w00mg")
+PaletteName = "Default"
+Instance = ExtResource("11_q6gag")
+metadata/_custom_type_script = "uid://dg21wno6w513c"
+
+[sub_resource type="Resource" id="Resource_ljnqe"]
+script = ExtResource("2_w00mg")
+PaletteName = "Alternative"
+Instance = ExtResource("12_yn7sm")
+metadata/_custom_type_script = "uid://dg21wno6w513c"
+
+[sub_resource type="Resource" id="Resource_pfguy"]
+script = ExtResource("3_m8lbm")
+Profile = ExtResource("11_hd0eg")
+ColorPalettes = Array[Object]([SubResource("Resource_4cevj"), SubResource("Resource_ljnqe")])
+metadata/_custom_type_script = "uid://dclkxgxahdy5l"
+
 [resource]
 script = ExtResource("1_x0sfh")
-elements = Array[Object]([SubResource("Resource_ug4c5"), SubResource("Resource_r4w1x")])
+elements = Array[Object]([SubResource("Resource_w00mg"), SubResource("Resource_a306g"), SubResource("Resource_pfguy")])
