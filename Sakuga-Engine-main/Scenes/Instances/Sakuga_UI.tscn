@@ -1,24 +1,42 @@
 [gd_scene format=3 uid="uid://blnwu2aaw8s60"]
 
 [ext_resource type="Script" uid="uid://cfclgt0r2avr4" path="res://Scripts/SakugaEngine/UI/HealthHUD.cs" id="1_ulr1j"]
+[ext_resource type="Texture2D" uid="uid://c13mh0o2apclt" path="res://Sprites/BattleUI/TestPortrait1.png" id="2_2sb4q"]
 [ext_resource type="Texture2D" uid="uid://6ctweo6uvot8" path="res://icon.svg" id="2_h5vba"]
+[ext_resource type="Texture2D" uid="uid://b0ulyflt7kjrl" path="res://Sprites/BattleUI/UpperHUDnoVictory.png" id="3_4gmwt"]
+[ext_resource type="Texture2D" uid="uid://cxt5aw4o4fy4r" path="res://Sprites/BattleUI/P1LostHealthBar.png" id="3_eoegb"]
 [ext_resource type="Texture2D" uid="uid://c6kfch34hg5x4" path="res://Sprites/healthbar_sprite.png" id="3_quu14"]
 [ext_resource type="Script" uid="uid://drp1aulrijkrn" path="res://Scripts/SakugaEngine/UI/RoundsCounter.cs" id="4_588f4"]
 [ext_resource type="Script" uid="uid://g6vbpbaj5xi6" path="res://Scripts/SakugaEngine/UI/OnlineInfo.cs" id="5_1n2tl"]
 [ext_resource type="Script" uid="uid://bu3dc4gatmgm1" path="res://Scripts/SakugaEngine/UI/ComboCounter.cs" id="5_f6x8r"]
 [ext_resource type="Texture2D" uid="uid://df50nf7a0i58" path="res://Sprites/LobbyIcons/lobbyicons_platform_pc.png" id="5_j3lw1"]
+[ext_resource type="Texture2D" uid="uid://nehej8a5ifyb" path="res://Sprites/BattleUI/P1HealthBar.png" id="5_jlnsx"]
 [ext_resource type="Script" uid="uid://bxtx4t4kufbsq" path="res://Scripts/SakugaEngine/UI/MetersHUD.cs" id="6_m7ri4"]
 [ext_resource type="Texture2D" uid="uid://0vthev3fa841" path="res://Sprites/meter_sprite.png" id="7_6huh3"]
+[ext_resource type="Texture2D" uid="uid://45s2tu2njgo" path="res://Sprites/BattleUI/HealthBurstOverlayBacking.png" id="8_eoegb"]
 [ext_resource type="Texture2D" uid="uid://cirlpf1j23vao" path="res://Sprites/meter_sprite_fill.png" id="8_vbhb2"]
+[ext_resource type="Texture2D" uid="uid://swumr1huopk1" path="res://Sprites/BattleUI/TimerBackgroundA.png" id="9_e234u"]
+[ext_resource type="Shader" uid="uid://b27qdxlyhpsti" path="res://Shaders/Overlay.gdshader" id="9_jlnsx"]
 [ext_resource type="Script" uid="uid://bxh004jlgsbbb" path="res://Scripts/SakugaEngine/UI/InputHistory.cs" id="9_vdd12"]
+[ext_resource type="Texture2D" uid="uid://wair2ga405uy" path="res://Sprites/BattleUI/TimerBackgroundB.png" id="10_3ks5t"]
 [ext_resource type="PackedScene" uid="uid://cjtsw7lf6uyuy" path="res://Scenes/Instances/InputHistory_Pref_P1.tscn" id="10_kbxok"]
+[ext_resource type="Texture2D" uid="uid://dsknvm2e7xt1o" path="res://Sprites/BattleUI/OverlayBackgroundTop.png" id="10_yl14h"]
 [ext_resource type="Script" uid="uid://b6yldfeec8kg2" path="res://Scripts/SakugaEngine/Utils/ShowFPS.cs" id="11_a8ejj"]
 [ext_resource type="PackedScene" uid="uid://cljylybqkoasi" path="res://Scenes/Instances/InputHistory_Pref_P2.tscn" id="11_k2bmj"]
 [ext_resource type="Script" uid="uid://hm7bsfnod2vb" path="res://Scripts/SakugaEngine/UI/FadeScreen.cs" id="12_uu21w"]
 [ext_resource type="PackedScene" uid="uid://dxj20xhmbkdbs" path="res://Scenes/PleaseResync_UI.tscn" id="14_16eh6"]
 [ext_resource type="Script" uid="uid://tduqq7pxgphg" path="res://Scripts/SakugaEngine/UI/MatchCardsController.cs" id="14_c0xn6"]
 [ext_resource type="Script" uid="uid://c74ackq5g2cbw" path="res://Scripts/SakugaEngine/Resources/MatchAnimation.cs" id="15_ysn3l"]
+[ext_resource type="Texture2D" uid="uid://qr7gln2472y7" path="res://Sprites/BattleUI/OverlayBackgroundBottom.png" id="17_5ipgc"]
 [ext_resource type="Script" uid="uid://3uu6r0mhj3p3" path="res://Scripts/SakugaEngine/Components/SoundQueue.cs" id="17_fweai"]
+[ext_resource type="Texture2D" uid="uid://dxvuahpwl7q5j" path="res://Sprites/BattleUI/BottomCircle.png" id="18_hbmc7"]
+[ext_resource type="Texture2D" uid="uid://bdvh0klpotqlv" path="res://Sprites/BattleUI/BottomCircleTransparent.png" id="24_5bfld"]
+
+[sub_resource type="FontVariation" id="FontVariation_2sb4q"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2sb4q"]
+shader = ExtResource("9_jlnsx")
+shader_parameter/intensity = 1.0
 
 [sub_resource type="Resource" id="Resource_4120v"]
 script = ExtResource("15_ysn3l")
@@ -591,6 +609,7 @@ _data = {
 }
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1639285127]
+metadata/_edit_horizontal_guides_ = [13.0]
 
 [node name="GameHUD_Background" type="Control" parent="." unique_id=1728610067 node_paths=PackedStringArray("P1Portrait", "P1Health", "P1LostHealth", "P1Rounds", "P1Combo", "P1Name", "P2Portrait", "P2Health", "P2LostHealth", "P2Rounds", "P2Combo", "P2Name", "Timer", "P1Debug", "P2Debug")]
 layout_mode = 3
@@ -621,104 +640,122 @@ anchors_preset = 0
 anchor_right = 1.0
 
 [node name="P1Portrait" type="TextureRect" parent="GameHUD_Background/HealthBars" unique_id=685425323]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -640.0
-offset_right = -512.0
-offset_bottom = 128.0
-texture = ExtResource("2_h5vba")
+offset_left = -625.0
+offset_top = 13.0
+offset_right = -521.0
+offset_bottom = 115.0
+grow_horizontal = 2
+scale = Vector2(1.0296314, 1.0296314)
+texture = ExtResource("2_2sb4q")
 expand_mode = 1
 stretch_mode = 4
 
 [node name="P2Portrait" type="TextureRect" parent="GameHUD_Background/HealthBars" unique_id=89658278]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 512.0
-offset_right = 640.0
-offset_bottom = 128.0
-texture = ExtResource("2_h5vba")
+offset_left = 516.0
+offset_top = 13.0
+offset_right = 620.0
+offset_bottom = 115.0
+grow_horizontal = 2
+scale = Vector2(1.03, 1.03)
+texture = ExtResource("2_2sb4q")
 expand_mode = 1
 stretch_mode = 4
 
 [node name="P1LostHealth" type="TextureProgressBar" parent="GameHUD_Background/HealthBars" unique_id=997365537]
+z_index = -1
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -590.0
-offset_top = 90.0
-offset_right = 1410.0
-offset_bottom = 225.0
+offset_left = -517.0
+offset_top = 93.0
+offset_right = 1998.0
+offset_bottom = 256.0
 grow_horizontal = 2
-scale = Vector2(0.27, 0.27)
-max_value = 10000.0
-step = 0.0
-value = 8000.0
-fill_mode = 1
-texture_under = ExtResource("3_quu14")
-texture_progress = ExtResource("3_quu14")
-tint_under = Color(0.509804, 0.509804, 0.509804, 1)
-tint_progress = Color(0.72882, 0, 0.08201, 1)
-
-[node name="P1Health" type="TextureProgressBar" parent="GameHUD_Background/HealthBars" unique_id=799365614]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -590.0
-offset_top = 90.0
-offset_right = 1410.0
-offset_bottom = 225.0
-grow_horizontal = 2
-scale = Vector2(0.27, 0.27)
-max_value = 10000.0
+scale = Vector2(0.167, 0.169)
+max_value = 7000.0
 step = 0.0
 value = 7000.0
 fill_mode = 1
-texture_progress = ExtResource("3_quu14")
-tint_under = Color(0.509804, 0.509804, 0.509804, 1)
-tint_progress = Color(0.909804, 0.843137, 0.396078, 1)
+texture_progress = ExtResource("3_eoegb")
+tint_under = Color(1, 1, 1, 0)
+tint_over = Color(1, 1, 1, 0)
+
+[node name="P1Health" type="TextureProgressBar" parent="GameHUD_Background/HealthBars" unique_id=799365614]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 123.0
+offset_top = 93.0
+offset_right = 1358.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.1669953, 0.1694553)
+max_value = 7000.0
+step = 0.0
+value = 7000.0
+fill_mode = 1
+texture_progress = ExtResource("5_jlnsx")
+tint_under = Color(1, 1, 1, 0)
+tint_over = Color(1, 1, 1, 0)
 
 [node name="P2LostHealth" type="TextureProgressBar" parent="GameHUD_Background/HealthBars" unique_id=1499953177]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 46.0
-offset_top = 90.0
-offset_right = 2046.0
-offset_bottom = 225.0
+offset_left = 92.599976
+offset_top = 93.5
+offset_right = 2607.6
+offset_bottom = 256.5
 grow_horizontal = 2
-scale = Vector2(0.27, 0.27)
-max_value = 10000.0
+scale = Vector2(0.167, 0.168)
+max_value = 7000.0
 step = 0.0
-value = 8000.0
-texture_under = ExtResource("3_quu14")
-texture_progress = ExtResource("3_quu14")
-tint_under = Color(0.509804, 0.509804, 0.509804, 1)
-tint_progress = Color(0.72882, 0, 0.08201, 1)
+value = 7000.0
+texture_progress = ExtResource("3_eoegb")
+tint_under = Color(1, 1, 1, 0)
+tint_over = Color(1, 1, 1, 0)
 
 [node name="P2Health" type="TextureProgressBar" parent="GameHUD_Background/HealthBars" unique_id=907058496]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = 46.0
-offset_top = 90.0
-offset_right = 2046.0
-offset_bottom = 225.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 732.6
+offset_top = 93.5
+offset_right = 1967.6001
+offset_bottom = 256.5
 grow_horizontal = 2
-scale = Vector2(0.27, 0.27)
-max_value = 10000.0
+grow_vertical = 2
+scale = Vector2(0.167, 0.168)
+max_value = 7000.0
 step = 0.0
 value = 7000.0
-texture_progress = ExtResource("3_quu14")
-tint_under = Color(0.509804, 0.509804, 0.509804, 1)
-tint_progress = Color(0.909804, 0.843137, 0.396078, 1)
+texture_progress = ExtResource("5_jlnsx")
+tint_under = Color(0.50956357, 0.50956357, 0.50956357, 0)
+tint_over = Color(1, 1, 1, 0)
+
+[node name="UpperHUDnoVictory" type="TextureRect" parent="GameHUD_Background/HealthBars" unique_id=483304827]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("3_4gmwt")
+expand_mode = 1
 
 [node name="P1Rounds" type="HBoxContainer" parent="GameHUD_Background/HealthBars" unique_id=1236664845]
+visible = false
 layout_mode = 0
 anchor_left = 0.5
 anchor_right = 0.5
@@ -752,6 +789,7 @@ layout_mode = 2
 texture = ExtResource("2_h5vba")
 
 [node name="P2Rounds" type="HBoxContainer" parent="GameHUD_Background/HealthBars" unique_id=413745748]
+visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -786,6 +824,7 @@ layout_mode = 2
 texture = ExtResource("2_h5vba")
 
 [node name="P1Name" type="Label" parent="GameHUD_Background/HealthBars" unique_id=1019002984]
+visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -799,6 +838,7 @@ scale = Vector2(2, 2)
 text = "Fighter 1"
 
 [node name="P2Name" type="Label" parent="GameHUD_Background/HealthBars" unique_id=1485341128]
+visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -812,21 +852,56 @@ scale = Vector2(2, 2)
 text = "Fighter 2"
 horizontal_alignment = 2
 
+[node name="Bar Backing" type="TextureRect" parent="GameHUD_Background/HealthBars" unique_id=699505136]
+modulate = Color(1, 1, 1, 0.63000005)
+z_index = -2
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("8_eoegb")
+expand_mode = 1
+
 [node name="Timer" type="Label" parent="GameHUD_Background/HealthBars" unique_id=205550416]
+z_index = -2
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -46.0
-offset_top = 24.0
-offset_right = 46.0
-offset_bottom = 134.0
+offset_left = -48.0
+offset_top = 49.0
+offset_right = 44.0
+offset_bottom = 159.0
 grow_horizontal = 2
 pivot_offset = Vector2(46, 55)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = SubResource("FontVariation_2sb4q")
 theme_override_font_sizes/font_size = 80
 text = "99"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="TimerGarnishA" type="TextureRect" parent="GameHUD_Background/HealthBars/Timer" unique_id=278062126]
+z_index = -2
+layout_mode = 0
+offset_left = -592.0
+offset_top = -49.0
+offset_right = 688.0
+offset_bottom = 671.0
+texture = ExtResource("9_e234u")
+expand_mode = 1
+
+[node name="TimerBackgroundB" type="TextureRect" parent="GameHUD_Background/HealthBars/Timer" unique_id=362820541]
+modulate = Color(1, 1, 1, 0.63000005)
+z_index = -2
+layout_mode = 0
+offset_left = -592.0
+offset_top = -49.0
+offset_right = 688.0
+offset_bottom = 671.0
+texture = ExtResource("10_3ks5t")
+expand_mode = 1
 
 [node name="OnlineInfo" type="Control" parent="GameHUD_Background" unique_id=1490443186 node_paths=PackedStringArray("P1Name", "P2Name", "P1Platform", "P2Platform")]
 layout_mode = 1
@@ -840,6 +915,7 @@ P1Platform = NodePath("P1OnlineInfoContainer/P1OnlinePlatform")
 P2Platform = NodePath("P2OnlineInfoContainer/P2OnlinePlatform")
 
 [node name="P1OnlineInfoContainer" type="ColorRect" parent="GameHUD_Background/OnlineInfo" unique_id=1570429287]
+visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -867,6 +943,7 @@ text = "Space reserved for online player"
 vertical_alignment = 1
 
 [node name="P2OnlineInfoContainer" type="ColorRect" parent="GameHUD_Background/OnlineInfo" unique_id=1946343934]
+visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -1012,6 +1089,15 @@ grow_vertical = 2
 scale = Vector2(1.5, 1.5)
 text = "Hit Combo"
 
+[node name="UI Background Top" type="TextureRect" parent="GameHUD_Background" unique_id=577175527]
+z_index = -1
+material = SubResource("ShaderMaterial_2sb4q")
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("10_yl14h")
+expand_mode = 1
+
 [node name="ViewportContainer" type="SubViewportContainer" parent="." unique_id=616342288]
 anchors_preset = 15
 anchor_right = 1.0
@@ -1019,6 +1105,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 stretch = true
+metadata/_edit_lock_ = true
 
 [node name="Viewport_Foreground" type="SubViewport" parent="ViewportContainer" unique_id=1652349718]
 transparent_bg = true
@@ -1050,6 +1137,7 @@ P1TrainingInfo = NodePath("TrainingInfo/P1Info/Information")
 P2TrainingInfo = NodePath("TrainingInfo/P2Info/Information")
 P1InputHistory = NodePath("InputHistory/P1InputHistory")
 P2InputHistory = NodePath("InputHistory/P2InputHistory")
+metadata/_edit_lock_ = true
 
 [node name="Meters" type="Control" parent="GameHUD_Foreground" unique_id=1096578342]
 anchors_preset = 0
@@ -1393,7 +1481,33 @@ layout_mode = 2
 [node name="InputHistory_Pref16" parent="GameHUD_Foreground/InputHistory/P2InputHistory" unique_id=459642963 instance=ExtResource("11_k2bmj")]
 layout_mode = 2
 
+[node name="UI Background Bottom" type="TextureRect" parent="GameHUD_Foreground" unique_id=991771631]
+z_index = -1
+material = SubResource("ShaderMaterial_2sb4q")
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("17_5ipgc")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="Circle" type="TextureRect" parent="GameHUD_Foreground/UI Background Bottom" unique_id=960639194]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("18_hbmc7")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="GameHUD_Foreground/UI Background Bottom/Circle" unique_id=2025185544]
+modulate = Color(1, 1, 1, 0.63000005)
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("24_5bfld")
+expand_mode = 1
+
 [node name="MatchCards" type="Control" parent="." unique_id=411599120 node_paths=PackedStringArray("animator", "RoundLabel", "KO_Label")]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -1423,7 +1537,7 @@ anchor_bottom = 0.5
 offset_left = -241.5
 offset_top = -147.0
 offset_right = 414.5
-offset_bottom = 147.00024
+offset_bottom = 345.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(328, 147)
@@ -1559,6 +1673,7 @@ script = ExtResource("17_fweai")
 metadata/_custom_type_script = "uid://3uu6r0mhj3p3"
 
 [node name="ResultsScreen" type="Control" parent="." unique_id=661745059]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -1652,6 +1767,7 @@ text = "Player 2 name"
 horizontal_alignment = 2
 
 [node name="FadeScreen" type="ColorRect" parent="." unique_id=1110242483]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -1662,6 +1778,7 @@ script = ExtResource("12_uu21w")
 FadeIntensity = 100
 
 [node name="Debug" type="Control" parent="." unique_id=682411219]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -1702,6 +1819,7 @@ text = "Lorem ipsun"
 horizontal_alignment = 2
 
 [node name="FPSDisplay" type="Control" parent="." unique_id=1091833598]
+visible = false
 layout_mode = 3
 anchors_preset = 5
 anchor_left = 0.5
@@ -1733,8 +1851,10 @@ horizontal_alignment = 1
 script = ExtResource("11_a8ejj")
 
 [node name="PleaseResync_UI" parent="." unique_id=1086814857 instance=ExtResource("14_16eh6")]
+visible = false
 
 [node name="Seed" type="Label" parent="." unique_id=737444796]
+visible = false
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
