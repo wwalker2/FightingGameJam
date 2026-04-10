@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bsbv07br0uqxw"]
+[gd_scene format=3 uid="uid://vhp0y8vdmx8c"]
 
 [ext_resource type="Script" uid="uid://bkhlpeqky2g1r" path="res://Scripts/SakugaEngine/Components/SakugaFighter.cs" id="1_p8mvr"]
 [ext_resource type="Resource" uid="uid://dercsjnhtrhqq" path="res://Fighters/Aisha/Kaede_Data.tres" id="2_nr18p"]
