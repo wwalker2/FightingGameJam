@@ -110,8 +110,9 @@
 [ext_resource type="Resource" uid="uid://cs77orvegsy4d" path="res://Fighters/Aisha/States/100_Kaede_Intro.tres" id="108_6avj7"]
 [ext_resource type="Resource" uid="uid://ddcqypksfutuk" path="res://Fighters/Aisha/States/101_Kaede_Victory.tres" id="109_6qv5w"]
 [ext_resource type="Resource" uid="uid://bqacwvooohk2k" path="res://Fighters/Aisha/States/102_Kaede_Defeat.tres" id="110_wymi2"]
-[ext_resource type="Resource" uid="uid://cjsv6v7fu8202" path="res://Fighters/Aisha/AI/Kaede_AIData.tres" id="111_rjt7c"]
+[ext_resource type="Resource" uid="uid://cjsv6v7fu8202" path="res://Fighters/Aisha/AI/Aisha_AIData.tres" id="111_rjt7c"]
 [ext_resource type="Script" uid="uid://bsbjg1nuyall1" path="res://Scripts/SakugaEngine/Resources/DataContainer.cs" id="112_midhk"]
+
 
 [sub_resource type="Resource" id="Resource_3b733"]
 script = ExtResource("31_2e56x")

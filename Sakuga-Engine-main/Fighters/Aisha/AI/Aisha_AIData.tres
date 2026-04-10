@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://qkcdnntram58" path="res://Scripts/SakugaEngine/Resources/AI/AIInput.cs" id="1_o5wy8"]
 [ext_resource type="Script" uid="uid://be0e6utc5xgk8" path="res://Scripts/SakugaEngine/Resources/AI/AIAction.cs" id="2_rma8i"]
-[ext_resource type="Resource" uid="uid://bjcpxce0q6yxw" path="res://Fighters/Aisha/AI/Kaede_AI_Medium.tres" id="3_0tlti"]
+[ext_resource type="Resource" uid="uid://bjcpxce0q6yxw" path="res://Fighters/Aisha/AI/Aisha_AI_Medium.tres" id="3_0tlti"]
 [ext_resource type="Script" uid="uid://dhvotekjrqw07" path="res://Scripts/SakugaEngine/Resources/AI/AIData.cs" id="4_22tbv"]
 
 [sub_resource type="Resource" id="Resource_qd5c5"]
