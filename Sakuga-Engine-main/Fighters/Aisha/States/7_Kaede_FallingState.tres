@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="FighterState" format=3 uid="uid://d3vxw2qw745ty"]
+
+[ext_resource type="Script" uid="uid://b8vqwkv52qq3e" path="res://Scripts/SakugaEngine/Resources/AnimationSettings.cs" id="1_u0kvo"]
+[ext_resource type="Script" uid="uid://5qrsoteskjym" path="res://Scripts/SakugaEngine/Resources/HitboxState.cs" id="2_5veup"]
+[ext_resource type="Script" uid="uid://bf60srwkccsm8" path="res://Scripts/SakugaEngine/Resources/FighterState.cs" id="3_e8hvd"]
+[ext_resource type="Script" uid="uid://5you05l2efnd" path="res://Scripts/SakugaEngine/Resources/StatePhysics.cs" id="4_frmss"]
+[ext_resource type="Script" uid="uid://bia88bspuvxd" path="res://Scripts/SakugaEngine/Resources/StateTransitionSettings.cs" id="5_tvpya"]
+
+[sub_resource type="Resource" id="Resource_gm6mq"]
+script = ExtResource("1_u0kvo")
+SourceAnimation = "Falling"
+metadata/_custom_type_script = "uid://b8vqwkv52qq3e"
+
+[sub_resource type="Resource" id="Resource_bjvsn"]
+script = ExtResource("2_5veup")
+
+[sub_resource type="Resource" id="1"]
+script = ExtResource("4_frmss")
+UseGravity = true
+Gravity = 200000
+
+[sub_resource type="Resource" id="Resource_w4yoe"]
+script = ExtResource("5_tvpya")
+StateIndex = 8
+Condition = 4
+DistanceArea = Vector2i(0, 99999)
+
+[resource]
+script = ExtResource("3_e8hvd")
+StateName = "Falling"
+BaseStance = 2
+Type = 1
+Duration = 6
+Loop = true
+LoopFrames = Vector2i(0, 5)
+stateProperties = null
+statePhysics = [SubResource("1")]
+hitboxStates = Array[Object]([SubResource("Resource_bjvsn")])
+animationEvents = null
+throwPivot = null
+stateTransitions = Array[Object]([SubResource("Resource_w4yoe")])
+animationSettings = Array[Object]([SubResource("Resource_gm6mq")])
+AIFlags = 1

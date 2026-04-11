@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://c2l2206ftntd2" path="res://Scripts/SakugaEngine/UI/MainMenu.cs" id="1_tt5f1"]
 [ext_resource type="Resource" uid="uid://c320twmibeytx" path="res://MatchSettings.tres" id="2_853f1"]
+[ext_resource type="AudioStream" uid="uid://b7ko61ulearbo" path="res://Songs/Opened Eyes.ogg" id="3_8saeu"]
+[ext_resource type="FontFile" uid="uid://cu0i5xdymo0ou" path="res://Tw Cen MT Condensed Medium.ttf" id="3_ghw46"]
+[ext_resource type="Texture2D" uid="uid://ca1o72kpm244v" path="res://Backgrounds/BlankBackground.png" id="5_df05h"]
 
 [node name="Control" type="Control" unique_id=626625648 node_paths=PackedStringArray("firstButton", "InputSelectMenu", "DeviceWidgetKeyboard1", "DeviceWidgetKeyboard2", "DeviceWidgetController1", "DeviceWidgetController2", "PivotP1", "PivotP2")]
 layout_mode = 3
@@ -40,58 +43,92 @@ offset_top = 76.0
 offset_right = 418.5
 offset_bottom = 241.0
 grow_horizontal = 2
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_ghw46")
 theme_override_font_sizes/font_size = 60
-text = "Sakuga Engine"
+text = "Team Jam Game"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MainMenu" unique_id=688292068]
+[node name="VBoxContainer" type="HBoxContainer" parent="MainMenu" unique_id=681281269]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -174.0
-offset_top = -14.0
-offset_right = 174.0
+offset_left = -610.0
+offset_top = 253.0
+offset_right = 618.0
 offset_bottom = 330.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 15
 alignment = 1
 
 [node name="Button_Online" type="Button" parent="MainMenu/VBoxContainer" unique_id=1631382224]
 layout_mode = 2
-size_flags_vertical = 11
+size_flags_vertical = 9
+theme_override_colors/font_color = Color(0.35, 0.35, 0.35, 1)
+theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_ghw46")
+theme_override_font_sizes/font_size = 55
 disabled = true
-text = " Online mode"
+text = "NETWORK"
 
 [node name="Button_Arcade" type="Button" parent="MainMenu/VBoxContainer" unique_id=1313525303]
 layout_mode = 2
 size_flags_vertical = 11
+theme_override_colors/font_color = Color(0.35, 0.35, 0.35, 1)
+theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_ghw46")
+theme_override_font_sizes/font_size = 55
 disabled = true
-text = "Arcade mode"
+text = "ARCADE"
 
 [node name="Button_Versus" type="Button" parent="MainMenu/VBoxContainer" unique_id=1092754504]
 layout_mode = 2
 size_flags_vertical = 11
-text = "Versus mode"
+theme_override_colors/font_color = Color(0.35, 0.35, 0.35, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_constants/h_separation = 15
+theme_override_fonts/font = ExtResource("3_ghw46")
+theme_override_font_sizes/font_size = 55
+text = "VERSUS"
 
 [node name="Button_Training" type="Button" parent="MainMenu/VBoxContainer" unique_id=1210790888]
 layout_mode = 2
 size_flags_vertical = 11
-text = "Training mode"
+theme_override_colors/font_color = Color(0.35, 0.35, 0.35, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_ghw46")
+theme_override_font_sizes/font_size = 55
+text = "TRAINING"
 
 [node name="Button_Replay" type="Button" parent="MainMenu/VBoxContainer" unique_id=1424355848]
 layout_mode = 2
 size_flags_vertical = 11
+theme_override_colors/font_color = Color(0.35, 0.35, 0.35, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_ghw46")
+theme_override_font_sizes/font_size = 55
 disabled = true
-text = "Replay mode"
+text = "REPLAY"
 
 [node name="Button_Quit" type="Button" parent="MainMenu/VBoxContainer" unique_id=1270923890]
 layout_mode = 2
-size_flags_vertical = 11
-text = "Quit Game"
+size_flags_vertical = 9
+theme_override_colors/font_color = Color(0.35, 0.35, 0.35, 1)
+theme_override_colors/font_hover_color = Color(0.9499975, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_ghw46")
+theme_override_font_sizes/font_size = 55
+text = "QUIT"
 
 [node name="InputSelection" type="Control" parent="." unique_id=1429820253]
 visible = false
@@ -103,6 +140,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Background" type="ColorRect" parent="InputSelection" unique_id=453892159]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -112,6 +150,7 @@ grow_vertical = 2
 color = Color(0, 0, 0, 0.20392157)
 
 [node name="P1Back" type="ColorRect" parent="InputSelection" unique_id=1972324897]
+visible = false
 layout_mode = 0
 offset_left = -408.0
 offset_top = -420.0
@@ -121,6 +160,7 @@ rotation = 0.43633232
 color = Color(0, 0, 0, 1)
 
 [node name="P2Back" type="ColorRect" parent="InputSelection" unique_id=1003816493]
+visible = false
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -134,6 +174,7 @@ rotation = -0.43633232
 color = Color(0, 0, 0, 1)
 
 [node name="P1Selecting" type="Control" parent="InputSelection" unique_id=1710169629]
+visible = false
 anchors_preset = 0
 offset_right = 194.0
 offset_bottom = 75.0
@@ -157,6 +198,7 @@ theme_override_font_sizes/font_size = 35
 text = "Player 1"
 
 [node name="P2Selecting" type="Control" parent="InputSelection" unique_id=929640676]
+visible = false
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -428,6 +470,20 @@ text = "Controller
 2"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=84464972]
+stream = ExtResource("3_8saeu")
+volume_db = -8.211
+autoplay = true
+parameters/looping = true
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1198581522]
+z_index = -1
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("5_df05h")
+expand_mode = 1
 
 [connection signal="pressed" from="MainMenu/VBoxContainer/Button_Online" to="." method="_OnOnlineButtonPressed"]
 [connection signal="pressed" from="MainMenu/VBoxContainer/Button_Arcade" to="." method="_OnArcadeButtonPressed"]

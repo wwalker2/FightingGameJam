@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b8qpqv8odqhss"
+path="res://.godot/imported/With the Words of a Demon.ogg-b78516684dfea839e96cc43c24ecc893.oggvorbisstr"
+
+[deps]
+
+source_file="res://Songs/With the Words of a Demon.ogg"
+dest_files=["res://.godot/imported/With the Words of a Demon.ogg-b78516684dfea839e96cc43c24ecc893.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

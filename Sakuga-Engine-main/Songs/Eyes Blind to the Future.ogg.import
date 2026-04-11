@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cqoyp564l2rl7"
+path="res://.godot/imported/Eyes Blind to the Future.ogg-10ec4fd4208807c8d22dca7866c47017.oggvorbisstr"
+
+[deps]
+
+source_file="res://Songs/Eyes Blind to the Future.ogg"
+dest_files=["res://.godot/imported/Eyes Blind to the Future.ogg-10ec4fd4208807c8d22dca7866c47017.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

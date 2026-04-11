@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="HitboxSettings" format=3 uid="uid://cl8cjryf7lqjw"]
+
+[ext_resource type="Script" uid="uid://dxuwyhds75mce" path="res://Scripts/SakugaEngine/Resources/HitboxSettings.cs" id="1_nn7pr"]
+
+[resource]
+script = ExtResource("1_nn7pr")
+PushboxCenter = Vector2i(0, 3000)
+PushboxSize = Vector2i(4000, 6000)
+Hitboxes = []

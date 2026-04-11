@@ -33,8 +33,10 @@ LoadingScreenManager="*uid://cejbemt1addi4"
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
-window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
+window/size/resizable=false
+window/energy_saving/keep_screen_on=false
+window/stretch/mode="viewport"
+window/stretch/scale_mode="integer"
 window/vsync/vsync_mode=0
 
 [dotnet]
@@ -45,6 +47,10 @@ project/assembly_name="Sakuga Engine"
 
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
+
+[gui]
+
+common/snap_controls_to_pixels=false
 
 [input]
 
@@ -504,5 +510,4 @@ debug_shift={
 
 [rendering]
 
-renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
