@@ -1,16 +1,8 @@
 [gd_resource type="ShaderMaterial" format=3 uid="uid://bywe24avrpvs"]
 
-[ext_resource type="Shader" uid="uid://2yb14h7j2sli" path="res://Shaders/color_palette.gdshader" id="1_3v25d"]
-[ext_resource type="Texture2D" uid="uid://bjrbdqj71fle8" path="res://Fighters/Aisha/Sprites/200-1.png" id="2_k054t"]
-[ext_resource type="Texture2D" uid="uid://1b4mj8bmjpwj" path="res://Fighters/Aisha/Palettes/kaede_palette_1.png" id="3_6iwil"]
-[ext_resource type="Texture2D" uid="uid://blk2w7x26shxx" path="res://Fighters/Aisha/Palettes/kaede_palette_2.png" id="4_8jtc2"]
+[ext_resource type="Shader" uid="uid://b27qdxlyhpsti" path="res://Shaders/Overlay.gdshader" id="1_om5me"]
 
 [resource]
 resource_local_to_scene = true
-render_priority = 0
-shader = ExtResource("1_3v25d")
-shader_parameter/albedo_texture = ExtResource("2_k054t")
-shader_parameter/num_colors = 43
-shader_parameter/precision = 0.01
-shader_parameter/palette_in = ExtResource("3_6iwil")
-shader_parameter/palette_out = ExtResource("4_8jtc2")
+shader = ExtResource("1_om5me")
+shader_parameter/intensity = 1.0
