@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ft3djmgf3rvq"]
 
 [ext_resource type="Script" uid="uid://bkhlpeqky2g1r" path="res://Scripts/SakugaEngine/Components/SakugaFighter.cs" id="1_lo0ai"]
-[ext_resource type="Resource" uid="uid://dercsjnhtrhqq" path="res://Fighters/Aisha/Kaede_Data.tres" id="2_n03lc"]
+[ext_resource type="Resource" uid="uid://dercsjnhtrhqq" path="res://Fighters/Aisha/Aisha_Data.tres" id="2_n03lc"]
 [ext_resource type="Resource" uid="uid://5w0ffcesv6ec" path="res://Fighters/Shared/Shared_SpawnablesList.tres" id="3_2rkqd"]
 [ext_resource type="Resource" uid="uid://b6a4cqdykhhg" path="res://Fighters/Shared/Shared_VFXList.tres" id="4_ta1o7"]
 [ext_resource type="Resource" uid="uid://k31pv0ejfv2s" path="res://Fighters/Shared/Shared_SFXList.tres" id="5_ci63n"]
