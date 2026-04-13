@@ -44,9 +44,13 @@
 [ext_resource type="Texture2D" uid="uid://rn8m4751t1kk" path="res://Sprites/BlackBox.png" id="31_5dk36"]
 [ext_resource type="Texture2D" uid="uid://cu7icuvt8okfm" path="res://Sprites/BattleUI/BottomHUDnoBacking.png" id="36_xjri1"]
 [ext_resource type="Texture2D" uid="uid://cec3jm1woi6mq" path="res://Sprites/BattleUI/BottomHUDShadow.png" id="37_5dk36"]
+[ext_resource type="Texture2D" uid="uid://dk3mah72vbmyu" path="res://Sprites/BattleUI/RoundStart&End/PreambleOutline.png" id="42_2qqlm"]
 [ext_resource type="Texture2D" uid="uid://7dvv7bbyt0sj" path="res://Sprites/BattleUI/RoundStart&End/CatchphraseOutline.png" id="42_j4fo4"]
 [ext_resource type="Texture2D" uid="uid://c4q71vjrs3yn7" path="res://Sprites/BattleUI/RoundStart&End/CatchphraseOverlay.png" id="43_kjwl2"]
+[ext_resource type="Texture2D" uid="uid://d2cfrg6y0ge26" path="res://Sprites/BattleUI/RoundStart&End/PreambleOverlay.png" id="43_x3q7a"]
+[ext_resource type="Texture2D" uid="uid://baek0eue0t81m" path="res://Sprites/BattleUI/RoundStart&End/CipherOutline.png" id="44_04huj"]
 [ext_resource type="Texture2D" uid="uid://cq3rqtk2cjeoe" path="res://Sprites/BattleUI/RoundStart&End/CatchphraseShadow.png" id="44_8vqcr"]
+[ext_resource type="Texture2D" uid="uid://djvwjq26532pk" path="res://Sprites/BattleUI/RoundStart&End/CipherOverlay.png" id="45_7eroh"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5bfld"]
 load_path = "res://.godot/imported/P1HealthBar.png-3bb259bd036ce5a542e173d15e0b7751.ctex"
@@ -794,6 +798,14 @@ _data = {
 &"RESET": SubResource("Animation_201fe"),
 &"RoundStart": SubResource("Animation_xjl2p")
 }
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hbc0h"]
+shader = ExtResource("9_jlnsx")
+shader_parameter/intensity = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1d11d"]
+shader = ExtResource("9_jlnsx")
+shader_parameter/intensity = 1.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1d2c4"]
 shader = ExtResource("9_jlnsx")
@@ -1924,6 +1936,24 @@ text = "CROSSED EXISTENCE
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="TextureRect" type="TextureRect" parent="MatchCards/CatchPhrase" unique_id=971599260]
+z_index = -1
+layout_mode = 0
+offset_left = 50.0
+offset_top = -22.0
+offset_right = 1330.0
+offset_bottom = 698.0
+texture = ExtResource("42_2qqlm")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="MatchCards/CatchPhrase/TextureRect" unique_id=808036330]
+material = SubResource("ShaderMaterial_hbc0h")
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("43_x3q7a")
+expand_mode = 1
+
 [node name="RoundCard" type="Label" parent="MatchCards" unique_id=1745501468]
 visible = false
 layout_mode = 1
@@ -1945,6 +1975,22 @@ theme_override_font_sizes/font_size = 115
 text = "CIPHER N"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MatchCards/RoundCard" unique_id=1737974356]
+z_index = -1
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("44_04huj")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="MatchCards/RoundCard/TextureRect" unique_id=1246240067]
+material = SubResource("ShaderMaterial_1d11d")
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("45_7eroh")
+expand_mode = 1
 
 [node name="FIGHT!" type="Label" parent="MatchCards" unique_id=1073739411]
 visible = false
