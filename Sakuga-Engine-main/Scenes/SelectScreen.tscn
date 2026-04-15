@@ -25,7 +25,6 @@
 [ext_resource type="Texture2D" uid="uid://cw7llwhkqnheo" path="res://Sprites/Arrow.png" id="18_7p58r"]
 [ext_resource type="AudioStream" uid="uid://cqoyp564l2rl7" path="res://Songs/Eyes Blind to the Future.ogg" id="18_mk26h"]
 [ext_resource type="Texture2D" uid="uid://d2w4ioudtovun" path="res://Sprites/P2SelectBOTTOM.png" id="18_sl6cr"]
-[ext_resource type="FontFile" uid="uid://cu0i5xdymo0ou" path="res://Tw Cen MT Condensed Medium.ttf" id="20_4qcp2"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3oegk"]
 load_path = "res://.godot/imported/P1SelectTOP.png-2ebaad07f100a8ab67245d35b2453cd9.ctex"
@@ -132,16 +131,6 @@ offset_bottom = 123.399994
 grow_horizontal = 2
 grow_vertical = 2
 columns = 3
-
-[node name="TextureRect" type="TextureRect" parent="CharacterSelect" unique_id=1325703499]
-layout_mode = 0
-offset_left = 23.0
-offset_top = -22.0
-offset_right = 63.0
-offset_bottom = 18.0
-scale = Vector2(31.999855, 17.999796)
-texture = ExtResource("15_tqyob")
-expand_mode = 1
 
 [node name="P1_Cursor" parent="CharacterSelect" unique_id=434925893 instance=ExtResource("6_5y3p4")]
 z_index = 1
