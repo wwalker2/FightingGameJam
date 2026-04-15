@@ -5,255 +5,255 @@ using SakugaEngine.UI;
 
 namespace SakugaEngine
 {
-    public partial class GameMonitor : Node
-    {
-        [Export] private FrameTimer DelayTimer;
-        public MatchCardsController Cards;
-        public Control ResultsScreen;
-        public int ClockLimit = 99;
-        public int RoundsToWin = 2;
-        public int Clock;
-        public int CurrentRound;
-        public int RoundWinner;
-        public int RoundLoser => RoundWinner == 0 ? 1 : 0;
-        public int Winner;
-        public Global.MatchState MatchState;
+	public partial class GameMonitor : Node
+	{
+		[Export] private FrameTimer DelayTimer;
+		public MatchCardsController Cards;
+		public Control ResultsScreen;
+		public int ClockLimit = 99;
+		public int RoundsToWin = 2;
+		public int Clock;
+		public int CurrentRound;
+		public int RoundWinner;
+		public int RoundLoser => RoundWinner == 0 ? 1 : 0;
+		public int Winner;
+		public Global.MatchState MatchState;
 
-        public int[] VictoryCounter;
+		public int[] VictoryCounter;
 
-        public Global.FadeScreenMode FadeMode;
-        public int FadeScreenIntensity;
-        public int FadeTime;
-        public int FadeProgress;
-        public bool TimeUp => Clock < 0;
+		public Global.FadeScreenMode FadeMode;
+		public int FadeScreenIntensity;
+		public int FadeTime;
+		public int FadeProgress;
+		public bool TimeUp => Clock < 0;
 
-        private SakugaFighter[] _fighters;
+		private SakugaFighter[] _fighters;
 
-        string sceneToReturn;
-        string winnerMessage;
+		string sceneToReturn;
+		string winnerMessage;
 
-        bool canReturn;
+		bool canReturn;
 
-        public void Initialize(SakugaFighter[] fighters, MatchSettings settings)
-        {
-            _fighters = fighters;
-            Winner = -1;
-            CurrentRound = 0;
-            ClockLimit = settings.TimeLimit;
-            Clock = Mathf.Max(0, ClockLimit * Global.TicksPerSecond);
-            RoundsToWin = settings.RoundsToWin;
-            SetMatchInitialState(settings); //<< This will be useful soon
-            sceneToReturn = settings.SelectedModeSettings.ReturnToScene;
-            VictoryCounter = new int[_fighters.Length];
-            for (int i = 0; i < VictoryCounter.Length; ++i)
-            {
-                VictoryCounter[i] = 0;
-            }
-            FadeScreenIntensity = 100;
-            FadeIn(40);
-        }
+		public void Initialize(SakugaFighter[] fighters, MatchSettings settings)
+		{
+			_fighters = fighters;
+			Winner = -1;
+			CurrentRound = 0;
+			ClockLimit = settings.TimeLimit;
+			Clock = Mathf.Max(0, ClockLimit * Global.TicksPerSecond);
+			RoundsToWin = settings.RoundsToWin;
+			SetMatchInitialState(settings); //<< This will be useful soon
+			sceneToReturn = settings.SelectedModeSettings.ReturnToScene;
+			VictoryCounter = new int[_fighters.Length];
+			for (int i = 0; i < VictoryCounter.Length; ++i)
+			{
+				VictoryCounter[i] = 0;
+			}
+			FadeScreenIntensity = 100;
+			FadeIn(40);
+		}
 
-        public void Render()
-        {
-            Cards.Render();                
-        }
+		public void Render()
+		{
+			Cards.Render();                
+		}
 
-        private void SetMatchInitialState(MatchSettings settings)
-        {
-            if (settings.SelectedModeSettings.ShowMatchIntro)
-            {
-                _fighters[0].PlayIntro(_fighters[1].Data.Profile.ShortName);
-                _fighters[1].PlayIntro(_fighters[0].Data.Profile.ShortName);
-                MatchState = Global.MatchState.INTRO;
-            }
-            else if (settings.SelectedModeSettings.ShowMatchCards)
-            {
-                MatchState = Global.MatchState.CATCHPHRASE;
-            }
-            else
-                MatchState = Global.MatchState.ROUND_RUNNING;
-        }
+		private void SetMatchInitialState(MatchSettings settings)
+		{
+			if (settings.SelectedModeSettings.ShowMatchIntro)
+			{
+				_fighters[0].PlayIntro(_fighters[1].Data.Profile.ShortName);
+				_fighters[1].PlayIntro(_fighters[0].Data.Profile.ShortName);
+				MatchState = Global.MatchState.INTRO;
+			}
+			else if (settings.SelectedModeSettings.ShowMatchCards)
+			{
+				MatchState = Global.MatchState.CATCHPHRASE;
+			}
+			else
+				MatchState = Global.MatchState.ROUND_RUNNING;
+		}
 
-        public void CheckVictoryConditions()
-        {
-            RoundWinner = 0; // Player 1 by default
+		public void CheckVictoryConditions()
+		{
+			RoundWinner = 0; // Player 1 by default
 
-            //Do not compare the current healths directly to not mess up with characters
-            //with different base health values.
-            //Convert them into percentages instead... but a bit bigger for extra precision
-            int p1HealthPercentage = _fighters[0].Variables.CurrentHealth * 1000 / _fighters[0].Data.MaxHealth;
-            int p2HealthPercentage = _fighters[1].Variables.CurrentHealth * 1000 / _fighters[1].Data.MaxHealth;
-            
-            if (_fighters[0].IsKO() && _fighters[1].IsKO())
-            {
-                RoundWinner = -1; // Double K.O.
-                GD.Print("Double K.O....");
-            }
-            else if (p2HealthPercentage == p1HealthPercentage)
-            {
-                RoundWinner = _fighters.Length; // Draw
-                GD.Print("Draw...");
-            }
-            else if (p2HealthPercentage > p1HealthPercentage)
-                RoundWinner = 1; // Player 2 wins
+			//Do not compare the current healths directly to not mess up with characters
+			//with different base health values.
+			//Convert them into percentages instead... but a bit bigger for extra precision
+			int p1HealthPercentage = _fighters[0].Variables.CurrentHealth * 1000 / _fighters[0].Data.MaxHealth;
+			int p2HealthPercentage = _fighters[1].Variables.CurrentHealth * 1000 / _fighters[1].Data.MaxHealth;
+			
+			if (_fighters[0].IsKO() && _fighters[1].IsKO())
+			{
+				RoundWinner = -1; // Double K.O.
+				GD.Print("Double K.O....");
+			}
+			else if (p2HealthPercentage == p1HealthPercentage)
+			{
+				RoundWinner = _fighters.Length; // Draw
+				GD.Print("Draw...");
+			}
+			else if (p2HealthPercentage > p1HealthPercentage)
+				RoundWinner = 1; // Player 2 wins
 
-            if (RoundWinner > -1 && RoundWinner < _fighters.Length)
-            {
-                VictoryCounter[RoundWinner]++;
-                GD.Print($"Player {RoundWinner + 1} win the round {CurrentRound + 1}!");
-                if (VictoryCounter[RoundWinner] == RoundsToWin)
-                    Winner = RoundWinner;
-            }
+			if (RoundWinner > -1 && RoundWinner < _fighters.Length)
+			{
+				VictoryCounter[RoundWinner]++;
+				GD.Print($"Player {RoundWinner + 1} win the round {CurrentRound + 1}!");
+				if (VictoryCounter[RoundWinner] == RoundsToWin)
+					Winner = RoundWinner;
+			}
 
-            CurrentRound++;
+			CurrentRound++;
 
 
-            if (TimeUp)
-            {
-                Cards.PlayKnockoutAnimation(-1, 3);
-            }
-            else
-            {
-                if (RoundWinner == 1)
-                    if (p2HealthPercentage == 1000)
-                        Cards.PlayKnockoutAnimation(1, 1);
-                    else
-                        Cards.PlayKnockoutAnimation(1, 0);
-                else if (RoundWinner == 0)
-                    if (p1HealthPercentage == 1000)
-                        Cards.PlayKnockoutAnimation(0, 1);
-                    else
-                        Cards.PlayKnockoutAnimation(0, 0);
-                else if (RoundWinner == -1)
-                    Cards.PlayKnockoutAnimation(-1, 2);
-            }
+			if (TimeUp)
+			{
+				Cards.PlayKnockoutAnimation(-1, 3);
+			}
+			else
+			{
+				if (RoundWinner == 1)
+					if (p2HealthPercentage == 1000)
+						Cards.PlayKnockoutAnimation(1, 1);
+					else
+						Cards.PlayKnockoutAnimation(1, 0);
+				else if (RoundWinner == 0)
+					if (p1HealthPercentage == 1000)
+						Cards.PlayKnockoutAnimation(0, 1);
+					else
+						Cards.PlayKnockoutAnimation(0, 0);
+				else if (RoundWinner == -1)
+					Cards.PlayKnockoutAnimation(-1, 2);
+			}
 
-            DelayTimer.Start(Cards.GetStateDelay());
-            MatchState = Global.MatchState.ROUND_END;
-        }
+			DelayTimer.Start(Cards.GetStateDelay());
+			MatchState = Global.MatchState.ROUND_END;
+		}
 
-        public void Tick()
-        {
-            FadeController();
-            DelayTimer.Run();
-            Cards.Run();
+		public void Tick()
+		{
+			FadeController();
+			DelayTimer.Run();
+			Cards.Run();
 
-            foreach (SakugaFighter fighter in _fighters)
-            {
-                fighter.StateMachine.CanRun = MatchState == Global.MatchState.ROUND_RUNNING;
-            }
+			foreach (SakugaFighter fighter in _fighters)
+			{
+				fighter.StateMachine.CanRun = MatchState == Global.MatchState.ROUND_RUNNING;
+			}
 
-            switch (MatchState)
-            {
-                case Global.MatchState.INTRO:
-                    if (AnyButtonPressed())
-                    {
-                        ResetRound();
-                    }
-                    if (_fighters[0].Animator.CurrentState == 0 && _fighters[1].Animator.CurrentState == 0)
-                    {
-                        Cards.PlayCatchPhraseAnimation();
-                        DelayTimer.Start(Cards.GetStateDelay());
-                        MatchState = Global.MatchState.CATCHPHRASE;
-                    }
-                    break;
-                case Global.MatchState.CATCHPHRASE:
-                    if (!DelayTimer.IsRunning())
-                    {
-                        Cards.PlayRoundStartAnimation(CurrentRound, false);
-                        DelayTimer.Start(Cards.GetStateDelay());
-                        GD.Print($"Round {CurrentRound + 1}...");
-                        MatchState = Global.MatchState.ROUND_START;
-                    }
-                    break;
-                case Global.MatchState.ROUND_START:
-                    if (!DelayTimer.IsRunning())
-                    {
-                        GD.Print("START!");
-                        MatchState = Global.MatchState.ROUND_RUNNING;
-                    }
-                    break;
-                case Global.MatchState.ROUND_RUNNING:
-                    MatchLoop();
-                    break;
-                case Global.MatchState.ROUND_END:
-                    if (!DelayTimer.IsRunning() && MatchEndCondition())
-                    {
-                        DelayTimer.Start(100);
+			switch (MatchState)
+			{
+				case Global.MatchState.INTRO:
+					if (AnyButtonPressed())
+					{
+						ResetRound();
+					}
+					if (_fighters[0].Animator.CurrentState == 0 && _fighters[1].Animator.CurrentState == 0)
+					{
+						Cards.PlayCatchPhraseAnimation();
+						DelayTimer.Start(Cards.GetStateDelay());
+						MatchState = Global.MatchState.CATCHPHRASE;
+					}
+					break;
+				case Global.MatchState.CATCHPHRASE:
+					if (!DelayTimer.IsRunning())
+					{
+						Cards.PlayRoundStartAnimation(CurrentRound, false);
+						DelayTimer.Start(Cards.GetStateDelay());
+						GD.Print($"Round {CurrentRound + 1}...");
+						MatchState = Global.MatchState.ROUND_START;
+					}
+					break;
+				case Global.MatchState.ROUND_START:
+					if (!DelayTimer.IsRunning())
+					{
+						GD.Print("START!");
+						MatchState = Global.MatchState.ROUND_RUNNING;
+					}
+					break;
+				case Global.MatchState.ROUND_RUNNING:
+					MatchLoop();
+					break;
+				case Global.MatchState.ROUND_END:
+					if (!DelayTimer.IsRunning() && MatchEndCondition())
+					{
+						DelayTimer.Start(100);
 
-                        if (Winner < 0)
-                        {
-                            SelectWinnerToAnimate();
-                            MatchState = Global.MatchState.ROUND_WINNER;
-                        }
-                        else
-                        {
-                            int Loser = Winner == 0 ? 1 : 0;
-                            _fighters[Winner].PlayOutro(_fighters[Loser].Data.Profile.ShortName, out winnerMessage);
-                            GD.Print($"Player {Winner + 1} win the match!");
-                            MatchState = Global.MatchState.MATCH_OUTRO;
-                        }
-                    }
-                    break;
-                case Global.MatchState.ROUND_WINNER:
-                    if (!DelayTimer.IsRunning())
-                    {
-                        Cards.PlayPlayerWinAnimation(RoundWinner);
-                        DelayTimer.Start(Cards.GetStateDelay());
-                        MatchState = Global.MatchState.ROUND_INTERLUDE;
-                    }
-                    if (AnyButtonPressed())
-                    {
-                        DelayTimer.Stop();
-                        MatchState = Global.MatchState.ROUND_INTERLUDE;
-                    }
-                    break;
-                case Global.MatchState.ROUND_INTERLUDE:
-                    if (!DelayTimer.IsRunning())
-                    {
-                        ResetRound();
-                    }
-                    break;
-                case Global.MatchState.NEXT_ROUND_TRANSITION:
-                    GoToRound();
-                    break;
-                case Global.MatchState.MATCH_OUTRO: 
-                    if (AnyButtonPressed() || !DelayTimer.IsRunning())
-                    {
-                        DelayTimer.Stop();
-                        // Open results menu
-                        CallDeferred("ShowResultScreen");
-                        MatchState = Global.MatchState.RESULTS;
-                    }
-                    break;
-                case Global.MatchState.RESULTS:
-                    // Return to menu for now
-                    if (AnyButtonPressed())
-                    {
-                        LoadingScreenManager.Instance.LoadScene(sceneToReturn);
-                    }
-                    break;
-            }
-        }
+						if (Winner < 0)
+						{
+							SelectWinnerToAnimate();
+							MatchState = Global.MatchState.ROUND_WINNER;
+						}
+						else
+						{
+							int Loser = Winner == 0 ? 1 : 0;
+							_fighters[Winner].PlayOutro(_fighters[Loser].Data.Profile.ShortName, out winnerMessage);
+							GD.Print($"Player {Winner + 1} win the match!");
+							MatchState = Global.MatchState.MATCH_OUTRO;
+						}
+					}
+					break;
+				case Global.MatchState.ROUND_WINNER:
+					if (!DelayTimer.IsRunning())
+					{
+						Cards.PlayPlayerWinAnimation(RoundWinner);
+						DelayTimer.Start(Cards.GetStateDelay());
+						MatchState = Global.MatchState.ROUND_INTERLUDE;
+					}
+					if (AnyButtonPressed())
+					{
+						DelayTimer.Stop();
+						MatchState = Global.MatchState.ROUND_INTERLUDE;
+					}
+					break;
+				case Global.MatchState.ROUND_INTERLUDE:
+					if (!DelayTimer.IsRunning())
+					{
+						ResetRound();
+					}
+					break;
+				case Global.MatchState.NEXT_ROUND_TRANSITION:
+					GoToRound();
+					break;
+				case Global.MatchState.MATCH_OUTRO: 
+					if (AnyButtonPressed() || !DelayTimer.IsRunning())
+					{
+						DelayTimer.Stop();
+						// Open results menu
+						CallDeferred("ShowResultScreen");
+						MatchState = Global.MatchState.RESULTS;
+					}
+					break;
+				case Global.MatchState.RESULTS:
+					// Return to menu for now
+					if (AnyButtonPressed())
+					{
+						LoadingScreenManager.Instance.LoadScene(sceneToReturn);
+					}
+					break;
+			}
+		}
 
-        private void MatchLoop()
-        {
-            bool p1TimeStop = _fighters[0].SuperFlash || _fighters[0].CinematicState;
-            bool p2TimeStop = _fighters[1].SuperFlash || _fighters[1].CinematicState;
+		private void MatchLoop()
+		{
+			bool p1TimeStop = _fighters[0].SuperFlash || _fighters[0].CinematicState;
+			bool p2TimeStop = _fighters[1].SuperFlash || _fighters[1].CinematicState;
 
-            if (!p1TimeStop && !p2TimeStop)
-            {
-                if (ClockLimit >= 0) Clock--;
+			if (!p1TimeStop && !p2TimeStop)
+			{
+				if (ClockLimit >= 0) Clock--;
 
-                if (TimeUp)
-                {
-                    GD.Print($"Time up!");
-                    CheckVictoryConditions();
-                    return;
-                }
-            }
+				if (TimeUp)
+				{
+					GD.Print($"Time up!");
+					CheckVictoryConditions();
+					return;
+				}
+			}
 
-            //Check if someone is KO'ed
+			//Check if someone is KO'ed
             bool someoneLose = false;
             for (int i = 0; i < _fighters.Length; i++)
             {
