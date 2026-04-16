@@ -48,9 +48,9 @@ project/assembly_name="Sakuga Engine"
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
 
-[editor_plugins]
+[gui]
 
-enabled=PackedStringArray("res://addons/Rename/plugin.cfg")
+common/snap_controls_to_pixels=false
 
 [input]
 

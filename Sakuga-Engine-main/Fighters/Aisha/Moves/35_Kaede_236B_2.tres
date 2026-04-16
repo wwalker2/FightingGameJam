@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="MoveSettings" format=3 uid="uid://dpvpvw3ywd4a"]
+
+[ext_resource type="Script" uid="uid://dpgs1fcn5u351" path="res://Scripts/SakugaEngine/Resources/MoveCancelSettings.cs" id="1_fgskf"]
+[ext_resource type="Resource" uid="uid://dnsaxvbcfkp5k" path="res://Fighters/Shared/Inputs/19_Input_236B.tres" id="2_idh8c"]
+[ext_resource type="Script" uid="uid://gk1rkw667o4n" path="res://Scripts/SakugaEngine/Resources/MoveSettings.cs" id="3_xxx48"]
+
+[sub_resource type="Resource" id="Resource_ftlsk"]
+script = ExtResource("1_fgskf")
+MoveIndex = 36
+Conditions = 7
+FrameThreshold = Vector2i(10, 999)
+metadata/_custom_type_script = "uid://dpgs1fcn5u351"
+
+[resource]
+script = ExtResource("3_xxx48")
+MoveName = "236B_2"
+MoveState = 64
+SkipCheck = true
+Inputs = ExtResource("2_idh8c")
+Priority = 7
+MoveEnd = 2
+IsSequenceFromStates = PackedInt32Array(63)
+CanCancelTo = Array[Object]([SubResource("Resource_ftlsk")])
+ExtraVariablesRequirement = null
+ExtraVariablesChange = null
+CanBeOverrided = true
+IgnoreSamePriority = false
+AcceptNullStates = true
+AcceptCombatStates = true
+UseOnGround = true

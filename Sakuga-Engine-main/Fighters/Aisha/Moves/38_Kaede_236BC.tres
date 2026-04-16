@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MoveSettings" format=3 uid="uid://cfjbcxktnefog"]
+
+[ext_resource type="Resource" uid="uid://gqj3r3ub5wjc" path="res://Fighters/Shared/Inputs/25_Input_236BC.tres" id="1_a7tcw"]
+[ext_resource type="Script" uid="uid://gk1rkw667o4n" path="res://Scripts/SakugaEngine/Resources/MoveSettings.cs" id="2_g4ba2"]
+
+[resource]
+script = ExtResource("2_g4ba2")
+MoveName = "236BC"
+MoveState = 68
+Inputs = ExtResource("1_a7tcw")
+SuperFlash = 26
+Priority = 8
+MoveEnd = 2
+SuperGaugeRequired = 5000
+CanCancelTo = null
+ExtraVariablesRequirement = null
+ExtraVariablesChange = null
+AcceptNullStates = true
+AcceptCombatStates = true
+UseOnGround = true
