@@ -43,6 +43,18 @@
 [ext_resource type="Texture2D" uid="uid://cgkb678h0gobc" path="res://Sprites/BattleUI/P2ComboOverlay.png" id="25_xjri1"]
 [ext_resource type="Texture2D" uid="uid://cu7icuvt8okfm" path="res://Sprites/BattleUI/BottomHUDnoBacking.png" id="36_xjri1"]
 [ext_resource type="Texture2D" uid="uid://cec3jm1woi6mq" path="res://Sprites/BattleUI/BottomHUDShadow.png" id="37_5dk36"]
+[ext_resource type="Texture2D" uid="uid://dk3mah72vbmyu" path="res://Sprites/BattleUI/RoundStart&End/PreambleOutline.png" id="42_2qqlm"]
+[ext_resource type="Texture2D" uid="uid://7dvv7bbyt0sj" path="res://Sprites/BattleUI/RoundStart&End/CatchphraseOutline.png" id="42_j4fo4"]
+[ext_resource type="Texture2D" uid="uid://c4q71vjrs3yn7" path="res://Sprites/BattleUI/RoundStart&End/CatchphraseOverlay.png" id="43_kjwl2"]
+[ext_resource type="Texture2D" uid="uid://d2cfrg6y0ge26" path="res://Sprites/BattleUI/RoundStart&End/PreambleOverlay.png" id="43_x3q7a"]
+[ext_resource type="Texture2D" uid="uid://baek0eue0t81m" path="res://Sprites/BattleUI/RoundStart&End/CipherOutline.png" id="44_04huj"]
+[ext_resource type="Texture2D" uid="uid://cq3rqtk2cjeoe" path="res://Sprites/BattleUI/RoundStart&End/CatchphraseShadow.png" id="44_8vqcr"]
+[ext_resource type="Texture2D" uid="uid://djvwjq26532pk" path="res://Sprites/BattleUI/RoundStart&End/CipherOverlay.png" id="45_7eroh"]
+[ext_resource type="Texture2D" uid="uid://6u8n5r0emdf4" path="res://Backgrounds/Victory Screen UI Background.png" id="50_1d11d"]
+[ext_resource type="Texture2D" uid="uid://cfmjdnris4pjr" path="res://Sprites/BattleUI/VictoryScreen/VictoryScreenTextboxNoOverlay.png" id="51_r0jj3"]
+[ext_resource type="Texture2D" uid="uid://bkwww6r7e3x6q" path="res://Sprites/BattleUI/VictoryScreen/VictoryScreenTextboxOverlay.png" id="52_3cpxk"]
+[ext_resource type="Texture2D" uid="uid://bxw7dmjwjtfpx" path="res://Sprites/BattleUI/VictoryScreen/VictoryScreenP1Selectbox.png" id="53_o2mcx"]
+[ext_resource type="Texture2D" uid="uid://c12aodov7tf6h" path="res://Sprites/BattleUI/VictoryScreen/VictoryScreenP2Selectbox.png" id="54_1kg8m"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5bfld"]
 load_path = "res://.godot/imported/P1HealthBar.png-3bb259bd036ce5a542e173d15e0b7751.ctex"
@@ -629,6 +641,26 @@ _data = {
 &"RoundStart": SubResource("Animation_xjl2p")
 }
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hbc0h"]
+shader = ExtResource("9_jlnsx")
+shader_parameter/intensity = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1d11d"]
+shader = ExtResource("9_jlnsx")
+shader_parameter/intensity = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1d2c4"]
+shader = ExtResource("9_jlnsx")
+shader_parameter/intensity = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_61c7y"]
+shader = ExtResource("9_jlnsx")
+shader_parameter/intensity = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_55pic"]
+shader = ExtResource("9_jlnsx")
+shader_parameter/intensity = 1.0
+
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1639285127]
 metadata/_edit_horizontal_guides_ = [13.0]
 metadata/_edit_vertical_guides_ = [185.0]
@@ -779,6 +811,7 @@ texture = ExtResource("3_4gmwt")
 expand_mode = 1
 
 [node name="P1Rounds" type="HBoxContainer" parent="GameHUD_Background/HealthBars" unique_id=1236664845]
+visible = false
 layout_mode = 0
 anchor_left = 0.5
 anchor_right = 0.5
@@ -1323,6 +1356,7 @@ near = 0.01
 
 [node name="GameHUD_Foreground" type="Control" parent="." unique_id=595347272 node_paths=PackedStringArray("P1Meter", "P2Meter", "P1TrainingInfo", "P2TrainingInfo", "P1InputHistory", "P2InputHistory")]
 process_priority = -1
+z_index = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -1424,12 +1458,16 @@ offset_left = 6.0
 offset_right = 123.0
 offset_bottom = 153.0
 grow_vertical = 2
-text = "Damage
-Current combo
-Highest combo
-Hit type
-Damage Scl.
-Frame data"
+theme_override_constants/line_spacing = -6
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("11_pvqvx")
+theme_override_font_sizes/font_size = 16
+text = "DAMAGE
+CURRENT COMBO
+HIGHEST COMBO
+HIT TYPE
+DAMAGE SCALE
+FRAME DATA"
 
 [node name="Information" type="Label" parent="GameHUD_Foreground/TrainingInfo/P1Info" unique_id=1033807718]
 layout_mode = 1
@@ -1442,6 +1480,9 @@ offset_right = 205.0
 offset_bottom = 153.0
 grow_horizontal = 0
 grow_vertical = 2
+theme_override_constants/line_spacing = -6
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("11_pvqvx")
 text = "0
 0
 0
@@ -1479,12 +1520,16 @@ offset_left = 6.0
 offset_right = 123.0
 offset_bottom = 153.0
 grow_vertical = 2
-text = "Damage
-Current combo
-Highest combo
-Hit type
-Damage Scl.
-Frame data"
+theme_override_constants/line_spacing = -6
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("11_pvqvx")
+theme_override_font_sizes/font_size = 16
+text = "DAMAGE
+CURRENT COMBO
+HIGHEST COMBO
+HIT TYPE
+DAMAGE SCALE
+FRAME DATA"
 
 [node name="Information" type="Label" parent="GameHUD_Foreground/TrainingInfo/P2Info" unique_id=1961395200]
 layout_mode = 1
@@ -1497,6 +1542,9 @@ offset_right = 205.0
 offset_bottom = 153.0
 grow_horizontal = 0
 grow_vertical = 2
+theme_override_constants/line_spacing = -6
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("11_pvqvx")
 text = "0
 0
 0
@@ -1725,6 +1773,24 @@ here!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="TextureRect" type="TextureRect" parent="MatchCards/CatchPhrase" unique_id=971599260]
+z_index = -1
+layout_mode = 0
+offset_left = 50.0
+offset_top = -22.0
+offset_right = 1330.0
+offset_bottom = 698.0
+texture = ExtResource("42_2qqlm")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="MatchCards/CatchPhrase/TextureRect" unique_id=808036330]
+material = SubResource("ShaderMaterial_hbc0h")
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("43_x3q7a")
+expand_mode = 1
+
 [node name="RoundCard" type="Label" parent="MatchCards" unique_id=1745501468]
 visible = false
 layout_mode = 1
@@ -1745,6 +1811,22 @@ theme_override_font_sizes/font_size = 80
 text = "Round N"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MatchCards/RoundCard" unique_id=1737974356]
+z_index = -1
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("44_04huj")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="MatchCards/RoundCard/TextureRect" unique_id=1246240067]
+material = SubResource("ShaderMaterial_1d11d")
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("45_7eroh")
+expand_mode = 1
 
 [node name="FIGHT!" type="Label" parent="MatchCards" unique_id=1073739411]
 visible = false
@@ -1857,14 +1939,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="ResultsScreen" unique_id=813076439]
+[node name="ColorRect" type="TextureRect" parent="ResultsScreen" unique_id=1386084967]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0.20392157)
+texture = ExtResource("50_1d11d")
+expand_mode = 1
 
 [node name="Title" type="Label" parent="ResultsScreen" unique_id=1032263509]
 layout_mode = 1
@@ -1881,32 +1964,72 @@ horizontal_alignment = 1
 vertical_alignment = 2
 
 [node name="VictoryMessage" type="Label" parent="ResultsScreen" unique_id=419266798]
+z_index = 1
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -162.0
+offset_left = 330.0
+offset_top = -195.0
+offset_right = -332.0
+offset_bottom = -41.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_font_sizes/font_size = 24
-text = "Victory is mine hehe!"
-horizontal_alignment = 1
-vertical_alignment = 1
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("11_pvqvx")
+theme_override_font_sizes/font_size = 30
+text = "Honestly, today's been the absolute worst... That stupid Bunmei..."
+
+[node name="VictoryTextbox" type="TextureRect" parent="ResultsScreen" unique_id=1529871652]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("51_r0jj3")
+expand_mode = 1
+
+[node name="VictoryOverlay" type="TextureRect" parent="ResultsScreen/VictoryTextbox" unique_id=930039087]
+material = SubResource("ShaderMaterial_61c7y")
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("52_3cpxk")
+expand_mode = 1
+
+[node name="P1Selectbox" type="TextureRect" parent="ResultsScreen" unique_id=14959965]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("53_o2mcx")
+expand_mode = 1
+
+[node name="P2Selectbox" type="TextureRect" parent="ResultsScreen" unique_id=243119387]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("54_1kg8m")
+expand_mode = 1
 
 [node name="WinBannerP1" type="Control" parent="ResultsScreen" unique_id=1910856377]
+visible = false
+z_index = 1
+material = SubResource("ShaderMaterial_55pic")
 layout_mode = 1
 anchors_preset = 0
 
 [node name="Winner" type="Label" parent="ResultsScreen/WinBannerP1" unique_id=1715785789]
 layout_mode = 0
-offset_right = 214.0
-offset_bottom = 69.0
-theme_override_font_sizes/font_size = 50
-text = "PLAYER 1 WIN!"
-vertical_alignment = 2
+offset_left = 3.0
+offset_top = 70.0
+offset_right = 1259.0
+offset_bottom = 472.0
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("11_pvqvx")
+theme_override_font_sizes/font_size = 375
+text = "P1 VICTORY"
 
 [node name="NamePlayer1" type="Label" parent="ResultsScreen/WinBannerP1" unique_id=386612944]
+visible = false
 layout_mode = 0
 offset_top = 58.0
 offset_right = 640.0
@@ -1915,6 +2038,7 @@ theme_override_font_sizes/font_size = 40
 text = "Player 1 name"
 
 [node name="WinBannerP2" type="Control" parent="ResultsScreen" unique_id=682353987]
+visible = false
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -1944,6 +2068,7 @@ horizontal_alignment = 2
 
 [node name="FadeScreen" type="ColorRect" parent="." unique_id=1110242483]
 visible = false
+z_index = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
