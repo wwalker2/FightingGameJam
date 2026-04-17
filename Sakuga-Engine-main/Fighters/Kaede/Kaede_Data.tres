@@ -62,7 +62,7 @@
 [ext_resource type="Resource" uid="uid://cs5taj1h7ne1g" path="res://Fighters/Kaede/States/25_Kaede_Hit_OnGround.tres" id="60_o7xo5"]
 [ext_resource type="Resource" uid="uid://8rrpty04u3yc" path="res://Fighters/Kaede/States/26_Kaede_Hit_Down.tres" id="61_1ohrk"]
 [ext_resource type="Resource" uid="uid://bfv01m42n1xo" path="res://Fighters/Kaede/States/27_Kaede_Hit_GetUp_1.tres" id="62_ljsqr"]
-[ext_resource type="Script" uid="uid://bsbjg1nuyall1" path="res://Scripts/SakugaEngine/Resources/DataContainer.cs" id="63_f0ivt"]
+[ext_resource type="Script" uid="uid://pdsqprbkhgv4" path="res://Scripts/SakugaEngine/Resources/DataContainer.cs" id="63_f0ivt"]
 [ext_resource type="Resource" uid="uid://dlgxfcj320njw" path="res://Fighters/Kaede/States/28_Kaede_Hit_Sweep_1.tres" id="63_w3ckd"]
 [ext_resource type="Resource" uid="uid://bwoarywlnubtd" path="res://Fighters/Kaede/States/29_Kaede_Hit_Sweep_2.tres" id="64_186y0"]
 [ext_resource type="Resource" uid="uid://b4giu8m6s2ibs" path="res://Fighters/Kaede/States/30_Kaede_Hit_Faint.tres" id="65_1j1r0"]
@@ -141,4 +141,3 @@ Intros = Array[Object]([SubResource("Resource_3b733")])
 Outros = Array[Object]([SubResource("Resource_cenu2")])
 VictoryPoses = Array[Object]([SubResource("Resource_186y0")])
 DefeatPose = 75
-metadata/_custom_type_script = "uid://bsbjg1nuyall1"

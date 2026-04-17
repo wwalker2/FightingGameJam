@@ -287,8 +287,8 @@
 [ext_resource type="PackedScene" uid="uid://dduf0jsq56ggk" path="res://Scenes/Instances/HitboxViewer.tscn" id="285_fngr4"]
 [ext_resource type="Script" uid="uid://3uu6r0mhj3p3" path="res://Scripts/SakugaEngine/Components/SoundQueue.cs" id="286_x2a0n"]
 [ext_resource type="Script" uid="uid://hg0vcp1gy2ny" path="res://Scripts/SakugaEngine/Collision/PhysicsBody.cs" id="287_i0ibg"]
-[ext_resource type="Script" uid="uid://dshbmw3q5jor2" path="res://Scripts/SakugaEngine/Components/InputManager.cs" id="288_3a57v"]
-[ext_resource type="Script" uid="uid://17dvgaypi8q0" path="res://Scripts/SakugaEngine/Components/SakugaStateMachine.cs" id="289_0csys"]
+[ext_resource type="Script" uid="uid://66semq5e6yt" path="res://Scripts/SakugaEngine/Components/InputManager.cs" id="288_3a57v"]
+[ext_resource type="Script" uid="uid://eajl6jjh3s1t" path="res://Scripts/SakugaEngine/Components/SakugaStateMachine.cs" id="289_0csys"]
 [ext_resource type="Script" uid="uid://jxgdxccucllx" path="res://Scripts/SakugaEngine/Components/CombatTracker.cs" id="290_7bu61"]
 [ext_resource type="Script" uid="uid://dvqrejewx20e3" path="res://Scripts/SakugaEngine/Components/AIBrain.cs" id="291_ymesv"]
 [ext_resource type="Script" uid="uid://v7id8u3160fg" path="res://Scripts/SakugaEngine/Components/FighterVariables.cs" id="292_nctfb"]
@@ -2973,7 +2973,7 @@ metadata/_custom_type_script = "uid://dvqrejewx20e3"
 
 [node name="Variables" type="Node" parent="." unique_id=89796892 node_paths=PackedStringArray("ExtraVariables")]
 script = ExtResource("292_nctfb")
-ExtraVariables = [NodePath("AirJumpLimit"), NodePath("AirDashLimit"), NodePath("IsDashJump")]
+ExtraVariables = [NodePath("AirJumpLimit"), NodePath("AirDashLimit"), NodePath("IsDashJump"), NodePath("BurstGauge"), NodePath("ChargeGauge")]
 
 [node name="AirJumpLimit" type="Node" parent="Variables" unique_id=1766771107]
 script = ExtResource("293_i2qcb")
@@ -2986,6 +2986,17 @@ MaxValue = 1
 [node name="IsDashJump" type="Node" parent="Variables" unique_id=2017893478]
 script = ExtResource("293_i2qcb")
 MaxValue = 1
+
+[node name="BurstGauge" type="Node" parent="Variables" unique_id=361076060]
+script = ExtResource("293_i2qcb")
+MaxValue = 10000
+StartingValue = 5000
+StartingFactor = 1
+StartingMode = 1
+
+[node name="ChargeGauge" type="Node" parent="Variables" unique_id=1617783402]
+script = ExtResource("293_i2qcb")
+MaxValue = 10000
 
 [node name="Timers" type="Node" parent="." unique_id=690093052]
 
