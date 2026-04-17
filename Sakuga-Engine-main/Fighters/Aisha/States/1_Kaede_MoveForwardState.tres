@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="FighterState" format=3 uid="uid://qhwf3ermrcq2"]
+
+[ext_resource type="Script" uid="uid://b8vqwkv52qq3e" path="res://Scripts/SakugaEngine/Resources/AnimationSettings.cs" id="1_leq28"]
+[ext_resource type="Script" uid="uid://5qrsoteskjym" path="res://Scripts/SakugaEngine/Resources/HitboxState.cs" id="2_qglof"]
+[ext_resource type="Script" uid="uid://bf60srwkccsm8" path="res://Scripts/SakugaEngine/Resources/FighterState.cs" id="3_6v50e"]
+[ext_resource type="Script" uid="uid://5you05l2efnd" path="res://Scripts/SakugaEngine/Resources/StatePhysics.cs" id="4_4n707"]
+
+[sub_resource type="Resource" id="Resource_mjtro"]
+script = ExtResource("1_leq28")
+SourceAnimation = "Walk_Forward"
+metadata/_custom_type_script = "uid://b8vqwkv52qq3e"
+
+[sub_resource type="Resource" id="Resource_5hurg"]
+script = ExtResource("2_qglof")
+
+[sub_resource type="Resource" id="1"]
+script = ExtResource("4_4n707")
+UseLateralSpeed = true
+LateralSpeed = 20000
+UseVerticalSpeed = true
+
+[resource]
+script = ExtResource("3_6v50e")
+StateName = "Walk_Forward"
+Type = 1
+Duration = 30
+Loop = true
+LoopFrames = Vector2i(0, 29)
+stateProperties = null
+statePhysics = [SubResource("1")]
+hitboxStates = Array[Object]([SubResource("Resource_5hurg")])
+animationEvents = null
+throwPivot = null
+stateTransitions = null
+animationSettings = Array[Object]([SubResource("Resource_mjtro")])
+AIFlags = 10

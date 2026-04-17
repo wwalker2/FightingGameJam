@@ -41,12 +41,20 @@
 [ext_resource type="Texture2D" uid="uid://bdvh0klpotqlv" path="res://Sprites/BattleUI/BottomCircleTransparent.png" id="24_5bfld"]
 [ext_resource type="Texture2D" uid="uid://cg08456qylqf7" path="res://Sprites/BattleUI/P2ComboShadow.png" id="24_6coeq"]
 [ext_resource type="Texture2D" uid="uid://cgkb678h0gobc" path="res://Sprites/BattleUI/P2ComboOverlay.png" id="25_xjri1"]
-[ext_resource type="Texture2D" uid="uid://rn8m4751t1kk" path="res://Sprites/BlackBox.png" id="31_5dk36"]
 [ext_resource type="Texture2D" uid="uid://cu7icuvt8okfm" path="res://Sprites/BattleUI/BottomHUDnoBacking.png" id="36_xjri1"]
 [ext_resource type="Texture2D" uid="uid://cec3jm1woi6mq" path="res://Sprites/BattleUI/BottomHUDShadow.png" id="37_5dk36"]
+[ext_resource type="Texture2D" uid="uid://dk3mah72vbmyu" path="res://Sprites/BattleUI/RoundStart&End/PreambleOutline.png" id="42_2qqlm"]
 [ext_resource type="Texture2D" uid="uid://7dvv7bbyt0sj" path="res://Sprites/BattleUI/RoundStart&End/CatchphraseOutline.png" id="42_j4fo4"]
 [ext_resource type="Texture2D" uid="uid://c4q71vjrs3yn7" path="res://Sprites/BattleUI/RoundStart&End/CatchphraseOverlay.png" id="43_kjwl2"]
+[ext_resource type="Texture2D" uid="uid://d2cfrg6y0ge26" path="res://Sprites/BattleUI/RoundStart&End/PreambleOverlay.png" id="43_x3q7a"]
+[ext_resource type="Texture2D" uid="uid://baek0eue0t81m" path="res://Sprites/BattleUI/RoundStart&End/CipherOutline.png" id="44_04huj"]
 [ext_resource type="Texture2D" uid="uid://cq3rqtk2cjeoe" path="res://Sprites/BattleUI/RoundStart&End/CatchphraseShadow.png" id="44_8vqcr"]
+[ext_resource type="Texture2D" uid="uid://djvwjq26532pk" path="res://Sprites/BattleUI/RoundStart&End/CipherOverlay.png" id="45_7eroh"]
+[ext_resource type="Texture2D" uid="uid://6u8n5r0emdf4" path="res://Backgrounds/Victory Screen UI Background.png" id="50_1d11d"]
+[ext_resource type="Texture2D" uid="uid://cfmjdnris4pjr" path="res://Sprites/BattleUI/VictoryScreen/VictoryScreenTextboxNoOverlay.png" id="51_r0jj3"]
+[ext_resource type="Texture2D" uid="uid://bkwww6r7e3x6q" path="res://Sprites/BattleUI/VictoryScreen/VictoryScreenTextboxOverlay.png" id="52_3cpxk"]
+[ext_resource type="Texture2D" uid="uid://bxw7dmjwjtfpx" path="res://Sprites/BattleUI/VictoryScreen/VictoryScreenP1Selectbox.png" id="53_o2mcx"]
+[ext_resource type="Texture2D" uid="uid://c12aodov7tf6h" path="res://Sprites/BattleUI/VictoryScreen/VictoryScreenP2Selectbox.png" id="54_1kg8m"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5bfld"]
 load_path = "res://.godot/imported/P1HealthBar.png-3bb259bd036ce5a542e173d15e0b7751.ctex"
@@ -60,10 +68,6 @@ shader = ExtResource("9_jlnsx")
 shader_parameter/intensity = 1.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2sb4q"]
-shader = ExtResource("9_jlnsx")
-shader_parameter/intensity = 1.0
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_u4h4f"]
 shader = ExtResource("9_jlnsx")
 shader_parameter/intensity = 1.0
 
@@ -112,19 +116,19 @@ metadata/_custom_type_script = "uid://c74ackq5g2cbw"
 
 [sub_resource type="Animation" id="Animation_4120v"]
 resource_name = "CatchPhrase"
-length = 1.4
+length = 1.5333351
 step = 0.016666668
 tracks/0/type = "value"
 tracks/0/imported = false
-tracks/0/enabled = false
+tracks/0/enabled = true
 tracks/0/path = NodePath("RoundCard:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(-0.016666668),
+"times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [true]
+"values": [false]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -189,62 +193,26 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("CatchPhrase:visible")
+tracks/6/path = NodePath("CatchPhrase:position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(-0.016666668, 0.13333333, 1.4),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [true, true, true]
+"times": PackedFloat32Array(0, 0.11666667, 1.4000001, 1.5333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-660, 250), Vector2(315, 250), Vector2(315, 250), Vector2(1300, 250)]
 }
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("CatchPhrase:modulate")
+tracks/7/path = NodePath("CatchPhrase:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(-0.016666668, 1.3, 1.4),
-"transitions": PackedFloat32Array(0.23325826, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = false
-tracks/8/path = NodePath("RoundCard:modulate")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(1.4),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("CatchPhrase:theme_override_font_sizes/font_size")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(0, 0.13333334, 0.18333334, 1.0833334, 1.1666666, 1.3, 1.4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 1.5158978, 1.5333333),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [100, 55, 100, 100, 80, 115, 100]
-}
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("CatchPhrase:theme_override_constants/line_spacing")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(0, 0.08333334, 0.13333334, 0.18333334, 1.1666666, 1.3, 1.4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [40, -40, 2, -40, -10, -40, -40]
+"values": [true, true, false]
 }
 
 [sub_resource type="Animation" id="Animation_p30di"]
@@ -347,7 +315,6 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_t2vuu"]
 resource_name = "P1_Win"
-length = 1.2333333
 step = 0.016666668
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -364,19 +331,18 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("P1Win:modulate")
+tracks/1/path = NodePath("P1Win:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(-0.083333336, 0.16666667, 1.0666667, 1.2166667),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.116666675),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+"values": [Vector2(-230, 300), Vector2(0, 300)]
 }
 
 [sub_resource type="Animation" id="Animation_lp1f3"]
 resource_name = "P2_Win"
-length = 1.25
 step = 0.016666668
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -393,14 +359,14 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("P2Win:modulate")
+tracks/1/path = NodePath("P2Win:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(-0.016666668, 0.13333334, 1.1, 1.25),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.116666675),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+"values": [Vector2(1090, 300), Vector2(860, 300)]
 }
 
 [sub_resource type="Animation" id="Animation_201fe"]
@@ -516,110 +482,26 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("CatchPhrase:visible")
+tracks/9/path = NodePath("CatchPhrase:position")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
+"update": 0,
+"values": [Vector2(398.5, 213)]
 }
 tracks/10/type = "value"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("CatchPhrase:modulate")
+tracks/10/path = NodePath("CatchPhrase:visible")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/11/type = "value"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("RoundCard:modulate")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/12/type = "value"
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/path = NodePath("FIGHT!:theme_override_font_sizes/font_size")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [265]
-}
-tracks/13/type = "value"
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/path = NodePath("RoundCard:theme_override_font_sizes/font_size")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [115]
-}
-tracks/14/type = "value"
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/path = NodePath("CatchPhrase:theme_override_font_sizes/font_size")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [100]
-}
-tracks/15/type = "value"
-tracks/15/imported = false
-tracks/15/enabled = true
-tracks/15/path = NodePath("CatchPhrase:theme_override_constants/line_spacing")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [-40]
-}
-tracks/16/type = "value"
-tracks/16/imported = false
-tracks/16/enabled = true
-tracks/16/path = NodePath("P1Win:modulate")
-tracks/16/interp = 1
-tracks/16/loop_wrap = true
-tracks/16/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/17/type = "value"
-tracks/17/imported = false
-tracks/17/enabled = true
-tracks/17/path = NodePath("P2Win:modulate")
-tracks/17/interp = 1
-tracks/17/loop_wrap = true
-tracks/17/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_xjl2p"]
@@ -652,7 +534,7 @@ tracks/1/keys = {
 }
 tracks/2/type = "value"
 tracks/2/imported = false
-tracks/2/enabled = false
+tracks/2/enabled = true
 tracks/2/path = NodePath("RoundCard:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
@@ -664,7 +546,7 @@ tracks/2/keys = {
 }
 tracks/3/type = "value"
 tracks/3/imported = false
-tracks/3/enabled = false
+tracks/3/enabled = true
 tracks/3/path = NodePath("FIGHT!:scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
@@ -746,42 +628,6 @@ tracks/9/keys = {
 "update": 1,
 "values": [false]
 }
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("RoundCard:modulate")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(0, 1.5666667, 1.65),
-"transitions": PackedFloat32Array(0.2588163, 3.2707983e-05, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/11/type = "value"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("FIGHT!:theme_override_font_sizes/font_size")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
-"times": PackedFloat32Array(1.6653982, 1.7333333, 2.1666667, 2.2, 2.3166666),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 1,
-"values": [155, 265, 265, 245, 450]
-}
-tracks/12/type = "value"
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/path = NodePath("RoundCard:theme_override_font_sizes/font_size")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/keys = {
-"times": PackedFloat32Array(0, 0.18333334, 0.31666666, 0.9166667, 1.3333334, 1.4, 1.5166667, 1.6666666),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [115, 55, 100, 100, 100, 115, 115, 175]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4120v"]
 _data = {
@@ -795,7 +641,23 @@ _data = {
 &"RoundStart": SubResource("Animation_xjl2p")
 }
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hbc0h"]
+shader = ExtResource("9_jlnsx")
+shader_parameter/intensity = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1d11d"]
+shader = ExtResource("9_jlnsx")
+shader_parameter/intensity = 1.0
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1d2c4"]
+shader = ExtResource("9_jlnsx")
+shader_parameter/intensity = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_61c7y"]
+shader = ExtResource("9_jlnsx")
+shader_parameter/intensity = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_55pic"]
 shader = ExtResource("9_jlnsx")
 shader_parameter/intensity = 1.0
 
@@ -949,6 +811,7 @@ texture = ExtResource("3_4gmwt")
 expand_mode = 1
 
 [node name="P1Rounds" type="HBoxContainer" parent="GameHUD_Background/HealthBars" unique_id=1236664845]
+visible = false
 layout_mode = 0
 anchor_left = 0.5
 anchor_right = 0.5
@@ -1474,6 +1337,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 stretch = true
+metadata/_edit_lock_ = true
 
 [node name="Viewport_Foreground" type="SubViewport" parent="ViewportContainer" unique_id=1652349718]
 transparent_bg = true
@@ -1492,6 +1356,7 @@ near = 0.01
 
 [node name="GameHUD_Foreground" type="Control" parent="." unique_id=595347272 node_paths=PackedStringArray("P1Meter", "P2Meter", "P1TrainingInfo", "P2TrainingInfo", "P1InputHistory", "P2InputHistory")]
 process_priority = -1
+z_index = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -1505,6 +1370,7 @@ P1TrainingInfo = NodePath("TrainingInfo/P1Info/Information")
 P2TrainingInfo = NodePath("TrainingInfo/P2Info/Information")
 P1InputHistory = NodePath("InputHistory/P1InputHistory")
 P2InputHistory = NodePath("InputHistory/P2InputHistory")
+metadata/_edit_lock_ = true
 
 [node name="Meters" type="Control" parent="GameHUD_Foreground" unique_id=1096578342]
 anchors_preset = 0
@@ -1557,48 +1423,42 @@ tint_under = Color(0.509804, 0.509804, 0.509804, 1)
 tint_progress = Color(0.301961, 0.745098, 0.243137, 1)
 
 [node name="TrainingInfo" type="Control" parent="GameHUD_Foreground" unique_id=108050585]
+visible = false
 anchors_preset = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="P1Info" type="Control" parent="GameHUD_Foreground/TrainingInfo" unique_id=1092314173]
-layout_mode = 1
-anchors_preset = 5
+anchors_preset = 0
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -276.0
-offset_top = 157.0
-offset_right = -276.0
-offset_bottom = 157.0
-grow_horizontal = 2
+offset_left = -290.0
+offset_top = 130.0
+offset_right = -290.0
+offset_bottom = 130.0
 
-[node name="Background" type="TextureRect" parent="GameHUD_Foreground/TrainingInfo/P1Info" unique_id=1539971356]
-modulate = Color(1, 1, 1, 0.49019608)
-material = SubResource("ShaderMaterial_u4h4f")
+[node name="Background" type="ColorRect" parent="GameHUD_Foreground/TrainingInfo/P1Info" unique_id=812274031]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -10.0
-offset_top = -13.0
-offset_right = 161.0
+offset_right = 209.0
 offset_bottom = 156.0
 grow_horizontal = 0
 grow_vertical = 2
-texture = ExtResource("31_5dk36")
-expand_mode = 1
+color = Color(0, 0, 0, 0.501961)
 
 [node name="Descriptions" type="Label" parent="GameHUD_Foreground/TrainingInfo/P1Info" unique_id=1100564771]
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
-offset_left = 8.0
-offset_right = 132.0
+offset_left = 6.0
+offset_right = 123.0
 offset_bottom = 153.0
 grow_vertical = 2
-theme_override_constants/line_spacing = 6
+theme_override_constants/line_spacing = -6
 theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("11_pvqvx")
 theme_override_font_sizes/font_size = 16
@@ -1615,12 +1475,12 @@ anchors_preset = 11
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 111.0
-offset_right = 160.0
-offset_bottom = 156.0
+offset_left = 141.0
+offset_right = 205.0
+offset_bottom = 153.0
 grow_horizontal = 0
 grow_vertical = 2
-theme_override_constants/line_spacing = 6
+theme_override_constants/line_spacing = -6
 theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("11_pvqvx")
 text = "0
@@ -1630,44 +1490,37 @@ HIGH
 100
 0(+0)"
 
-[node name="P2Info" type="Control" parent="GameHUD_Foreground/TrainingInfo" unique_id=733970255]
-layout_mode = 1
-anchors_preset = 5
+[node name="P2Info" type="Control" parent="GameHUD_Foreground/TrainingInfo" unique_id=1297068344]
+anchors_preset = 0
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 120.0
-offset_top = 157.0
-offset_right = 120.0
-offset_bottom = 157.0
-grow_horizontal = 2
+offset_left = 100.0
+offset_top = 130.0
+offset_right = 100.0
+offset_bottom = 130.0
 
-[node name="Background" type="TextureRect" parent="GameHUD_Foreground/TrainingInfo/P2Info" unique_id=1099682951]
-modulate = Color(1, 1, 1, 0.49019608)
-material = SubResource("ShaderMaterial_u4h4f")
+[node name="Background" type="ColorRect" parent="GameHUD_Foreground/TrainingInfo/P2Info" unique_id=1521455846]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -10.0
-offset_top = -13.0
-offset_right = 161.0
+offset_right = 209.0
 offset_bottom = 156.0
 grow_horizontal = 0
 grow_vertical = 2
-texture = ExtResource("31_5dk36")
-expand_mode = 1
+color = Color(0, 0, 0, 0.501961)
 
-[node name="Descriptions" type="Label" parent="GameHUD_Foreground/TrainingInfo/P2Info" unique_id=881395175]
+[node name="Descriptions" type="Label" parent="GameHUD_Foreground/TrainingInfo/P2Info" unique_id=333085343]
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
-offset_left = 8.0
-offset_right = 132.0
+offset_left = 6.0
+offset_right = 123.0
 offset_bottom = 153.0
 grow_vertical = 2
-theme_override_constants/line_spacing = 6
+theme_override_constants/line_spacing = -6
 theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("11_pvqvx")
 theme_override_font_sizes/font_size = 16
@@ -1678,18 +1531,18 @@ HIT TYPE
 DAMAGE SCALE
 FRAME DATA"
 
-[node name="Information" type="Label" parent="GameHUD_Foreground/TrainingInfo/P2Info" unique_id=377179506]
+[node name="Information" type="Label" parent="GameHUD_Foreground/TrainingInfo/P2Info" unique_id=1961395200]
 layout_mode = 1
 anchors_preset = 11
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 111.0
-offset_right = 160.0
-offset_bottom = 156.0
+offset_left = 141.0
+offset_right = 205.0
+offset_bottom = 153.0
 grow_horizontal = 0
 grow_vertical = 2
-theme_override_constants/line_spacing = 6
+theme_override_constants/line_spacing = -6
 theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("11_pvqvx")
 text = "0
@@ -1700,12 +1553,11 @@ HIGH
 0(+0)"
 
 [node name="InputHistory" type="Control" parent="GameHUD_Foreground" unique_id=1672551536]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 126.0
-offset_bottom = 126.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -1879,6 +1731,7 @@ texture = ExtResource("37_5dk36")
 expand_mode = 1
 
 [node name="MatchCards" type="Control" parent="." unique_id=411599120 node_paths=PackedStringArray("animator", "RoundLabel", "KO_Label")]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -1891,8 +1744,6 @@ script = ExtResource("14_c0xn6")
 animator = NodePath("AnimationPlayer")
 RoundLabel = NodePath("RoundCard")
 KO_Label = NodePath("KO")
-RoundName = "CIPHER"
-KO_Names = PackedStringArray("END", "PERFECT END", "CROSSED END", "PERPETUAL END")
 Animations = Array[Object]([SubResource("Resource_4120v"), SubResource("Resource_hctok"), SubResource("Resource_t2vuu"), SubResource("Resource_lp1f3"), SubResource("Resource_p30di"), SubResource("Resource_8c81w"), SubResource("Resource_fi7j4")])
 metadata/_edit_use_anchors_ = true
 
@@ -1907,22 +1758,38 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -640.0
-offset_top = -338.0
-offset_right = 640.0
-offset_bottom = 387.0
+offset_left = -241.5
+offset_top = -147.0
+offset_right = 414.5
+offset_bottom = 345.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(18.892157, 18.892157, 18.892157, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/line_spacing = -40
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("11_pvqvx")
-theme_override_font_sizes/font_size = 100
-text = "CROSSED EXISTENCE
-  ANALYZE THE OTHER"
+pivot_offset = Vector2(328, 147)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 70
+text = "Insert some
+cool and poetic line
+here!"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MatchCards/CatchPhrase" unique_id=971599260]
+z_index = -1
+layout_mode = 0
+offset_left = 50.0
+offset_top = -22.0
+offset_right = 1330.0
+offset_bottom = 698.0
+texture = ExtResource("42_2qqlm")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="MatchCards/CatchPhrase/TextureRect" unique_id=808036330]
+material = SubResource("ShaderMaterial_hbc0h")
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("43_x3q7a")
+expand_mode = 1
 
 [node name="RoundCard" type="Label" parent="MatchCards" unique_id=1745501468]
 visible = false
@@ -1932,19 +1799,34 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -640.0
-offset_top = -338.0
-offset_right = 640.0
-offset_bottom = 382.0
+offset_left = 660.0
+offset_top = -60.0
+offset_right = 1077.9999
+offset_bottom = 77.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(209, 68.5)
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("11_pvqvx")
-theme_override_font_sizes/font_size = 115
-text = "CIPHER N"
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 80
+text = "Round N"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MatchCards/RoundCard" unique_id=1737974356]
+z_index = -1
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("44_04huj")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="MatchCards/RoundCard/TextureRect" unique_id=1246240067]
+material = SubResource("ShaderMaterial_1d11d")
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("45_7eroh")
+expand_mode = 1
 
 [node name="FIGHT!" type="Label" parent="MatchCards" unique_id=1073739411]
 visible = false
@@ -1954,46 +1836,18 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -640.0
-offset_top = -330.0
-offset_right = 640.0
-offset_bottom = 390.0
+offset_left = -209.0
+offset_top = -68.5
+offset_right = 209.0
+offset_bottom = 68.5
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(209, 68.5)
-theme_override_constants/line_spacing = 0
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("11_pvqvx")
-theme_override_font_sizes/font_size = 265
-text = "ANATOMIZE"
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 100
+text = "FIGHT!"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="CatchphraseOutline" type="TextureRect" parent="MatchCards/FIGHT!" unique_id=730527066]
-z_index = -1
-layout_mode = 0
-offset_top = -30.0
-offset_right = 1023.991
-offset_bottom = 546.0108
-scale = Vector2(1.250011, 1.2499765)
-texture = ExtResource("42_j4fo4")
-expand_mode = 1
-
-[node name="Overlay" type="TextureRect" parent="MatchCards/FIGHT!/CatchphraseOutline" unique_id=199947200]
-material = SubResource("ShaderMaterial_1d2c4")
-layout_mode = 0
-offset_right = 1023.991
-offset_bottom = 576.0108
-texture = ExtResource("43_kjwl2")
-expand_mode = 1
-
-[node name="Shadow" type="TextureRect" parent="MatchCards/FIGHT!/CatchphraseOutline" unique_id=1302747887]
-modulate = Color(1, 1, 1, 0.63000005)
-layout_mode = 0
-offset_right = 1023.991
-offset_bottom = 576.0108
-texture = ExtResource("44_8vqcr")
-expand_mode = 1
 
 [node name="KO" type="Label" parent="MatchCards" unique_id=228166061]
 visible = false
@@ -2005,14 +1859,13 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -960.0
 offset_top = -60.0
-offset_right = -542.0005
+offset_right = -542.00037
 offset_bottom = 77.00012
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(209, 68.5)
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("11_pvqvx")
-theme_override_font_sizes/font_size = 115
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 100
 text = "K.O."
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -2026,16 +1879,15 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -190.0
-offset_top = -260.0
+offset_top = -60.0
 offset_right = 228.00098
-offset_bottom = -122.99951
+offset_bottom = 77.00055
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(209, 68.5)
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("11_pvqvx")
-theme_override_font_sizes/font_size = 115
-text = "DRAW"
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 80
+text = "Draw..."
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -2045,16 +1897,13 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_top = -360.0
-offset_right = 1280.0
-offset_bottom = 360.0
+offset_top = -60.0
+offset_right = 418.0
+offset_bottom = 77.0
 grow_vertical = 2
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("11_pvqvx")
-theme_override_font_sizes/font_size = 115
-text = "P1 VICTORY"
-horizontal_alignment = 1
-vertical_alignment = 1
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 60
+text = "P1 Win!"
 
 [node name="P2Win" type="Label" parent="MatchCards" unique_id=981754637]
 visible = false
@@ -2064,18 +1913,17 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -1280.0
-offset_top = -360.0
-offset_bottom = 360.0
+offset_left = -190.0
+offset_top = -60.0
+offset_right = 227.99963
+offset_bottom = 76.99994
 grow_horizontal = 0
 grow_vertical = 2
 pivot_offset = Vector2(418, 0)
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("11_pvqvx")
-theme_override_font_sizes/font_size = 115
-text = "P2 VICTORY"
-horizontal_alignment = 1
-vertical_alignment = 1
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 60
+text = "P2 Win!"
+horizontal_alignment = 2
 
 [node name="SoundQueue" type="AudioStreamPlayer3D" parent="MatchCards" unique_id=537292548]
 bus = &"Announcer"
@@ -2091,14 +1939,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="ResultsScreen" unique_id=813076439]
+[node name="ColorRect" type="TextureRect" parent="ResultsScreen" unique_id=1386084967]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0.20392157)
+texture = ExtResource("50_1d11d")
+expand_mode = 1
 
 [node name="Title" type="Label" parent="ResultsScreen" unique_id=1032263509]
 layout_mode = 1
@@ -2115,32 +1964,72 @@ horizontal_alignment = 1
 vertical_alignment = 2
 
 [node name="VictoryMessage" type="Label" parent="ResultsScreen" unique_id=419266798]
+z_index = 1
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -162.0
+offset_left = 330.0
+offset_top = -195.0
+offset_right = -332.0
+offset_bottom = -41.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_font_sizes/font_size = 24
-text = "Victory is mine hehe!"
-horizontal_alignment = 1
-vertical_alignment = 1
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("11_pvqvx")
+theme_override_font_sizes/font_size = 30
+text = "Honestly, today's been the absolute worst... That stupid Bunmei..."
+
+[node name="VictoryTextbox" type="TextureRect" parent="ResultsScreen" unique_id=1529871652]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("51_r0jj3")
+expand_mode = 1
+
+[node name="VictoryOverlay" type="TextureRect" parent="ResultsScreen/VictoryTextbox" unique_id=930039087]
+material = SubResource("ShaderMaterial_61c7y")
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("52_3cpxk")
+expand_mode = 1
+
+[node name="P1Selectbox" type="TextureRect" parent="ResultsScreen" unique_id=14959965]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("53_o2mcx")
+expand_mode = 1
+
+[node name="P2Selectbox" type="TextureRect" parent="ResultsScreen" unique_id=243119387]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("54_1kg8m")
+expand_mode = 1
 
 [node name="WinBannerP1" type="Control" parent="ResultsScreen" unique_id=1910856377]
+visible = false
+z_index = 1
+material = SubResource("ShaderMaterial_55pic")
 layout_mode = 1
 anchors_preset = 0
 
 [node name="Winner" type="Label" parent="ResultsScreen/WinBannerP1" unique_id=1715785789]
 layout_mode = 0
-offset_right = 214.0
-offset_bottom = 69.0
-theme_override_font_sizes/font_size = 50
-text = "PLAYER 1 WIN!"
-vertical_alignment = 2
+offset_left = 3.0
+offset_top = 70.0
+offset_right = 1259.0
+offset_bottom = 472.0
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("11_pvqvx")
+theme_override_font_sizes/font_size = 375
+text = "P1 VICTORY"
 
 [node name="NamePlayer1" type="Label" parent="ResultsScreen/WinBannerP1" unique_id=386612944]
+visible = false
 layout_mode = 0
 offset_top = 58.0
 offset_right = 640.0
@@ -2149,6 +2038,7 @@ theme_override_font_sizes/font_size = 40
 text = "Player 1 name"
 
 [node name="WinBannerP2" type="Control" parent="ResultsScreen" unique_id=682353987]
+visible = false
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -2178,6 +2068,7 @@ horizontal_alignment = 2
 
 [node name="FadeScreen" type="ColorRect" parent="." unique_id=1110242483]
 visible = false
+z_index = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://bywe24avrpvs"]
+
+[ext_resource type="Shader" uid="uid://b27qdxlyhpsti" path="res://Shaders/Overlay.gdshader" id="1_om5me"]
+
+[resource]
+resource_local_to_scene = true
+shader = ExtResource("1_om5me")
+shader_parameter/intensity = 1.0

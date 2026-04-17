@@ -5,19 +5,6 @@
 [ext_resource type="AudioStream" uid="uid://b7ko61ulearbo" path="res://Songs/Opened Eyes.ogg" id="3_8saeu"]
 [ext_resource type="FontFile" uid="uid://cu0i5xdymo0ou" path="res://Tw Cen MT Condensed Medium.ttf" id="3_ghw46"]
 [ext_resource type="Texture2D" uid="uid://ca1o72kpm244v" path="res://Backgrounds/BlankBackground.png" id="5_df05h"]
-[ext_resource type="Shader" uid="uid://b27qdxlyhpsti" path="res://Shaders/Overlay.gdshader" id="5_loo7a"]
-[ext_resource type="Texture2D" uid="uid://c1hvwaimshwy2" path="res://Sprites/Keyboard1.png" id="6_if7li"]
-[ext_resource type="Texture2D" uid="uid://2o14nodmbf64" path="res://Sprites/Keyboard2.png" id="7_rrcx7"]
-[ext_resource type="Texture2D" uid="uid://3y7g2u58ux53" path="res://Sprites/Controller1.png" id="8_fh7cp"]
-[ext_resource type="Texture2D" uid="uid://bbe5bso3kl75w" path="res://Sprites/Controller2.png" id="9_8e205"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_7467j"]
-shader = ExtResource("5_loo7a")
-shader_parameter/intensity = 1.0
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_2x1g0"]
-shader = ExtResource("5_loo7a")
-shader_parameter/intensity = 1.0
 
 [node name="Control" type="Control" unique_id=626625648 node_paths=PackedStringArray("firstButton", "InputSelectMenu", "DeviceWidgetKeyboard1", "DeviceWidgetKeyboard2", "DeviceWidgetController1", "DeviceWidgetController2", "PivotP1", "PivotP2")]
 layout_mode = 3
@@ -152,52 +139,47 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Background" type="TextureRect" parent="InputSelection" unique_id=2069799207]
-z_index = 1
+[node name="Background" type="ColorRect" parent="InputSelection" unique_id=453892159]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("5_df05h")
-expand_mode = 1
+color = Color(0, 0, 0, 0.20392157)
 
 [node name="P1Back" type="ColorRect" parent="InputSelection" unique_id=1972324897]
-z_index = 1
-material = SubResource("ShaderMaterial_7467j")
+visible = false
 layout_mode = 0
-offset_left = 650.00006
-offset_top = -682.00006
-offset_right = 1435.0
-offset_bottom = 770.4229
-rotation = 0.7853982
-color = Color(0, 0, 0, 0.6666667)
+offset_left = -408.0
+offset_top = -420.0
+offset_right = 378.0
+offset_bottom = 1032.4231
+rotation = 0.43633232
+color = Color(0, 0, 0, 1)
 
 [node name="P2Back" type="ColorRect" parent="InputSelection" unique_id=1003816493]
-z_index = 1
-material = SubResource("ShaderMaterial_2x1g0")
+visible = false
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -74.99988
-offset_top = -126.99997
-offset_right = 711.00024
-offset_bottom = 1325.4231
+offset_left = -320.00024
+offset_top = -93.999985
+offset_right = 465.99976
+offset_bottom = 1358.4231
 grow_horizontal = 0
-rotation = 0.7853982
-color = Color(0, 0, 0, 0.6666667)
+rotation = -0.43633232
+color = Color(0, 0, 0, 1)
 
 [node name="P1Selecting" type="Control" parent="InputSelection" unique_id=1710169629]
 visible = false
-z_index = 2
 anchors_preset = 0
 offset_right = 194.0
 offset_bottom = 75.0
 
 [node name="ColorRect" type="ColorRect" parent="InputSelection/P1Selecting" unique_id=1258181165]
-z_index = 2
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -249,20 +231,16 @@ text = "Player 2"
 horizontal_alignment = 2
 
 [node name="Label" type="Label" parent="InputSelection" unique_id=2031921082]
-z_index = 1
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -288.0
-offset_top = 108.0
-offset_right = 289.0
-offset_bottom = 232.0
+offset_left = -228.0
+offset_right = 229.0
+offset_bottom = 110.0
 grow_horizontal = 2
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("3_ghw46")
-theme_override_font_sizes/font_size = 115
-text = "INPUT SELECTION"
+theme_override_font_sizes/font_size = 80
+text = "Input Select"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -290,7 +268,6 @@ grow_horizontal = 0
 grow_vertical = 2
 
 [node name="Widget_Key1" type="Control" parent="InputSelection" unique_id=1577511075]
-z_index = 1
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -298,16 +275,16 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -297.40002
-offset_top = -121.5
+offset_top = 1.5
 offset_right = 40.599976
-offset_bottom = 68.5
+offset_bottom = 191.5
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.7, 0.7)
 pivot_offset = Vector2(169, 95)
 metadata/_edit_group_ = true
 
-[node name="ColorRect" type="TextureRect" parent="InputSelection/Widget_Key1" unique_id=1792787167]
+[node name="ColorRect" type="ColorRect" parent="InputSelection/Widget_Key1" unique_id=1540166261]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -320,11 +297,9 @@ offset_right = 161.0
 offset_bottom = 84.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("6_if7li")
-expand_mode = 1
+color = Color(0.3180198, 0.31801978, 0.31801975, 1)
 
 [node name="Label" type="Label" parent="InputSelection/Widget_Key1" unique_id=695895268]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -344,7 +319,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Widget_Key2" type="Control" parent="InputSelection" unique_id=1277435886]
-z_index = 1
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -352,16 +326,16 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -54.700012
-offset_top = -120.99994
+offset_top = 7.5
 offset_right = 283.30005
-offset_bottom = 69.00006
+offset_bottom = 197.5
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.7, 0.7)
 pivot_offset = Vector2(169, 95)
 metadata/_edit_group_ = true
 
-[node name="ColorRect" type="TextureRect" parent="InputSelection/Widget_Key2" unique_id=720485995]
+[node name="ColorRect" type="ColorRect" parent="InputSelection/Widget_Key2" unique_id=1138968402]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -374,11 +348,9 @@ offset_right = 161.0
 offset_bottom = 84.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("7_rrcx7")
-expand_mode = 1
+color = Color(0.3180198, 0.31801978, 0.31801975, 1)
 
 [node name="Label" type="Label" parent="InputSelection/Widget_Key2" unique_id=299980597]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -398,24 +370,23 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Widget_Joy1" type="Control" parent="InputSelection" unique_id=233987095]
-z_index = 1
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -297.99997
-offset_top = -4.0
-offset_right = 40.000122
-offset_bottom = 186.0
+offset_left = -302.7
+offset_top = 151.0
+offset_right = 35.30005
+offset_bottom = 341.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.7, 0.7)
 pivot_offset = Vector2(169, 95)
 metadata/_edit_group_ = true
 
-[node name="ColorRect" type="TextureRect" parent="InputSelection/Widget_Joy1" unique_id=1057486360]
+[node name="ColorRect" type="ColorRect" parent="InputSelection/Widget_Joy1" unique_id=61810047]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -428,11 +399,9 @@ offset_right = 161.0
 offset_bottom = 84.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("8_fh7cp")
-expand_mode = 1
+color = Color(0.3180198, 0.31801978, 0.31801975, 1)
 
 [node name="Label" type="Label" parent="InputSelection/Widget_Joy1" unique_id=1082274651]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -452,24 +421,23 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Widget_Joy2" type="Control" parent="InputSelection" unique_id=374408097]
-z_index = 1
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -55.0
-offset_top = -4.0
-offset_right = 283.0
-offset_bottom = 186.0
+offset_left = -52.0
+offset_top = 146.0
+offset_right = 286.0
+offset_bottom = 336.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.7, 0.7)
 pivot_offset = Vector2(169, 95)
 metadata/_edit_group_ = true
 
-[node name="ColorRect" type="TextureRect" parent="InputSelection/Widget_Joy2" unique_id=473116872]
+[node name="ColorRect" type="ColorRect" parent="InputSelection/Widget_Joy2" unique_id=621129536]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -482,11 +450,9 @@ offset_right = 161.0
 offset_bottom = 84.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("9_8e205")
-expand_mode = 1
+color = Color(0.3180198, 0.31801978, 0.31801975, 1)
 
 [node name="Label" type="Label" parent="InputSelection/Widget_Joy2" unique_id=840008495]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
