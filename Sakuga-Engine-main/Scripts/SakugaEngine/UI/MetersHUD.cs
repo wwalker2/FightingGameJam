@@ -6,20 +6,10 @@ namespace SakugaEngine.UI
 	{
 		[Export] private TextureProgressBar P1Meter;
 		[Export] private TextureProgressBar P2Meter;
-		[Export] private TextureProgressBar P1Charge;
-		[Export] private TextureProgressBar P2Charge;
 		[Export] private Label P1TrainingInfo;
 		[Export] private Label P2TrainingInfo;
 		[Export] private InputHistory P1InputHistory;
 		[Export] private InputHistory P2InputHistory;
-
-		[ExportCategory("References")]
-		// P1 Charge Gauge
-		[Export] private Texture2D P1ChargeChargeTexture;
-		[Export] private Texture2D P1ChargeFullTexture;
-		// P2 Charge Gauge
-		[Export] private Texture2D P2ChargeChargeTexture;
-		[Export] private Texture2D P2ChargeFullTexture;
 
 		private int CurrentFrameAdvantage;
 
@@ -41,24 +31,7 @@ namespace SakugaEngine.UI
 		{
 			P1Meter.Value = fighters[0].Variables.CurrentSuperGauge;
 			P2Meter.Value = fighters[1].Variables.CurrentSuperGauge;
-			
-			// Extra gauge
-			int Charge1Value = fighters[0].Variables.ExtraVariables[4].CurrentValue;
-			int Charge2Value = fighters[1].Variables.ExtraVariables[4].CurrentValue;
-			
-			if (Charge1Value < fighters[0].Variables.ExtraVariables[4].MaxValue)
-				P1Charge.TextureProgress = P1ChargeChargeTexture;
-			else if (Charge1Value >= fighters[0].Variables.ExtraVariables[4].MaxValue)
-				P1Charge.TextureProgress = P1ChargeFullTexture;
-				
-			if (Charge2Value < fighters[1].Variables.ExtraVariables[4].MaxValue)
-				P2Charge.TextureProgress = P2ChargeChargeTexture;
-			else if (Charge2Value >= fighters[1].Variables.ExtraVariables[4].MaxValue)
-				P2Charge.TextureProgress = P2ChargeFullTexture;
-			
-			P1Charge.Value = Charge1Value;
-			P2Charge.Value = Charge2Value;
-			
+
 			GetFrameAdvantage(fighters);
 
 			P1InputHistory.SetHistoryList(fighters[0].Inputs);

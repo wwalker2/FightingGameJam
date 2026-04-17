@@ -3,26 +3,18 @@
 [ext_resource type="Script" uid="uid://cfclgt0r2avr4" path="res://Scripts/SakugaEngine/UI/HealthHUD.cs" id="1_ulr1j"]
 [ext_resource type="Texture2D" uid="uid://c13mh0o2apclt" path="res://Sprites/BattleUI/TestPortrait1.png" id="2_2sb4q"]
 [ext_resource type="Texture2D" uid="uid://6ctweo6uvot8" path="res://icon.svg" id="2_h5vba"]
-[ext_resource type="Texture2D" uid="uid://dkttnwbey72g7" path="res://Sprites/BattleUI/P1BurstCharge1.png" id="2_o2mcx"]
-[ext_resource type="Texture2D" uid="uid://c0qtae38tqe72" path="res://Sprites/BattleUI/P1Burst1.png" id="3_1kg8m"]
 [ext_resource type="Texture2D" uid="uid://b0ulyflt7kjrl" path="res://Sprites/BattleUI/UpperHUDnoVictory.png" id="3_4gmwt"]
 [ext_resource type="Texture2D" uid="uid://cxt5aw4o4fy4r" path="res://Sprites/BattleUI/P1LostHealthBar.png" id="3_eoegb"]
-[ext_resource type="Texture2D" uid="uid://cueiyef3kgwft" path="res://Sprites/BattleUI/P1BurstCharge2.png" id="4_1kg8m"]
 [ext_resource type="Script" uid="uid://drp1aulrijkrn" path="res://Scripts/SakugaEngine/UI/RoundsCounter.cs" id="4_588f4"]
 [ext_resource type="Texture2D" uid="uid://chmxh383bvlus" path="res://Sprites/BattleUI/P2LostHealthBar.png" id="4_e234u"]
 [ext_resource type="Script" uid="uid://g6vbpbaj5xi6" path="res://Scripts/SakugaEngine/UI/OnlineInfo.cs" id="5_1n2tl"]
 [ext_resource type="Texture2D" uid="uid://dmx4hgnynim26" path="res://Sprites/BattleUI/P2HealthBar.png" id="5_3ks5t"]
-[ext_resource type="Texture2D" uid="uid://c42lhs7bewcn5" path="res://Sprites/BattleUI/P2BurstCharge1.png" id="5_e5kcm"]
 [ext_resource type="Script" uid="uid://bu3dc4gatmgm1" path="res://Scripts/SakugaEngine/UI/ComboCounter.cs" id="5_f6x8r"]
 [ext_resource type="Texture2D" uid="uid://df50nf7a0i58" path="res://Sprites/LobbyIcons/lobbyicons_platform_pc.png" id="5_j3lw1"]
-[ext_resource type="Texture2D" uid="uid://lgbvf4di3scx" path="res://Sprites/BattleUI/P1Burst2.png" id="5_r0jj3"]
-[ext_resource type="Texture2D" uid="uid://b5lp1cxdutfp3" path="res://Sprites/BattleUI/P2Burst1.png" id="6_hycwv"]
 [ext_resource type="Script" uid="uid://bxtx4t4kufbsq" path="res://Scripts/SakugaEngine/UI/MetersHUD.cs" id="6_m7ri4"]
 [ext_resource type="Texture2D" uid="uid://0vthev3fa841" path="res://Sprites/meter_sprite.png" id="7_6huh3"]
-[ext_resource type="Texture2D" uid="uid://c7qwtmv8ff6hj" path="res://Sprites/BattleUI/P2BurstCharge2.png" id="7_x8602"]
 [ext_resource type="Texture2D" uid="uid://45s2tu2njgo" path="res://Sprites/BattleUI/HealthBurstOverlayBacking.png" id="8_eoegb"]
 [ext_resource type="Texture2D" uid="uid://cirlpf1j23vao" path="res://Sprites/meter_sprite_fill.png" id="8_vbhb2"]
-[ext_resource type="Texture2D" uid="uid://cav4m3moo7bti" path="res://Sprites/BattleUI/P2Burst2.png" id="8_wtead"]
 [ext_resource type="Texture2D" uid="uid://61qcrhgx1enj" path="res://Sprites/BattleUI/RoundCountColor.png" id="9_5bfld"]
 [ext_resource type="Texture2D" uid="uid://swumr1huopk1" path="res://Sprites/BattleUI/TimerBackgroundA.png" id="9_e234u"]
 [ext_resource type="Shader" uid="uid://b27qdxlyhpsti" path="res://Shaders/Overlay.gdshader" id="9_jlnsx"]
@@ -52,10 +44,6 @@
 [ext_resource type="Texture2D" uid="uid://rn8m4751t1kk" path="res://Sprites/BlackBox.png" id="31_5dk36"]
 [ext_resource type="Texture2D" uid="uid://cu7icuvt8okfm" path="res://Sprites/BattleUI/BottomHUDnoBacking.png" id="36_xjri1"]
 [ext_resource type="Texture2D" uid="uid://cec3jm1woi6mq" path="res://Sprites/BattleUI/BottomHUDShadow.png" id="37_5dk36"]
-[ext_resource type="Texture2D" uid="uid://dls0os6ppokil" path="res://Sprites/BattleUI/P1ChargeCharge.png" id="37_5muor"]
-[ext_resource type="Texture2D" uid="uid://cuxjleegvhdmp" path="res://Sprites/BattleUI/P1ChargeGauge.png" id="38_ripqy"]
-[ext_resource type="Texture2D" uid="uid://chamv8lwl4fkf" path="res://Sprites/BattleUI/P2ChargeCharge.png" id="39_fmcmb"]
-[ext_resource type="Texture2D" uid="uid://b1p4pvf2llyxo" path="res://Sprites/BattleUI/P2ChargeGauge.png" id="40_ormvx"]
 [ext_resource type="Texture2D" uid="uid://dk3mah72vbmyu" path="res://Sprites/BattleUI/RoundStart&End/PreambleOutline.png" id="42_2qqlm"]
 [ext_resource type="Texture2D" uid="uid://7dvv7bbyt0sj" path="res://Sprites/BattleUI/RoundStart&End/CatchphraseOutline.png" id="42_j4fo4"]
 [ext_resource type="Texture2D" uid="uid://c4q71vjrs3yn7" path="res://Sprites/BattleUI/RoundStart&End/CatchphraseOverlay.png" id="43_kjwl2"]
@@ -71,9 +59,6 @@
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5bfld"]
 load_path = "res://.godot/imported/P1HealthBar.png-3bb259bd036ce5a542e173d15e0b7751.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3cpxk"]
-load_path = "res://.godot/imported/P1Burst1.png-20dfc71b88e16b5d447580a66e7228c0.ctex"
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6coeq"]
 shader = ExtResource("9_jlnsx")
@@ -308,7 +293,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.31666666, 0.85, 0.8833333, 1),
 "transitions": PackedFloat32Array(0.61557275, 1e-05, 1, 1, 1),
 "update": 0,
-"values": [Vector2(425, 100), Vector2(425, 250), Vector2(425, 250), Vector2(425, 300), Vector2(425, 500)]
+"values": [Vector2(450, 100), Vector2(450, 300), Vector2(450, 300), Vector2(450, 300), Vector2(450, 500)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -329,7 +314,7 @@ length = 1.6666684
 step = 0.016666668
 tracks/0/type = "value"
 tracks/0/imported = false
-tracks/0/enabled = true
+tracks/0/enabled = false
 tracks/0/path = NodePath("KO:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
@@ -341,7 +326,7 @@ tracks/0/keys = {
 }
 tracks/1/type = "value"
 tracks/1/imported = false
-tracks/1/enabled = true
+tracks/1/enabled = false
 tracks/1/path = NodePath("KO:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
@@ -951,7 +936,7 @@ shader_parameter/intensity = 1.0
 metadata/_edit_horizontal_guides_ = [13.0]
 metadata/_edit_vertical_guides_ = [185.0]
 
-[node name="GameHUD_Background" type="Control" parent="." unique_id=1728610067 node_paths=PackedStringArray("P1Portrait", "P1Health", "P1LostHealth", "P1Burst1", "P1Burst2", "P1Rounds", "P1Combo", "P1Name", "P2Portrait", "P2Health", "P2LostHealth", "P2Burst1", "P2Burst2", "P2Rounds", "P2Combo", "P2Name", "Timer", "P1Debug", "P2Debug")]
+[node name="GameHUD_Background" type="Control" parent="." unique_id=1728610067 node_paths=PackedStringArray("P1Portrait", "P1Health", "P1LostHealth", "P1Rounds", "P1Combo", "P1Name", "P2Portrait", "P2Health", "P2LostHealth", "P2Rounds", "P2Combo", "P2Name", "Timer", "P1Debug", "P2Debug")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -962,30 +947,18 @@ script = ExtResource("1_ulr1j")
 P1Portrait = NodePath("HealthBars/P1Portrait")
 P1Health = NodePath("HealthBars/P1Health")
 P1LostHealth = NodePath("HealthBars/P1LostHealth")
-P1Burst1 = NodePath("HealthBars/P1Burst1")
-P1Burst2 = NodePath("HealthBars/P1Burst2")
 P1Rounds = NodePath("HealthBars/P1Rounds")
 P1Combo = NodePath("ComboCounters/P1ComboCounter")
 P1Name = NodePath("HealthBars/P1Name")
 P2Portrait = NodePath("HealthBars/P2Portrait")
 P2Health = NodePath("HealthBars/P2Health")
 P2LostHealth = NodePath("HealthBars/P2LostHealth")
-P2Burst1 = NodePath("HealthBars/P2Burst1")
-P2Burst2 = NodePath("HealthBars/P2Burst2")
 P2Rounds = NodePath("HealthBars/P2Rounds")
 P2Combo = NodePath("ComboCounters/P2ComboCounter")
 P2Name = NodePath("HealthBars/P2Name")
 Timer = NodePath("HealthBars/Timer")
 P1Debug = NodePath("../Debug/P1Debug")
 P2Debug = NodePath("../Debug/P2Debug")
-P1BurstChargeTexture1 = ExtResource("2_o2mcx")
-P1BurstFullTexture1 = ExtResource("5_r0jj3")
-P1BurstChargeTexture2 = ExtResource("4_1kg8m")
-P1BurstFullTexture2 = ExtResource("5_r0jj3")
-P2BurstChargeTexture1 = ExtResource("5_e5kcm")
-P2BurstFullTexture1 = ExtResource("6_hycwv")
-P2BurstChargeTexture2 = ExtResource("7_x8602")
-P2BurstFullTexture2 = ExtResource("8_wtead")
 
 [node name="HealthBars" type="Control" parent="GameHUD_Background" unique_id=1101058686]
 anchors_preset = 0
@@ -1079,88 +1052,6 @@ max_value = 10000.0
 step = 0.0
 value = 10000.0
 texture_progress = ExtResource("4_e234u")
-tint_under = Color(1, 1, 1, 0)
-tint_over = Color(1, 1, 1, 0)
-
-[node name="P1Burst1" type="TextureProgressBar" parent="GameHUD_Background/HealthBars" unique_id=2037104811]
-z_index = -1
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 422.3
-offset_top = 129.7
-offset_right = -297.7
-offset_bottom = 208.7
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.167, 0.169)
-max_value = 5000.0
-step = 0.0
-value = 5000.0
-fill_mode = 1
-texture_progress = SubResource("CompressedTexture2D_3cpxk")
-tint_under = Color(1, 1, 1, 0)
-tint_over = Color(1, 1, 1, 0)
-
-[node name="P1Burst2" type="TextureProgressBar" parent="GameHUD_Background/HealthBars" unique_id=965002127]
-z_index = -1
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 321.5
-offset_top = 129.5
-offset_right = -398.5
-offset_bottom = 208.5
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.167, 0.169)
-min_value = 5000.0
-max_value = 10000.0
-step = 0.0
-value = 10000.0
-fill_mode = 1
-texture_progress = ExtResource("5_r0jj3")
-tint_under = Color(1, 1, 1, 0)
-tint_over = Color(1, 1, 1, 0)
-
-[node name="P2Burst1" type="TextureProgressBar" parent="GameHUD_Background/HealthBars" unique_id=1809799754]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 760.0
-offset_top = 129.8
-offset_right = 40.0
-offset_bottom = 208.8
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.167, 0.168)
-max_value = 5000.0
-step = 0.0
-value = 5000.0
-texture_progress = ExtResource("3_1kg8m")
-tint_under = Color(1, 1, 1, 0)
-tint_over = Color(1, 1, 1, 0)
-
-[node name="P2Burst2" type="TextureProgressBar" parent="GameHUD_Background/HealthBars" unique_id=268420196]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 860.6
-offset_top = 129.7
-offset_right = 140.59998
-offset_bottom = 208.7
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.167, 0.168)
-min_value = 5000.0
-max_value = 10000.0
-step = 0.0
-value = 10000.0
-texture_progress = ExtResource("5_r0jj3")
 tint_under = Color(1, 1, 1, 0)
 tint_over = Color(1, 1, 1, 0)
 
@@ -1733,7 +1624,7 @@ cull_mask = 18
 fov = 45.0
 near = 0.01
 
-[node name="GameHUD_Foreground" type="Control" parent="." unique_id=595347272 node_paths=PackedStringArray("P1Meter", "P2Meter", "P1Charge", "P2Charge", "P1TrainingInfo", "P2TrainingInfo", "P1InputHistory", "P2InputHistory")]
+[node name="GameHUD_Foreground" type="Control" parent="." unique_id=595347272 node_paths=PackedStringArray("P1Meter", "P2Meter", "P1TrainingInfo", "P2TrainingInfo", "P1InputHistory", "P2InputHistory")]
 process_priority = -1
 z_index = 1
 layout_mode = 3
@@ -1745,16 +1636,10 @@ grow_vertical = 2
 script = ExtResource("6_m7ri4")
 P1Meter = NodePath("Meters/P1Meter")
 P2Meter = NodePath("Meters/P2Meter")
-P1Charge = NodePath("Meters/P1Charge")
-P2Charge = NodePath("Meters/P2Charge")
 P1TrainingInfo = NodePath("TrainingInfo/P1Info/Information")
 P2TrainingInfo = NodePath("TrainingInfo/P2Info/Information")
 P1InputHistory = NodePath("InputHistory/P1InputHistory")
 P2InputHistory = NodePath("InputHistory/P2InputHistory")
-P1ChargeChargeTexture = ExtResource("37_5muor")
-P1ChargeFullTexture = ExtResource("38_ripqy")
-P2ChargeChargeTexture = ExtResource("39_fmcmb")
-P2ChargeFullTexture = ExtResource("40_ormvx")
 
 [node name="Meters" type="Control" parent="GameHUD_Foreground" unique_id=1096578342]
 anchors_preset = 0
@@ -1782,43 +1667,6 @@ texture_under = ExtResource("7_6huh3")
 texture_progress = ExtResource("8_vbhb2")
 tint_under = Color(0.509804, 0.509804, 0.509804, 1)
 tint_progress = Color(0.301961, 0.745098, 0.243137, 1)
-
-[node name="P1Charge" type="TextureProgressBar" parent="GameHUD_Foreground/Meters" unique_id=267912591]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -620.5
-offset_top = -40.0
-offset_right = 1564.5
-offset_bottom = 123.0
-grow_horizontal = 2
-grow_vertical = 0
-scale = Vector2(0.16667056, 0.1668051)
-max_value = 10000.0
-step = 0.0
-fill_mode = 1
-texture_progress = ExtResource("38_ripqy")
-
-[node name="P2Charge" type="TextureProgressBar" parent="GameHUD_Foreground/Meters" unique_id=1837431659]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = 256.3
-offset_top = -40.0
-offset_right = 2441.3
-offset_bottom = 123.0
-grow_horizontal = 2
-grow_vertical = 0
-scale = Vector2(0.16667056, 0.1668051)
-max_value = 10000.0
-step = 0.0
-texture_progress = ExtResource("40_ormvx")
 
 [node name="P2Meter" type="TextureProgressBar" parent="GameHUD_Foreground/Meters" unique_id=1631360117]
 visible = false
@@ -1987,7 +1835,6 @@ HIGH
 0(+0)"
 
 [node name="InputHistory" type="Control" parent="GameHUD_Foreground" unique_id=1672551536]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -2325,9 +2172,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 560.0
+offset_left = -960.0
 offset_top = -60.0
-offset_right = 977.99854
+offset_right = -542.0016
 offset_bottom = 155.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -2349,8 +2196,8 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -190.0
 offset_top = -60.091003
-offset_right = 237.00012
-offset_bottom = 207.90985
+offset_right = 237.0
+offset_bottom = 207.90936
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(209, 68.5)

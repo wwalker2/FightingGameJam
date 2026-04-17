@@ -9,8 +9,6 @@ namespace SakugaEngine.UI
 		[Export] private TextureRect P1Portrait;
 		[Export] private TextureProgressBar P1Health;
 		[Export] private TextureProgressBar P1LostHealth;
-		[Export] private TextureProgressBar P1Burst1;
-		[Export] private TextureProgressBar P1Burst2;
 		[Export] private RoundsCounter P1Rounds;
 		[Export] private ComboCounter P1Combo;
 		[Export] private Label P1Name;
@@ -19,8 +17,6 @@ namespace SakugaEngine.UI
 		[Export] private TextureRect P2Portrait;
 		[Export] private TextureProgressBar P2Health;
 		[Export] private TextureProgressBar P2LostHealth;
-		[Export] private TextureProgressBar P2Burst1;
-		[Export] private TextureProgressBar P2Burst2;
 		[Export] private RoundsCounter P2Rounds;
 		[Export] private ComboCounter P2Combo;
 		[Export] private Label P2Name;
@@ -29,18 +25,6 @@ namespace SakugaEngine.UI
 		[Export] private Label Timer;
 		[Export] private Label P1Debug;
 		[Export] private Label P2Debug;
-		
-		[ExportCategory("References")]
-		// P1 Burst Gauge
-		[Export] private Texture2D P1BurstChargeTexture1;
-		[Export] private Texture2D P1BurstFullTexture1;
-		[Export] private Texture2D P1BurstChargeTexture2;
-		[Export] private Texture2D P1BurstFullTexture2;
-		// P2 Burst Gauge
-		[Export] private Texture2D P2BurstChargeTexture1;
-		[Export] private Texture2D P2BurstFullTexture1;
-		[Export] private Texture2D P2BurstChargeTexture2;
-		[Export] private Texture2D P2BurstFullTexture2;
 
 		public void Setup(SakugaFighter[] fighters)
 		{
@@ -69,37 +53,6 @@ namespace SakugaEngine.UI
 			P2Health.Value = fighters[1].Variables.CurrentHealth;
 			P1LostHealth.Value = fighters[0].FighterVars.LostHealth;
 			P2LostHealth.Value = fighters[1].FighterVars.LostHealth;
-
-			// Extra gauge
-			int Burst1Value = fighters[0].Variables.ExtraVariables[3].CurrentValue;
-			int Burst2Value = fighters[1].Variables.ExtraVariables[3].CurrentValue;
-
-			if (Burst1Value < fighters[0].Variables.ExtraVariables[3].MaxValue / 2)
-				P1Burst1.TextureProgress = P1BurstChargeTexture1;
-			else if (Burst1Value >= fighters[0].Variables.ExtraVariables[3].MaxValue / 2)
-				P1Burst1.TextureProgress = P1BurstFullTexture1;
-			
-			if (Burst1Value < fighters[0].Variables.ExtraVariables[3].MaxValue)
-				P1Burst2.TextureProgress = P1BurstChargeTexture2;
-			else if (Burst1Value >= fighters[0].Variables.ExtraVariables[3].MaxValue)
-				P1Burst2.TextureProgress = P1BurstFullTexture2;
-			
-			if (Burst2Value < fighters[1].Variables.ExtraVariables[3].MaxValue / 2)
-				P2Burst1.TextureProgress = P2BurstChargeTexture1;
-			else if (Burst2Value >= fighters[1].Variables.ExtraVariables[3].MaxValue / 2)
-				P2Burst1.TextureProgress = P2BurstFullTexture1;
-			
-			if (Burst2Value < fighters[1].Variables.ExtraVariables[3].MaxValue)
-				P2Burst2.TextureProgress = P2BurstChargeTexture2;
-			else if (Burst2Value >= fighters[1].Variables.ExtraVariables[3].MaxValue)
-				P2Burst2.TextureProgress = P2BurstFullTexture2;
-
-			P1Burst1.Value = Burst1Value;
-			P1Burst2.Value = Burst1Value;
-			P2Burst1.Value = Burst2Value;
-			P2Burst2.Value = Burst2Value;
-
-			//--------------
 
 			UpdateTimer(monitor);
 

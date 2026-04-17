@@ -227,13 +227,13 @@
 [ext_resource type="Texture2D" uid="uid://b1ubesqgej5l4" path="res://Fighters/Kaede/Sprites/300-4.png" id="223"]
 [ext_resource type="Texture2D" uid="uid://yafexk6ppnyh" path="res://Fighters/Kaede/Sprites/300-5.png" id="224"]
 [ext_resource type="Script" uid="uid://hg0vcp1gy2ny" path="res://Scripts/SakugaEngine/Collision/PhysicsBody.cs" id="225_oxjr4"]
-[ext_resource type="Script" uid="uid://66semq5e6yt" path="res://Scripts/SakugaEngine/Components/InputManager.cs" id="227_ppa6i"]
+[ext_resource type="Script" uid="uid://dshbmw3q5jor2" path="res://Scripts/SakugaEngine/Components/InputManager.cs" id="227_ppa6i"]
 [ext_resource type="Script" uid="uid://v7id8u3160fg" path="res://Scripts/SakugaEngine/Components/FighterVariables.cs" id="228_8hrt3"]
 [ext_resource type="Script" uid="uid://jxgdxccucllx" path="res://Scripts/SakugaEngine/Components/CombatTracker.cs" id="231_bxldr"]
 [ext_resource type="Script" uid="uid://cmq3cp1n0copp" path="res://Scripts/SakugaEngine/Components/FrameTimer.cs" id="232_811te"]
 [ext_resource type="Texture2D" uid="uid://fg31rf0uue6u" path="res://Fighters/Kaede/Sprites/180-0.png" id="284_7p1pn"]
 [ext_resource type="Script" uid="uid://3uu6r0mhj3p3" path="res://Scripts/SakugaEngine/Components/SoundQueue.cs" id="285_ltkr8"]
-[ext_resource type="Script" uid="uid://eajl6jjh3s1t" path="res://Scripts/SakugaEngine/Components/SakugaStateMachine.cs" id="285_novy5"]
+[ext_resource type="Script" uid="uid://17dvgaypi8q0" path="res://Scripts/SakugaEngine/Components/SakugaStateMachine.cs" id="285_novy5"]
 [ext_resource type="Texture2D" uid="uid://dpbfosshjan8a" path="res://Fighters/Kaede/Sprites/180-1.png" id="285_p81x1"]
 [ext_resource type="Texture2D" uid="uid://c5vndg8y682ik" path="res://Fighters/Kaede/Sprites/180-2.png" id="286_n0lul"]
 [ext_resource type="Texture2D" uid="uid://bnms05ws7bpq0" path="res://Fighters/Kaede/Sprites/180-3.png" id="287_gxj1q"]
@@ -2971,7 +2971,7 @@ metadata/_custom_type_script = "uid://dvqrejewx20e3"
 
 [node name="Variables" type="Node" parent="." unique_id=1057331048 node_paths=PackedStringArray("ExtraVariables")]
 script = ExtResource("228_8hrt3")
-ExtraVariables = [NodePath("AirJumpLimit"), NodePath("AirDashLimit"), NodePath("IsDashJump"), NodePath("BurstGauge"), NodePath("ChargeGauge")]
+ExtraVariables = [NodePath("AirJumpLimit"), NodePath("AirDashLimit"), NodePath("IsDashJump")]
 
 [node name="AirJumpLimit" type="Node" parent="Variables" unique_id=894000032]
 script = ExtResource("294_608rl")
@@ -2984,17 +2984,6 @@ MaxValue = 1
 [node name="IsDashJump" type="Node" parent="Variables" unique_id=1085956616]
 script = ExtResource("294_608rl")
 MaxValue = 1
-
-[node name="BurstGauge" type="Node" parent="Variables" unique_id=110497006]
-script = ExtResource("294_608rl")
-MaxValue = 10000
-StartingValue = 5000
-StartingFactor = 1
-StartingMode = 1
-
-[node name="ChargeGauge" type="Node" parent="Variables" unique_id=1379044812]
-script = ExtResource("294_608rl")
-MaxValue = 10000
 
 [node name="Timers" type="Node" parent="." unique_id=1886312484]
 
