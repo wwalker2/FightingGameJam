@@ -4,12 +4,8 @@ namespace SakugaEngine.UI
 {
 	public partial class MetersHUD : Control
 	{
-		[Export] private TextureProgressBar P1Contract;
-		[Export] private TextureProgressBar P2Contract;
-		[Export] private TextureProgressBar P1Seal;
-		[Export] private TextureProgressBar P2Seal;
-		[Export] private TextureProgressBar P1Charge;
-		[Export] private TextureProgressBar P2Charge;
+		[Export] private TextureProgressBar P1Meter;
+		[Export] private TextureProgressBar P2Meter;
 		[Export] private Label P1TrainingInfo;
 		[Export] private Label P2TrainingInfo;
 		[Export] private InputHistory P1InputHistory;
@@ -27,40 +23,15 @@ namespace SakugaEngine.UI
 
 		public void Setup(SakugaFighter[] fighters)
 		{
-			P1Contract.MaxValue = fighters[0].Variables.ExtraVariables[5].MaxValue;
-			P2Contract.MaxValue = fighters[1].Variables.ExtraVariables[5].MaxValue;
-			
-			P1Seal.MaxValue = fighters[0].Variables.ExtraVariables[6].MaxValue;
-			P2Seal.MaxValue = fighters[1].Variables.ExtraVariables[6].MaxValue;
+			P1Meter.MaxValue = fighters[0].Data.MaxSuperGauge;
+			P2Meter.MaxValue = fighters[1].Data.MaxSuperGauge;
 		}
 
 		public void UpdateMeters(SakugaFighter[] fighters)
 		{
-			// Contract Gauge
-			P1Contract.Value = fighters[0].Variables.ExtraVariables[5].CurrentValue;
-			P2Contract.Value = fighters[1].Variables.ExtraVariables[5].CurrentValue;
-			
-			// Seal Gauge
-			P1Seal.Value = fighters[0].Variables.ExtraVariables[6].CurrentValue;
-			P2Seal.Value = fighters[1].Variables.ExtraVariables[6].CurrentValue;
-			
-			// Charge Gauge
-			int Charge1Value = fighters[0].Variables.ExtraVariables[4].CurrentValue;
-			int Charge2Value = fighters[1].Variables.ExtraVariables[4].CurrentValue;
-			
-			if (Charge1Value < fighters[0].Variables.ExtraVariables[4].MaxValue)
-				P1Charge.TextureProgress = P1ChargeChargeTexture;
-			else if (Charge1Value >= fighters[0].Variables.ExtraVariables[4].MaxValue)
-				P1Charge.TextureProgress = P1ChargeFullTexture;
-				
-			if (Charge2Value < fighters[1].Variables.ExtraVariables[4].MaxValue)
-				P2Charge.TextureProgress = P2ChargeChargeTexture;
-			else if (Charge2Value >= fighters[1].Variables.ExtraVariables[4].MaxValue)
-				P2Charge.TextureProgress = P2ChargeFullTexture;
-			
-			P1Charge.Value = Charge1Value;
-			P2Charge.Value = Charge2Value;
-			
+			P1Meter.Value = fighters[0].Variables.CurrentSuperGauge;
+			P2Meter.Value = fighters[1].Variables.CurrentSuperGauge;
+
 			GetFrameAdvantage(fighters);
 
 			P1InputHistory.SetHistoryList(fighters[0].Inputs);

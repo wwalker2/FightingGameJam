@@ -2973,7 +2973,7 @@ metadata/_custom_type_script = "uid://dvqrejewx20e3"
 
 [node name="Variables" type="Node" parent="." unique_id=89796892 node_paths=PackedStringArray("ExtraVariables")]
 script = ExtResource("292_nctfb")
-ExtraVariables = [NodePath("AirJumpLimit"), NodePath("AirDashLimit"), NodePath("IsDashJump"), NodePath("BurstGauge"), NodePath("ChargeGauge"), NodePath("Contract Gauge"), NodePath("Seal Gauge")]
+ExtraVariables = [NodePath("AirJumpLimit"), NodePath("AirDashLimit"), NodePath("IsDashJump")]
 
 [node name="AirJumpLimit" type="Node" parent="Variables" unique_id=1766771107]
 script = ExtResource("293_i2qcb")
@@ -2986,26 +2986,6 @@ MaxValue = 1
 [node name="IsDashJump" type="Node" parent="Variables" unique_id=2017893478]
 script = ExtResource("293_i2qcb")
 MaxValue = 1
-
-[node name="BurstGauge" type="Node" parent="Variables" unique_id=361076060]
-script = ExtResource("293_i2qcb")
-MaxValue = 10000
-StartingValue = 5000
-StartingFactor = 1
-StartingMode = 1
-
-[node name="ChargeGauge" type="Node" parent="Variables" unique_id=1617783402]
-script = ExtResource("293_i2qcb")
-MaxValue = 10000
-
-[node name="Contract Gauge" type="Node" parent="Variables" unique_id=704696473]
-script = ExtResource("293_i2qcb")
-MaxValue = 4
-StartingValue = 1
-
-[node name="Seal Gauge" type="Node" parent="Variables" unique_id=1631156407]
-script = ExtResource("293_i2qcb")
-MaxValue = 4
 
 [node name="Timers" type="Node" parent="." unique_id=690093052]
 
