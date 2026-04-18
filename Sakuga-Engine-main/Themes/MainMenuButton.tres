@@ -1,0 +1,20 @@
+[gd_resource type="Theme" format=3 uid="uid://cct261edpou81"]
+
+[ext_resource type="FontFile" uid="uid://cu0i5xdymo0ou" path="res://Tw Cen MT Condensed Medium.ttf" id="1_4dep8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6hbyb"]
+bg_color = Color(0.60038817, 0.60038817, 0.60038817, 0)
+border_color = Color(0.8001019, 0.8001019, 0.8001019, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4dep8"]
+draw_center = false
+border_color = Color(0.8001019, 0.8001019, 0.8001019, 0)
+
+[resource]
+default_font = ExtResource("1_4dep8")
+default_font_size = 84
+Button/constants/h_separation = 0
+Button/constants/icon_max_width = 0
+Button/icons/icon = null
+Button/styles/focus = SubResource("StyleBoxFlat_6hbyb")
+Button/styles/hover = SubResource("StyleBoxFlat_4dep8")

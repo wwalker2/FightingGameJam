@@ -1,21 +1,30 @@
 [gd_scene format=3 uid="uid://dn8hnj6b1vxko"]
 
-[ext_resource type="Script" uid="uid://c2l2206ftntd2" path="res://Scripts/SakugaEngine/UI/MainMenu.cs" id="1_tt5f1"]
+[ext_resource type="Script" uid="uid://dp1nb1ldvfdi0" path="res://Scripts/SakugaEngine/UI/MainMenu.cs" id="1_tt5f1"]
 [ext_resource type="Resource" uid="uid://c320twmibeytx" path="res://MatchSettings.tres" id="2_853f1"]
 [ext_resource type="AudioStream" uid="uid://b7ko61ulearbo" path="res://Songs/Opened Eyes.ogg" id="3_8saeu"]
 [ext_resource type="FontFile" uid="uid://cu0i5xdymo0ou" path="res://Tw Cen MT Condensed Medium.ttf" id="3_ghw46"]
+[ext_resource type="Texture2D" uid="uid://y6gyn2m331fr" path="res://Sprites/Logos/KCLogoBlackGlowSubtitleBlack.png" id="3_if7li"]
 [ext_resource type="Texture2D" uid="uid://ca1o72kpm244v" path="res://Backgrounds/BlankBackground.png" id="5_df05h"]
 [ext_resource type="Shader" uid="uid://b27qdxlyhpsti" path="res://Shaders/Overlay.gdshader" id="5_loo7a"]
+[ext_resource type="Theme" uid="uid://cct261edpou81" path="res://Themes/MainMenuButton.tres" id="5_rrcx7"]
+[ext_resource type="Texture2D" uid="uid://hmh3cuqrb6od" path="res://Backgrounds/MainMenuIcon.png" id="6_7467j"]
 [ext_resource type="Texture2D" uid="uid://c1hvwaimshwy2" path="res://Sprites/Keyboard1.png" id="6_if7li"]
 [ext_resource type="Texture2D" uid="uid://2o14nodmbf64" path="res://Sprites/Keyboard2.png" id="7_rrcx7"]
 [ext_resource type="Texture2D" uid="uid://3y7g2u58ux53" path="res://Sprites/Controller1.png" id="8_fh7cp"]
 [ext_resource type="Texture2D" uid="uid://bbe5bso3kl75w" path="res://Sprites/Controller2.png" id="9_8e205"]
+[ext_resource type="Texture2D" uid="uid://brmg2ywuhuocx" path="res://Backgrounds/BackgroundOverlay.png" id="13_8e205"]
+[ext_resource type="Texture2D" uid="uid://7ed10bx1ok04" path="res://Backgrounds/BackgroundBar.png" id="14_7467j"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7467j"]
 shader = ExtResource("5_loo7a")
 shader_parameter/intensity = 1.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2x1g0"]
+shader = ExtResource("5_loo7a")
+shader_parameter/intensity = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_riqfo"]
 shader = ExtResource("5_loo7a")
 shader_parameter/intensity = 1.0
 
@@ -46,102 +55,122 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="MainMenu" unique_id=1213252608]
+[node name="Title" type="TextureRect" parent="MainMenu" unique_id=1411088876]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -418.5
-offset_top = 76.0
-offset_right = 418.5
-offset_bottom = 241.0
+offset_left = -248.99997
+offset_top = 444.00003
+offset_right = 5138.0
+offset_bottom = 1859.0
 grow_horizontal = 2
+scale = Vector2(0.17, 0.17)
+texture = ExtResource("3_if7li")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="MainMenu" unique_id=1132722147]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 14.0
+offset_right = 359.0
+offset_bottom = 122.0
 theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("3_ghw46")
-theme_override_font_sizes/font_size = 60
-text = "Team Jam Game"
-horizontal_alignment = 1
-vertical_alignment = 1
+theme_override_font_sizes/font_size = 100
+text = "MAIN MENU"
 
-[node name="VBoxContainer" type="HBoxContainer" parent="MainMenu" unique_id=681281269]
+[node name="VBoxContainer" type="HFlowContainer" parent="MainMenu" unique_id=1218853815]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = 4
 anchor_top = 0.5
-anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -610.0
-offset_top = 253.0
-offset_right = 618.0
-offset_bottom = 330.0
-grow_horizontal = 2
+offset_left = 14.0
+offset_top = -245.0
+offset_right = 260.0
+offset_bottom = 264.0
 grow_vertical = 2
-theme_override_constants/separation = 15
-alignment = 1
+theme_override_constants/v_separation = -17
 
 [node name="Button_Online" type="Button" parent="MainMenu/VBoxContainer" unique_id=1631382224]
 layout_mode = 2
-size_flags_vertical = 9
-theme_override_colors/font_color = Color(0.35, 0.35, 0.35, 1)
+size_flags_vertical = 4
+theme = ExtResource("5_rrcx7")
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
 theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_colors/font_disabled_color = Color(0.009324101, 0.009324101, 0.009324101, 1)
 theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("3_ghw46")
-theme_override_font_sizes/font_size = 55
 disabled = true
 text = "NETWORK"
+icon = ExtResource("6_7467j")
+flat = true
+alignment = 0
+expand_icon = true
 
 [node name="Button_Arcade" type="Button" parent="MainMenu/VBoxContainer" unique_id=1313525303]
 layout_mode = 2
-size_flags_vertical = 11
+size_flags_vertical = 4
+theme = ExtResource("5_rrcx7")
+theme_type_variation = &"FlatButton"
 theme_override_colors/font_color = Color(0.35, 0.35, 0.35, 1)
 theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_colors/font_disabled_color = Color(0.009324101, 0.009324101, 0.009324101, 1)
 theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("3_ghw46")
-theme_override_font_sizes/font_size = 55
 disabled = true
 text = "ARCADE"
+alignment = 0
 
 [node name="Button_Versus" type="Button" parent="MainMenu/VBoxContainer" unique_id=1092754504]
 layout_mode = 2
-size_flags_vertical = 11
+size_flags_vertical = 4
+theme = ExtResource("5_rrcx7")
+theme_type_variation = &"FlatButton"
 theme_override_colors/font_color = Color(0.35, 0.35, 0.35, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(0.009324101, 0.009324101, 0.009324101, 1)
 theme_override_constants/outline_size = 5
 theme_override_constants/h_separation = 15
-theme_override_fonts/font = ExtResource("3_ghw46")
-theme_override_font_sizes/font_size = 55
 text = "VERSUS"
+flat = true
+alignment = 0
 
 [node name="Button_Training" type="Button" parent="MainMenu/VBoxContainer" unique_id=1210790888]
 layout_mode = 2
-size_flags_vertical = 11
+size_flags_vertical = 4
+theme = ExtResource("5_rrcx7")
+theme_type_variation = &"FlatButton"
 theme_override_colors/font_color = Color(0.35, 0.35, 0.35, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(0.009324101, 0.009324101, 0.009324101, 1)
 theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("3_ghw46")
-theme_override_font_sizes/font_size = 55
 text = "TRAINING"
+alignment = 0
 
 [node name="Button_Replay" type="Button" parent="MainMenu/VBoxContainer" unique_id=1424355848]
 layout_mode = 2
-size_flags_vertical = 11
+size_flags_vertical = 4
+theme = ExtResource("5_rrcx7")
+theme_type_variation = &"FlatButton"
 theme_override_colors/font_color = Color(0.35, 0.35, 0.35, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(0.009324101, 0.009324101, 0.009324101, 1)
 theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("3_ghw46")
-theme_override_font_sizes/font_size = 55
 disabled = true
 text = "REPLAY"
+alignment = 0
 
 [node name="Button_Quit" type="Button" parent="MainMenu/VBoxContainer" unique_id=1270923890]
 layout_mode = 2
-size_flags_vertical = 9
+size_flags_vertical = 4
+theme = ExtResource("5_rrcx7")
+theme_type_variation = &"FlatButton"
 theme_override_colors/font_color = Color(0.35, 0.35, 0.35, 1)
 theme_override_colors/font_hover_color = Color(0.9499975, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(0.009324101, 0.009324101, 0.009324101, 1)
 theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("3_ghw46")
-theme_override_font_sizes/font_size = 55
 text = "QUIT"
+alignment = 0
 
 [node name="InputSelection" type="Control" parent="." unique_id=1429820253]
 visible = false
@@ -511,8 +540,26 @@ volume_db = -8.211
 autoplay = true
 parameters/looping = true
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1198581522]
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1977531944]
 z_index = -1
+material = SubResource("ShaderMaterial_riqfo")
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("13_8e205")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="TextureRect2" unique_id=766149389]
+layout_mode = 0
+offset_top = 614.0
+offset_right = 1280.0
+offset_bottom = 704.0
+texture = ExtResource("14_7467j")
+expand_mode = 1
+flip_h = true
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect2" unique_id=1198581522]
+z_index = -2
 layout_mode = 0
 offset_right = 1280.0
 offset_bottom = 720.0
