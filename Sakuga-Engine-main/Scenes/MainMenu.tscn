@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://dn8hnj6b1vxko"]
 
-[ext_resource type="Script" uid="uid://c2l2206ftntd2" path="res://Scripts/SakugaEngine/UI/MainMenu.cs" id="1_tt5f1"]
+[ext_resource type="Script" uid="uid://dp1nb1ldvfdi0" path="res://Scripts/SakugaEngine/UI/MainMenu.cs" id="1_tt5f1"]
 [ext_resource type="Resource" uid="uid://c320twmibeytx" path="res://MatchSettings.tres" id="2_853f1"]
 [ext_resource type="AudioStream" uid="uid://b7ko61ulearbo" path="res://Songs/Opened Eyes.ogg" id="3_8saeu"]
 [ext_resource type="FontFile" uid="uid://cu0i5xdymo0ou" path="res://Tw Cen MT Condensed Medium.ttf" id="3_ghw46"]
+[ext_resource type="Texture2D" uid="uid://y6gyn2m331fr" path="res://Sprites/Logos/KCLogoBlackGlowSubtitleBlack.png" id="3_if7li"]
 [ext_resource type="Texture2D" uid="uid://ca1o72kpm244v" path="res://Backgrounds/BlankBackground.png" id="5_df05h"]
 [ext_resource type="Shader" uid="uid://b27qdxlyhpsti" path="res://Shaders/Overlay.gdshader" id="5_loo7a"]
 [ext_resource type="Texture2D" uid="uid://c1hvwaimshwy2" path="res://Sprites/Keyboard1.png" id="6_if7li"]
@@ -46,42 +47,48 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="MainMenu" unique_id=1213252608]
+[node name="Title" type="TextureRect" parent="MainMenu" unique_id=1411088876]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -418.5
-offset_top = 76.0
-offset_right = 418.5
-offset_bottom = 241.0
+offset_left = -168.0
+offset_top = 508.0
+offset_right = 5219.0
+offset_bottom = 1923.0
 grow_horizontal = 2
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("3_if7li")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="MainMenu" unique_id=1132722147]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 10.0
+offset_right = 368.0
+offset_bottom = 118.0
 theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("3_ghw46")
-theme_override_font_sizes/font_size = 60
-text = "Team Jam Game"
-horizontal_alignment = 1
-vertical_alignment = 1
+theme_override_font_sizes/font_size = 100
+text = "MAIN MENU"
 
-[node name="VBoxContainer" type="HBoxContainer" parent="MainMenu" unique_id=681281269]
+[node name="VBoxContainer" type="FlowContainer" parent="MainMenu" unique_id=513077983]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -610.0
-offset_top = 253.0
-offset_right = 618.0
-offset_bottom = 330.0
+offset_left = -614.0
+offset_top = -240.0
+offset_right = -426.0
+offset_bottom = 192.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 15
-alignment = 1
+vertical = true
 
 [node name="Button_Online" type="Button" parent="MainMenu/VBoxContainer" unique_id=1631382224]
 layout_mode = 2
-size_flags_vertical = 9
 theme_override_colors/font_color = Color(0.35, 0.35, 0.35, 1)
 theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
 theme_override_constants/outline_size = 5
