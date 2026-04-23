@@ -46,6 +46,15 @@ namespace SakugaEngine
 		public void SetOpponent(SakugaFighter opponent) { if (opponent != _opponent) _opponent = opponent; }
 		public FighterVariables FighterVars => Variables as FighterVariables;
 
+		public bool IsCounter(SakugaFighter target)
+		{
+			return Animator.CurrentStateType() == Global.StateType.COMBAT && target.Animator.CurrentStateType() == Global.StateType.COMBAT &&
+				 	AnimationStage == Global.AnimationStage.ACTIVE && target.GetOpponent().AnimationStage < Global.AnimationStage.RECOVERY;
+		} 
+		public bool IsPunishCounter(SakugaFighter target){
+			return Animator.CurrentStateType() == Global.StateType.COMBAT && target.Animator.CurrentStateType() == Global.StateType.COMBAT &&
+				 	AnimationStage == Global.AnimationStage.ACTIVE && target.GetOpponent().AnimationStage == Global.AnimationStage.RECOVERY;
+		} 
 		public void ParseInputs(ushort rawInputs)
 		{
 			Inputs.InsertToHistory(rawInputs);
@@ -797,10 +806,25 @@ namespace SakugaEngine
 				else
 				{
 					hitFX = box.HitEffectIndex;
+
+					if (IsCounter(target.FighterReference()))
+					{
+						FighterVars.AddContract();
+						// Notify
+						GD.Print("COUNTER!");
+					}
+					else if (IsPunishCounter(target.FighterReference()))
+					{
+						FighterVars.AddContract();
+						// Notify
+						GD.Print("PUNISH!");
+					}
+
 					GetOpponent().HitDamage(box, false);
 					if (box.AllowSelfPushback)
 						HitPushback(box.SelfPushbackDuration, box.SelfPushbackForce);
 					CancelConditions |= Global.CancelCondition.HIT_CANCEL;
+					
 					GD.Print("Fighter: Hit!");
 				}
 				Brain.canAdvance = true;

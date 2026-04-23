@@ -50,6 +50,14 @@ namespace SakugaEngine
 			Contracts = (byte)Mathf.Clamp(Contracts, 0, _owner.Data.MaxContracts - Seals);
 		}
 
+		public void SpendContract(int amount)
+		{
+			for (int i = 0; i < amount; i++)
+			{
+				SpendContract();
+			}
+		}
+
 		public void SpendContract()
 		{
 			if (ContractsSealed()) return;
@@ -63,14 +71,25 @@ namespace SakugaEngine
 				Seals++;
 			}
 
-			Contracts = (byte)Mathf.Clamp(Contracts, 0, _owner.Data.MaxContracts - Seals);
 			Seals = (byte)Mathf.Clamp(Seals, 0, _owner.Data.MaxContracts);
+			Contracts = (byte)Mathf.Clamp(Contracts, 0, _owner.Data.MaxContracts - Seals);
+			
+		}
+
+		public void RecoverContract()
+		{
+			Seals--;
+			Contracts++;
+
+			Seals = (byte)Mathf.Clamp(Seals, 0, _owner.Data.MaxContracts);
+			Contracts = (byte)Mathf.Clamp(Contracts, 0, _owner.Data.MaxContracts - Seals);
 		}
 
 		public bool ContractsSealed()
 		{
 			return Seals >= _owner.Data.MaxContracts;
 		}
+
 
 		public void ResetContracts()
 		{
