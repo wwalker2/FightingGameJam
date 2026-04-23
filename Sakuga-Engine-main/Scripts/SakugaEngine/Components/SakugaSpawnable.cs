@@ -149,7 +149,6 @@ namespace SakugaEngine
             Body.IsMovable = false;
             Body.HitConfirmed = true;
             Body.IsMovable = false;
-            GetFighterOwner().Variables.AddSuperGauge(superGaugeGain);
             HitStop.Start(hitStopDuration);
             if (hitEffect >= 0)
             {

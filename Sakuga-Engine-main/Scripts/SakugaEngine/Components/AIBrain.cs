@@ -233,8 +233,8 @@ namespace SakugaEngine
                     if (!correctSurface) continue;
 
                     //Check super gauge
-                    bool enoughSuperGauge = selectedList.Conditions[i].SuperGaugeRequired <= _owner.Variables.CurrentSuperGauge;
-                    if (!enoughSuperGauge) continue;
+                    //bool enoughSuperGauge = selectedList.Conditions[i].SuperGaugeRequired <= _owner.Variables.CurrentSuperGauge;
+                    //if (!enoughSuperGauge) continue;
 
                     //Check distance for each command
                     bool isSameX = selectedList.Conditions[i].Distance.X == prevDistX;

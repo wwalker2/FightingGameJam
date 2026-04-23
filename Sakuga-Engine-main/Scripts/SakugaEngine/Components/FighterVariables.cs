@@ -66,7 +66,7 @@ namespace SakugaEngine
 			{
 				Contracts--;
 			}
-			else if (!ContractsSealed())
+			else
 			{
 				Seals++;
 			}
@@ -83,6 +83,11 @@ namespace SakugaEngine
 
 			Seals = (byte)Mathf.Clamp(Seals, 0, _owner.Data.MaxContracts);
 			Contracts = (byte)Mathf.Clamp(Contracts, 0, _owner.Data.MaxContracts - Seals);
+		}
+
+		public bool CanUseContracts(byte amount)
+		{
+			return Seals < amount;
 		}
 
 		public bool ContractsSealed()

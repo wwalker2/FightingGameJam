@@ -12,14 +12,12 @@ namespace SakugaEngine
         [Export] public ExtraVariable[] ExtraVariables;
 
         public int CurrentHealth;
-        public int CurrentSuperGauge;
         public sbyte SuperArmor;
 
         public virtual void Initialize(SakugaActor owner)
         {
             _owner = owner;
             CurrentHealth = owner.Data.MaxHealth;
-            CurrentSuperGauge = 0;
             SuperArmor = 0;
 
             if (HasExtraVariables())
@@ -41,18 +39,6 @@ namespace SakugaEngine
             CurrentHealth = Mathf.Clamp(CurrentHealth, 0, _owner.Data.MaxHealth);
         }
 
-        public void AddSuperGauge(int value)
-        {
-            CurrentSuperGauge += value;
-            CurrentSuperGauge = Mathf.Clamp(CurrentSuperGauge, 0, _owner.Data.MaxSuperGauge);
-        }
-
-        public void RemoveSuperGauge(int value)
-        {
-            CurrentSuperGauge -= value;
-            CurrentSuperGauge = Mathf.Clamp(CurrentSuperGauge, 0, _owner.Data.MaxSuperGauge);
-        }
-
         public void RemoveSuperArmor(sbyte value)
         {
             SuperArmor -= value;
@@ -64,7 +50,6 @@ namespace SakugaEngine
                 CurrentHealth = 1;
             else
                 RemoveHealth(damage);
-            AddSuperGauge(meterGain);
         }
 
         public void ArmorDamage(sbyte damage, int healthDamage)
@@ -198,7 +183,6 @@ namespace SakugaEngine
                     ExtraVariables[i].Serialize(bw);
             
             bw.Write(CurrentHealth);
-            bw.Write(CurrentSuperGauge);
             bw.Write(SuperArmor);
         }
 
@@ -209,7 +193,6 @@ namespace SakugaEngine
                     ExtraVariables[i].Deserialize(br);
             
             CurrentHealth = br.ReadInt32();
-            CurrentSuperGauge = br.ReadInt32();
             SuperArmor = br.ReadSByte();
         }
     }

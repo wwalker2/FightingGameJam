@@ -733,7 +733,6 @@ namespace SakugaEngine
 			LayerSorting = 1;
 			Body.HitConfirmed = true;
 			Body.IsMovable = false;
-			Variables.AddSuperGauge(superGaugeGain);
 			HitStop.Start(hitStopDuration);
 			if (hitEffect >= 0 && VFXSpawn != Vector2I.Zero)
 			{
