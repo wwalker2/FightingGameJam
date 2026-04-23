@@ -2639,7 +2639,6 @@ text = "Lorem ipsun"
 horizontal_alignment = 2
 
 [node name="PleaseResync_UI" parent="." unique_id=1086814857 instance=ExtResource("14_16eh6")]
-visible = false
 
 [node name="Seed" type="Label" parent="." unique_id=737444796]
 visible = false

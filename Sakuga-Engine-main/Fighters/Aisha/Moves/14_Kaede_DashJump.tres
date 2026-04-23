@@ -20,7 +20,6 @@ MoveName = "Dash Jump"
 MoveState = 6
 Inputs = ExtResource("2_af6p2")
 Priority = 3
-BuildSuperGauge = 6
 DistanceArea = Vector2i(0, 99999)
 IsSequenceFromStates = PackedInt32Array(13)
 CanCancelTo = null

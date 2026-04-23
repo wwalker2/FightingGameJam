@@ -1,14 +1,14 @@
 [gd_resource type="Resource" script_class="FighterProfile" format=3 uid="uid://bwehxfu2g08t8"]
 
 [ext_resource type="Texture2D" uid="uid://ltphgg4capie" path="res://Fighters/Aisha/Sprites/TestPortrait1.png" id="1_hqtjn"]
-[ext_resource type="Texture2D" uid="uid://bjyq4wiy1ltxt" path="res://Fighters/Aisha/Sprites/Kaede_Render.png" id="2_57r18"]
+[ext_resource type="Texture2D" uid="uid://dj54l3gv0ivs" path="res://Fighters/Aisha/Sprites/aisha_render.png" id="2_hqtjn"]
 [ext_resource type="Script" uid="uid://c5w04j5my3h8p" path="res://Scripts/SakugaEngine/Resources/FighterProfile.cs" id="3_40mk2"]
 
 [resource]
 script = ExtResource("3_40mk2")
 FighterName = "AISHA+BISHA"
 ShortName = "Aisha"
-Render = ExtResource("2_57r18")
+Render = ExtResource("2_hqtjn")
 Portrait = ExtResource("1_hqtjn")
 AutoStage = 2
 AutoBGM = 2

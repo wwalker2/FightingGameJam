@@ -140,4 +140,3 @@ Intros = Array[Object]([SubResource("Resource_3b733")])
 Outros = Array[Object]([SubResource("Resource_cenu2")])
 VictoryPoses = Array[Object]([SubResource("Resource_186y0")])
 DefeatPose = 75
-metadata/_custom_type_script = "uid://bsbjg1nuyall1"
