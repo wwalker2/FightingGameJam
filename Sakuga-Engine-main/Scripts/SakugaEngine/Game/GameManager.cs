@@ -12,14 +12,16 @@ namespace SakugaEngine.Game
 {
 	public partial class GameManager : Node, IGameState
 	{
+		public static GameManager Instance;
+
 		[Export] public MatchSettings Match;
-		[Export] private GameMonitor Monitor;
+		[Export] public GameMonitor Monitor;
 		[Export] public FighterList fightersList;
 		[Export] public StageList stagesList;
 		[Export] public BGMList songsList;
 		[Export] private CanvasLayer FighterUI;
-		[Export] private FighterCamera Camera;
-		[Export] private AudioStreamPlayer BGMSource;
+		[Export] public FighterCamera Camera;
+		[Export] public AudioStreamPlayer BGMSource;
 		private Label SeedViewer;
 		private FadeScreen Curtain;
 		public uint InputSize;
@@ -39,6 +41,8 @@ namespace SakugaEngine.Game
 		
 		public override void _Ready()
 		{
+			Instance = this;
+
 			healthHUD = (HealthHUD)FighterUI.GetNode("GameHUD_Background");
 			metersHUD = (MetersHUD)FighterUI.GetNode("GameHUD_Foreground");
 			SeedViewer = (Label)FighterUI.GetNode("Seed");
@@ -218,18 +222,22 @@ namespace SakugaEngine.Game
 
 			for (int i = 0; i < Fighters.Length; i++)
 			{
-				if (Fighters[i].UseAI)
-				{
-					Fighters[i].Brain.SelectCommand();
-					Fighters[i].Brain.UpdateCommand();
-				}
-				else
-				{
-					ushort combinedInput = 0;
-					combinedInput |= playerInput[i * InputSize];
-					combinedInput |= (ushort)(playerInput[(i * InputSize) + 1] << 8);
-					Fighters[i].ParseInputs(combinedInput);
-				}
+				if (Monitor.MatchState == Global.MatchState.ROUND_END)
+                {
+                    Fighters[i].ParseInputs(0);
+                    continue;
+                }
+                if (Fighters[i].UseAI)
+                {
+                    Fighters[i].Brain.SelectCommand();
+                    Fighters[i].Brain.UpdateCommand();
+                    continue;
+                }
+
+				ushort combinedInput = 0;
+				combinedInput |= playerInput[i * InputSize];
+				combinedInput |= (ushort)(playerInput[(i * InputSize) + 1] << 8);
+				Fighters[i].ParseInputs(combinedInput);
 			}
 
 			for (int i = 0; i < Nodes.Count; i++)
@@ -303,11 +311,17 @@ namespace SakugaEngine.Game
 			}
 			if (Input.IsActionJustPressed("debug_f5"))
 			{
-				Fighters[0].Variables.CurrentSuperGauge = Fighters[0].Data.MaxSuperGauge;
+				if (Input.IsActionPressed("debug_shift"))
+					Fighters[0].FighterVars.AddContract();
+				else
+					Fighters[0].FighterVars.SpendContract();
 			}
 			if (Input.IsActionJustPressed("debug_f6"))
 			{
-				Fighters[1].Variables.CurrentSuperGauge = Fighters[1].Data.MaxSuperGauge;
+				if (Input.IsActionPressed("debug_shift"))
+					Fighters[1].FighterVars.AddContract();
+				else
+					Fighters[1].FighterVars.SpendContract();
 			}
 			if (Input.IsActionJustPressed("debug_timer"))
 			{

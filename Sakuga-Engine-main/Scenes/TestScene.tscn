@@ -7,7 +7,7 @@
 [ext_resource type="Resource" uid="uid://c320twmibeytx" path="res://MatchSettings.tres" id="5_5rbs6"]
 [ext_resource type="Resource" uid="uid://c8s3ip7gkhwq6" path="res://Roster.tres" id="5_pp7s2"]
 [ext_resource type="Resource" uid="uid://bl30fi0muatu1" path="res://StageSelect.tres" id="6_c264a"]
-[ext_resource type="Script" uid="uid://8r60yfod0dqc" path="res://Scripts/SakugaEngine/Components/GameMonitor.cs" id="6_d185x"]
+[ext_resource type="Script" uid="uid://cbremyyalvs3" path="res://Scripts/SakugaEngine/Components/GameMonitor.cs" id="6_d185x"]
 [ext_resource type="Script" uid="uid://j5t0o28p2u6u" path="res://Scripts/SakugaEngine/Game/SakugaRollbackManager.cs" id="6_jke5l"]
 [ext_resource type="Resource" uid="uid://fxj4uvd0y37r" path="res://Soundtrack.tres" id="7_6xh1p"]
 
@@ -24,7 +24,6 @@ script = ExtResource("3_201fe")
 metadata/_custom_type_script = "uid://cmq3cp1n0copp"
 
 [node name="GameManager" type="Node" parent="." unique_id=2009171254 node_paths=PackedStringArray("Monitor", "FighterUI", "Camera", "BGMSource")]
-process_priority = 1
 script = ExtResource("1_ocl0l")
 Match = ExtResource("5_5rbs6")
 Monitor = NodePath("../GameMonitor")
@@ -38,7 +37,6 @@ BGMSource = NodePath("../BGM")
 [node name="RollbackManager" type="Node" parent="." unique_id=1298643102 node_paths=PackedStringArray("GameManager")]
 script = ExtResource("6_jke5l")
 GameManager = NodePath("../GameManager")
-UseSeparateThread = true
 SpectatorDelay = 10
 InputSize = 2
 

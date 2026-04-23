@@ -1865,7 +1865,7 @@ offset_bottom = 123.0
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(0.16667056, 0.1668051)
-max_value = 10000.0
+max_value = 1000.0
 step = 0.0
 fill_mode = 1
 texture_progress = ExtResource("38_ripqy")
@@ -1884,7 +1884,7 @@ offset_bottom = 123.0
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(0.16667056, 0.1668051)
-max_value = 10000.0
+max_value = 1000.0
 step = 0.0
 texture_progress = ExtResource("40_ormvx")
 

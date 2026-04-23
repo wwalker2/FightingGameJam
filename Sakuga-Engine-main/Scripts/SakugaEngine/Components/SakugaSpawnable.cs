@@ -32,6 +32,9 @@ namespace SakugaEngine
         public void SetFighterOwner(SakugaFighter owner) { _owner = owner; }
         public override SakugaFighter FighterReference() { return GetFighterOwner(); }
 
+        public bool IsCounter(SakugaFighter target) => AnimationStage == Global.AnimationStage.ACTIVE && target.GetOpponent().AnimationStage < Global.AnimationStage.RECOVERY;
+		public bool IsPunishCounter(SakugaFighter target) => AnimationStage == Global.AnimationStage.ACTIVE && target.GetOpponent().AnimationStage == Global.AnimationStage.RECOVERY;
+
         private bool AllowHitCheck(SakugaActor other)
         {
             if (CurrentHitCheck == 1 && other != _owner) return false;
@@ -146,7 +149,6 @@ namespace SakugaEngine
             Body.IsMovable = false;
             Body.HitConfirmed = true;
             Body.IsMovable = false;
-            GetFighterOwner().Variables.AddSuperGauge(superGaugeGain);
             HitStop.Start(hitStopDuration);
             if (hitEffect >= 0)
             {

@@ -53,6 +53,19 @@ namespace SakugaEngine
         public const int INPUT_ANY_DIRECTION = INPUT_UP | INPUT_DOWN | INPUT_LEFT | INPUT_RIGHT;
         public const int INPUT_ANY_BUTTON = INPUT_FACE_A | INPUT_FACE_B | INPUT_FACE_C | INPUT_FACE_D | INPUT_FACE_E | INPUT_FACE_F | INPUT_FACE_G | INPUT_FACE_H;
 
+        // Contracts
+        public const byte Contract1 = 1 << 0; // 1
+        public const byte Contract2 = 1 << 1; // 2
+        public const byte Contract3 = 1 << 2; // 4
+        public const byte Contract4 = 1 << 3; // 8
+        // Seals
+        public const byte sealStart = 4;
+        public const byte Seal1 = 1 << 0 + sealStart; // 16
+        public const byte Seal2 = 1 << 1 + sealStart; // 32
+        public const byte Seal3 = 1 << 2 + sealStart; // 64
+        public const byte Seal4 = 1 << 3 + sealStart; // 128
+
+
         //Global enumerators
         public enum AnimationStage { STARTUP, ACTIVE, RECOVERY }
         public enum ButtonMode { PRESS, HOLD, RELEASE, WAS_PRESSED, NOT_PRESSED }
@@ -128,7 +141,7 @@ namespace SakugaEngine
             ON_WALLS = 1 << 3,
             ON_FALL = 1 << 4,
             ON_LIFE_END = 1 << 5,
-            ON_INPUT_COMMAND = 1 << 6,
+            MATCH_NOT_RUNNING = 1 << 6,
             ON_DISTANCE = 1 << 7,
         }
         [Flags]

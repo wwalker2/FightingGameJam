@@ -93,12 +93,15 @@ namespace SakugaEngine
 			}
 		}
 
+		public Global.AnimationStage AnimationStage;
+
 		public void UpdateHitboxes()
 		{
 			for (int i = 0; i < Animator.GetCurrentState().hitboxStates.Length; ++i)
 			{
 				if (Animator.CurrentStateFrame != Animator.GetCurrentState().hitboxStates[i].Frame)  continue;
-
+				
+				AnimationStage = Animator.GetCurrentState().hitboxStates[i].animationStage;
 				Body.SetHitbox(Animator.GetCurrentState().hitboxStates[i].HitboxIndex);
 				if (Animator.GetCurrentState().hitboxStates[i].ResetHits || Animator.CurrentStateFrame == 0)
 					Body.HitConfirmed = false;
@@ -136,7 +139,7 @@ namespace SakugaEngine
 				bool flag4 = (conditions & (byte)Global.TransitionCondition.ON_WALLS) != 0;
 				bool flag5 = (conditions & (byte)Global.TransitionCondition.ON_FALL) != 0;
 				bool flag6 = (conditions & (byte)Global.TransitionCondition.ON_LIFE_END) != 0;
-				bool flag7 = (conditions & (byte)Global.TransitionCondition.ON_INPUT_COMMAND) != 0;
+				bool flag7 = (conditions & (byte)Global.TransitionCondition.MATCH_NOT_RUNNING) != 0;
 				bool flag8 = (conditions & (byte)Global.TransitionCondition.ON_DISTANCE) != 0;
 
 				bool stateEnded = Animator.StateEnded();
@@ -145,7 +148,7 @@ namespace SakugaEngine
 				bool isOnWall = Body.IsOnWall;
 				bool isFalling = Body.IsFalling;
 				bool isDead = LifeEnded();
-				bool validInput = Inputs.CheckMotionInputs(Animator.GetCurrentState().stateTransitions[i].Inputs);
+				bool isMatchRunning = Game.GameManager.Instance.Monitor.MatchState != Global.MatchState.ROUND_RUNNING;
 				int distance = Global.Distance(FighterReference().GetOpponent().Body.FixedPosition, Body.FixedPosition).X;
 				bool isDistanceRange = distance >= Animator.GetCurrentState().stateTransitions[i].DistanceArea.X &&
 										distance <= Animator.GetCurrentState().stateTransitions[i].DistanceArea.Y;
@@ -163,7 +166,7 @@ namespace SakugaEngine
 				//Condition 6: On Life End
 				bool c6 = !flag6 || flag6 && isDead;
 				//Condition 7: On Input Command
-				bool c7 = !flag7 || flag7 && validInput;
+				bool c7 = !flag7 || flag7 && isMatchRunning;
 				//Condition 8: On Distance
 				bool c8 = !flag8 || flag8 && isDistanceRange;
 

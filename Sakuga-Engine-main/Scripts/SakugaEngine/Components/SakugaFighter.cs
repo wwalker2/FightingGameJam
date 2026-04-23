@@ -46,6 +46,15 @@ namespace SakugaEngine
 		public void SetOpponent(SakugaFighter opponent) { if (opponent != _opponent) _opponent = opponent; }
 		public FighterVariables FighterVars => Variables as FighterVariables;
 
+		public bool IsCounter(SakugaFighter target)
+		{
+			return Animator.CurrentStateType() == Global.StateType.COMBAT && target.Animator.CurrentStateType() == Global.StateType.COMBAT &&
+				 	AnimationStage == Global.AnimationStage.ACTIVE && target.GetOpponent().AnimationStage < Global.AnimationStage.RECOVERY;
+		} 
+		public bool IsPunishCounter(SakugaFighter target){
+			return Animator.CurrentStateType() == Global.StateType.COMBAT && target.Animator.CurrentStateType() == Global.StateType.COMBAT &&
+				 	AnimationStage == Global.AnimationStage.ACTIVE && target.GetOpponent().AnimationStage == Global.AnimationStage.RECOVERY;
+		} 
 		public void ParseInputs(ushort rawInputs)
 		{
 			Inputs.InsertToHistory(rawInputs);
@@ -174,6 +183,13 @@ namespace SakugaEngine
 				HorizontalBounce.Run();
 				VerticalBounce.Run();
 				MoveBuffer.Run();
+				if (Inputs.IsBeingPressed(Inputs.CurrentHistory, Global.INPUT_FACE_C))
+				{
+					FighterVars.PartnerMeter += (uint)Data.PartnerGaugeChargeRate;
+					if (FighterVars.PartnerMeter > (uint)Data.MaxPartnerGauge)
+						FighterVars.PartnerMeter = (uint)Data.MaxPartnerGauge;
+				}
+				
 				if (Animator.GetCurrentState().HitStunFrameLimit < 0 || !IsStunLocked())
 					Animator.RunState();
 			}
@@ -188,6 +204,8 @@ namespace SakugaEngine
 			ChangePlayerSide();
 			Inputs.InputSide = Body.PlayerSide;
 			StateMachine.CheckMoves();
+			if (!Inputs.IsBeingPressed(Inputs.CurrentHistory, Global.INPUT_FACE_C))
+				FighterVars.PartnerMeter = 0;
 
 			if (HitstunType > (int)Global.HitstunType.STAGGER)
 				ThrowPivoting();
@@ -535,7 +553,8 @@ namespace SakugaEngine
 					"\nHitstun Type: "+HitstunType+
 					"\nHitbox: "+Body.CurrentHitbox+
 					"\nHealth: "+Variables.CurrentHealth+"/"+Data.MaxHealth+
-					"\nSuper Gauge: "+Variables.CurrentSuperGauge+"/"+Data.MaxSuperGauge+
+					"\nPartner Gauge: "+FighterVars.PartnerMeter+"/"+Data.MaxPartnerGauge+
+					"\nContracts: "+FighterVars.Contracts+"|| Seals: "+FighterVars.Seals+
 					"\nSuper Armor: "+Variables.SuperArmor+
 					"\nHit Stun: "+HitStun.TimeLeft+
 					"\nCharge Buffers: "+Inputs.hCharge+" | "+Inputs.vCharge+
@@ -714,7 +733,6 @@ namespace SakugaEngine
 			LayerSorting = 1;
 			Body.HitConfirmed = true;
 			Body.IsMovable = false;
-			Variables.AddSuperGauge(superGaugeGain);
 			HitStop.Start(hitStopDuration);
 			if (hitEffect >= 0 && VFXSpawn != Vector2I.Zero)
 			{
@@ -787,10 +805,25 @@ namespace SakugaEngine
 				else
 				{
 					hitFX = box.HitEffectIndex;
+
+					if (IsCounter(target.FighterReference()))
+					{
+						FighterVars.AddContract();
+						// Notify
+						GD.Print("COUNTER!");
+					}
+					else if (IsPunishCounter(target.FighterReference()))
+					{
+						FighterVars.AddContract();
+						// Notify
+						GD.Print("PUNISH!");
+					}
+
 					GetOpponent().HitDamage(box, false);
 					if (box.AllowSelfPushback)
 						HitPushback(box.SelfPushbackDuration, box.SelfPushbackForce);
 					CancelConditions |= Global.CancelCondition.HIT_CANCEL;
+					
 					GD.Print("Fighter: Hit!");
 				}
 				Brain.canAdvance = true;
@@ -895,6 +928,7 @@ namespace SakugaEngine
 			bw.Write(GravityDecayFactor);
 			bw.Write(HitstunDecayFactor);
 			bw.Write((byte)CancelConditions);
+			bw.Write((byte)AnimationStage);
 		}
 
 		public override void Deserialize(BinaryReader br)
@@ -929,6 +963,7 @@ namespace SakugaEngine
 			GravityDecayFactor = br.ReadByte();
 			HitstunDecayFactor = br.ReadByte();
 			CancelConditions = (Global.CancelCondition)br.ReadByte();
+			AnimationStage = (Global.AnimationStage)br.ReadByte();
 
 			Body.UpdateColliders();
 		}

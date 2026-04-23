@@ -57,7 +57,9 @@ namespace SakugaEngine
 				_owner.Variables.CurrentHealth <= GetMove(index).HealthThreshold.Y;
 			if (!isDesiredHealth) return false;
 			
-			if (_owner.Variables.CurrentSuperGauge < GetMove(index).SuperGaugeRequired) return false;
+			if (_owner.FighterVars.PartnerMeter < GetMove(index).ChargeRequired.X || _owner.FighterVars.PartnerMeter > GetMove(index).ChargeRequired.Y) return false;
+
+			if (GetMove(index).ContractsRequired > 0 && !_owner.FighterVars.CanUseContracts((byte)GetMove(index).ContractsRequired)) return false;
 
 			if (!_owner.Variables.CompareExtraVariables(GetMove(index).ExtraVariablesRequirement)) return false;
 			
@@ -82,9 +84,6 @@ namespace SakugaEngine
 				}
 			}
 
-			if (CurrentMove >= 0)
-				_owner.Variables.AddSuperGauge(GetCurrentMove().BuildSuperGauge);
-
 			CheckMoveEndCondition();
 			CheckMoveCancel();
 			ProcessMoveBuffer();
@@ -100,7 +99,7 @@ namespace SakugaEngine
 		public void ExecuteMove(int moveIndex)
 		{
 			if (GetMove(moveIndex).InterruptCornerPushback) _owner.StopPushing();
-			_owner.Variables.CurrentSuperGauge -= GetMove(moveIndex).SuperGaugeRequired;
+			_owner.FighterVars.SpendContract((byte)GetMove(moveIndex).ContractsRequired);
 
 			if (_owner.Variables.CurrentHealth > 10 && GetMove(moveIndex).SpendHealth > 0)
 				_owner.Variables.CurrentHealth -= GetMove(moveIndex).SpendHealth;

@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://brmg2ywuhuocx" path="res://Backgrounds/BackgroundOverlay.png" id="13_8e205"]
 [ext_resource type="Texture2D" uid="uid://7ed10bx1ok04" path="res://Backgrounds/BackgroundBar.png" id="14_7467j"]
 
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7467j"]
 shader = ExtResource("5_loo7a")
 shader_parameter/intensity = 1.0
