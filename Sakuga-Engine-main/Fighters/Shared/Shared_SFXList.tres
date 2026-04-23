@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="SoundsList" load_steps=17 format=3 uid="uid://k31pv0ejfv2s"]
+[gd_resource type="Resource" script_class="SoundsList" format=3 uid="uid://k31pv0ejfv2s"]
 
 [ext_resource type="AudioStream" uid="uid://cuyk8rwy80fsn" path="res://Fighters/Shared/SFX/Footstep_Walk1.wav" id="1_66nul"]
 [ext_resource type="Script" uid="uid://dxsqcefr6c62n" path="res://Scripts/SakugaEngine/Resources/SoundsList.cs" id="1_yu0fx"]

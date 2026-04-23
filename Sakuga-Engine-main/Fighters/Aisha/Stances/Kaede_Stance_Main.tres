@@ -39,7 +39,7 @@
 [ext_resource type="Resource" uid="uid://hjhg1lyuytar" path="res://Fighters/Aisha/Moves/36_Kaede_236B_3.tres" id="37_xvbr1"]
 [ext_resource type="Resource" uid="uid://b4vdltrxbqhvm" path="res://Fighters/Aisha/Moves/37_Kaede_623C.tres" id="38_c1sph"]
 [ext_resource type="Resource" uid="uid://cfjbcxktnefog" path="res://Fighters/Aisha/Moves/38_Kaede_236BC.tres" id="39_i7w00"]
-[ext_resource type="Script" uid="uid://00dse0vp38l7" path="res://Scripts/SakugaEngine/Resources/FighterStance.cs" id="40_0jso0"]
+[ext_resource type="Script" uid="uid://ddrvw4nom6hlu" path="res://Scripts/SakugaEngine/Resources/FighterStance.cs" id="40_0jso0"]
 
 [resource]
 script = ExtResource("40_0jso0")
