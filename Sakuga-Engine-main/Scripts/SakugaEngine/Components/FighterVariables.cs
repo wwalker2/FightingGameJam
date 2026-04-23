@@ -14,6 +14,11 @@ namespace SakugaEngine
 		public ushort CurrentCornerDamageScaling;
 		public ushort CurrentDamageProration;
 		public ushort CurrentGravityProration;
+
+		public uint PartnerMeter;
+
+		public byte Contracts;
+		public byte Seals;
 		
 		public int LostHealth;
 
@@ -29,8 +34,48 @@ namespace SakugaEngine
 			CurrentCornerDamageScaling = Global.CornerMaxDamageScaling;
 			CurrentDamageScaling = CurrentBaseDamageScaling;
 
+			PartnerMeter = 0;
+
 			CurrentDamageProration = 100;
 			CurrentGravityProration = 100;
+
+			ResetContracts();
+		}
+
+		public void AddContract()
+		{
+			if (Contracts < _owner.Data.MaxContracts - Seals)
+				Contracts++;
+
+			Contracts = (byte)Mathf.Clamp(Contracts, 0, _owner.Data.MaxContracts - Seals);
+		}
+
+		public void SpendContract()
+		{
+			if (ContractsSealed()) return;
+
+			if (Contracts > 0)
+			{
+				Contracts--;
+			}
+			else if (!ContractsSealed())
+			{
+				Seals++;
+			}
+
+			Contracts = (byte)Mathf.Clamp(Contracts, 0, _owner.Data.MaxContracts - Seals);
+			Seals = (byte)Mathf.Clamp(Seals, 0, _owner.Data.MaxContracts);
+		}
+
+		public bool ContractsSealed()
+		{
+			return Seals >= _owner.Data.MaxContracts;
+		}
+
+		public void ResetContracts()
+		{
+			Contracts = 1;
+			Seals = 0;
 		}
 
 		public override void TakeDamage(int damage, int meterGain, bool isKilingBlow)
@@ -95,6 +140,11 @@ namespace SakugaEngine
 			bw.Write(CurrentCornerDamageScaling);
 			bw.Write(CurrentDamageProration);
 			bw.Write(CurrentGravityProration);
+
+			bw.Write(PartnerMeter);
+
+			bw.Write(Contracts);
+			bw.Write(Seals);
 		}
 
 		public override void Deserialize(BinaryReader br)
@@ -109,6 +159,9 @@ namespace SakugaEngine
 			CurrentCornerDamageScaling = br.ReadUInt16();
 			CurrentDamageProration = br.ReadUInt16();
 			CurrentGravityProration = br.ReadUInt16();
+			PartnerMeter = br.ReadUInt32();
+			Contracts = br.ReadByte();
+			Seals = br.ReadByte();
 		}
 	}
 }

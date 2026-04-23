@@ -59,6 +59,8 @@ namespace SakugaEngine
 			
 			if (_owner.Variables.CurrentSuperGauge < GetMove(index).SuperGaugeRequired) return false;
 
+			if (_owner.FighterVars.PartnerMeter < GetMove(index).ChargeRequired.X || _owner.FighterVars.PartnerMeter > GetMove(index).ChargeRequired.Y) return false;
+
 			if (!_owner.Variables.CompareExtraVariables(GetMove(index).ExtraVariablesRequirement)) return false;
 			
 			bool AllowedFrameWindow = _owner.Animator.GetCurrentState().Loop || !_owner.Animator.GetCurrentState().Loop && _owner.Animator.CurrentStateFrame < GetMove(index).FrameLimit;

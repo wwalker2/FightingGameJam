@@ -75,6 +75,10 @@ namespace SakugaEngine
 
         public void UpdateExtraVariables()
         {
+            if (Game.GameManager.Instance == null) return;
+            if (Game.GameManager.Instance.Monitor == null) return;
+            if (Game.GameManager.Instance.Monitor.MatchState != Global.MatchState.ROUND_RUNNING) return;
+
             if (!HasExtraVariables()) return;
 
             for (int v = 0; v < ExtraVariables.Length; v++)
@@ -99,6 +103,7 @@ namespace SakugaEngine
 
             for (int i = 0; i < CompareTo.Length; i++)
             {
+                if (CompareTo[i] == null) continue;
                 if (CompareTo[i].Value < 0) continue;
 
                 if (ExtraVariables[i].CurrentMode != (byte)CompareTo[i].Mode) return false;

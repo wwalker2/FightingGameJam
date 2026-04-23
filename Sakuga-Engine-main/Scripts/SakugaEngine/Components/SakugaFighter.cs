@@ -174,6 +174,13 @@ namespace SakugaEngine
 				HorizontalBounce.Run();
 				VerticalBounce.Run();
 				MoveBuffer.Run();
+				if (Inputs.IsBeingPressed(Inputs.CurrentHistory, Global.INPUT_FACE_C))
+				{
+					FighterVars.PartnerMeter += (uint)Data.PartnerGaugeChargeRate;
+					if (FighterVars.PartnerMeter > (uint)Data.MaxPartnerGauge)
+						FighterVars.PartnerMeter = (uint)Data.MaxPartnerGauge;
+				}
+				
 				if (Animator.GetCurrentState().HitStunFrameLimit < 0 || !IsStunLocked())
 					Animator.RunState();
 			}
@@ -188,6 +195,8 @@ namespace SakugaEngine
 			ChangePlayerSide();
 			Inputs.InputSide = Body.PlayerSide;
 			StateMachine.CheckMoves();
+			if (!Inputs.IsBeingPressed(Inputs.CurrentHistory, Global.INPUT_FACE_C))
+				FighterVars.PartnerMeter = 0;
 
 			if (HitstunType > (int)Global.HitstunType.STAGGER)
 				ThrowPivoting();
@@ -535,7 +544,8 @@ namespace SakugaEngine
 					"\nHitstun Type: "+HitstunType+
 					"\nHitbox: "+Body.CurrentHitbox+
 					"\nHealth: "+Variables.CurrentHealth+"/"+Data.MaxHealth+
-					"\nSuper Gauge: "+Variables.CurrentSuperGauge+"/"+Data.MaxSuperGauge+
+					"\nPartner Gauge: "+FighterVars.PartnerMeter+"/"+Data.MaxPartnerGauge+
+					"\nContracts: "+FighterVars.Contracts+"|| Seals: "+FighterVars.Seals+
 					"\nSuper Armor: "+Variables.SuperArmor+
 					"\nHit Stun: "+HitStun.TimeLeft+
 					"\nCharge Buffers: "+Inputs.hCharge+" | "+Inputs.vCharge+
@@ -895,6 +905,7 @@ namespace SakugaEngine
 			bw.Write(GravityDecayFactor);
 			bw.Write(HitstunDecayFactor);
 			bw.Write((byte)CancelConditions);
+			bw.Write((byte)AnimationStage);
 		}
 
 		public override void Deserialize(BinaryReader br)
@@ -929,6 +940,7 @@ namespace SakugaEngine
 			GravityDecayFactor = br.ReadByte();
 			HitstunDecayFactor = br.ReadByte();
 			CancelConditions = (Global.CancelCondition)br.ReadByte();
+			AnimationStage = (Global.AnimationStage)br.ReadByte();
 
 			Body.UpdateColliders();
 		}

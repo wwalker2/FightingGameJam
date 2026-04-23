@@ -45,25 +45,25 @@ namespace SakugaEngine.UI
 		public void UpdateMeters(SakugaFighter[] fighters)
 		{
 			// Contract Gauge
-			P1Contract.Value = fighters[0].Variables.ExtraVariables[5].CurrentValue;
-			P2Contract.Value = fighters[1].Variables.ExtraVariables[5].CurrentValue;
+			P1Contract.Value = fighters[0].FighterVars.Contracts;
+			P2Contract.Value = fighters[1].FighterVars.Contracts;
 			
 			// Seal Gauge
-			P1Seal.Value = fighters[0].Variables.ExtraVariables[6].CurrentValue;
-			P2Seal.Value = fighters[1].Variables.ExtraVariables[6].CurrentValue;
+			P1Seal.Value = fighters[0].FighterVars.Seals;
+			P2Seal.Value = fighters[1].FighterVars.Seals;
 			
 			// Charge Gauge
-			int Charge1Value = fighters[0].Variables.ExtraVariables[4].CurrentValue;
-			int Charge2Value = fighters[1].Variables.ExtraVariables[4].CurrentValue;
+			uint Charge1Value = fighters[0].FighterVars.PartnerMeter;
+			uint Charge2Value = fighters[1].FighterVars.PartnerMeter;
 			
-			if (Charge1Value < fighters[0].Variables.ExtraVariables[4].MaxValue)
+			if (Charge1Value < 1000)
 				P1Charge.TextureProgress = P1ChargeChargeTexture;
-			else if (Charge1Value >= fighters[0].Variables.ExtraVariables[4].MaxValue)
+			else if (Charge1Value >= 1000)
 				P1Charge.TextureProgress = P1ChargeFullTexture;
 				
-			if (Charge2Value < fighters[1].Variables.ExtraVariables[4].MaxValue)
+			if (Charge2Value < 1000)
 				P2Charge.TextureProgress = P2ChargeChargeTexture;
-			else if (Charge2Value >= fighters[1].Variables.ExtraVariables[4].MaxValue)
+			else if (Charge2Value >= 1000)
 				P2Charge.TextureProgress = P2ChargeFullTexture;
 			
 			P1Charge.Value = Charge1Value;

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="FighterStance" load_steps=41 format=3 uid="uid://bpi3dgk313noc"]
+[gd_resource type="Resource" script_class="FighterStance" format=3 uid="uid://bpi3dgk313noc"]
 
 [ext_resource type="Resource" uid="uid://b1uqbm5bepxhv" path="res://Fighters/Kaede/Moves/0_Kaede_MoveForward.tres" id="1_8fbso"]
 [ext_resource type="Resource" uid="uid://dhmyuy5f4qm0x" path="res://Fighters/Kaede/Moves/1_Kaede_MoveBackwards.tres" id="2_2lsvi"]
@@ -8,7 +8,7 @@
 [ext_resource type="Resource" uid="uid://2aifytfjpp26" path="res://Fighters/Kaede/Moves/5_Kaede_JumpForward.tres" id="6_6ue60"]
 [ext_resource type="Resource" uid="uid://c7bfv24bbrpki" path="res://Fighters/Kaede/Moves/6_Kaede_JumpBackwards.tres" id="7_6m2w4"]
 [ext_resource type="Resource" uid="uid://bjy4bx4dv4qd6" path="res://Fighters/Kaede/Moves/7_Kaede_AirDashForward.tres" id="8_yqhy4"]
-[ext_resource type="Script" uid="uid://00dse0vp38l7" path="res://Scripts/SakugaEngine/Resources/FighterStance.cs" id="9"]
+[ext_resource type="Script" uid="uid://ddrvw4nom6hlu" path="res://Scripts/SakugaEngine/Resources/FighterStance.cs" id="9"]
 [ext_resource type="Resource" uid="uid://v1wx455mfvn2" path="res://Fighters/Kaede/Moves/8_Kaede_AirDashBackwards.tres" id="9_euwau"]
 [ext_resource type="Resource" uid="uid://brha3nw12aj44" path="res://Fighters/Kaede/Moves/9_Kaede_Crouch.tres" id="10_wd1qc"]
 [ext_resource type="Resource" uid="uid://8cv3fxgdm0td" path="res://Fighters/Kaede/Moves/11_Kaede_AirJumpNeutral.tres" id="11_67cbe"]
@@ -21,7 +21,7 @@
 [ext_resource type="Resource" uid="uid://dleyoipqsmi1b" path="res://Fighters/Kaede/Moves/18_Kaede_5A.tres" id="18_l7ox0"]
 [ext_resource type="Resource" uid="uid://bxq1eqaqdsm3s" path="res://Fighters/Kaede/Moves/17_Kaede_GetUpBackwards.tres" id="18_ms8a6"]
 [ext_resource type="Resource" uid="uid://dt51mvupv8nx5" path="res://Fighters/Kaede/Moves/19_Kaede_5B.tres" id="19_do64y"]
-[ext_resource type="Resource" uid="uid://e8k6uiwvnacl" path="res://Fighters/Kaede/Moves/20_Kaede_5C.tres" id="20_2lesk"]
+[ext_resource type="Resource" uid="uid://e8k6uiwvnacl" path="res://Fighters/Kaede/Moves/20_Kaede_5P.tres" id="20_2lesk"]
 [ext_resource type="Resource" uid="uid://c4rrn130o8wh7" path="res://Fighters/Kaede/Moves/21_Kaede_2A.tres" id="21_kox32"]
 [ext_resource type="Resource" uid="uid://bqtrq1qoop13m" path="res://Fighters/Kaede/Moves/22_Kaede_2B.tres" id="22_j4ow5"]
 [ext_resource type="Resource" uid="uid://by1wdar1r0hpy" path="res://Fighters/Kaede/Moves/23_Kaede_2C.tres" id="23_w3q8g"]
@@ -40,6 +40,7 @@
 [ext_resource type="Resource" uid="uid://ds7v65wp010cw" path="res://Fighters/Kaede/Moves/36_Kaede_236B_3.tres" id="37_t24cr"]
 [ext_resource type="Resource" uid="uid://d05yefknp8o8a" path="res://Fighters/Kaede/Moves/37_Kaede_623C.tres" id="38_ikbmw"]
 [ext_resource type="Resource" uid="uid://cp44wcvfgrkue" path="res://Fighters/Kaede/Moves/38_Kaede_236BC.tres" id="39_7g1w4"]
+
 
 [resource]
 script = ExtResource("9")
