@@ -14,7 +14,7 @@ metadata/_custom_type_script = "uid://dpgs1fcn5u351"
 [resource]
 script = ExtResource("3_j3g34")
 MoveName = "2B"
-MoveState = 52
+MoveState = 57
 Inputs = ExtResource("2_w5ugs")
 Priority = 5
 MoveEnd = 2

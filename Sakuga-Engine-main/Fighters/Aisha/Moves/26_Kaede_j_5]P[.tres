@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="MoveSettings" format=3 uid="uid://cwsoagvtmiwxc"]
+
+[ext_resource type="Resource" uid="uid://fnernd2rfpal" path="res://Fighters/Shared/Inputs/13_Input_]P[.tres" id="1_i8evr"]
+[ext_resource type="Script" uid="uid://gk1rkw667o4n" path="res://Scripts/SakugaEngine/Resources/MoveSettings.cs" id="2_h30dd"]
+
+[resource]
+script = ExtResource("2_h30dd")
+MoveName = "j.5P"
+MoveState = 64
+Inputs = ExtResource("1_i8evr")
+Priority = 5
+MoveEnd = 2
+ChargeRequired = Vector2i(0, 50)
+CanCancelTo = Array[Object]([])
+ExtraVariablesRequirement = Array[Object]([])
+ExtraVariablesChange = Array[Object]([])
+CanBeOverrided = true
+IgnoreSamePriority = false
+AcceptNullStates = true
+AcceptCombatStates = true
+UseOnAir = true

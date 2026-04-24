@@ -20,13 +20,13 @@
 [ext_resource type="Resource" uid="uid://1rrv3y1vbqjm" path="res://Fighters/Aisha/Moves/17_Kaede_GetUpBackwards.tres" id="18_0tcb4"]
 [ext_resource type="Resource" uid="uid://co3duc0qnwpoi" path="res://Fighters/Aisha/Moves/18_Kaede_5A.tres" id="19_b118f"]
 [ext_resource type="Resource" uid="uid://borouwdlb1ryv" path="res://Fighters/Aisha/Moves/19_Kaede_5B.tres" id="20_2i626"]
-[ext_resource type="Resource" uid="uid://btkujcya3br04" path="res://Fighters/Aisha/Moves/20_Kaede_5C.tres" id="21_rrca7"]
+[ext_resource type="Resource" uid="uid://btkujcya3br04" path="res://Fighters/Aisha/Moves/20_Kaede_5P.tres" id="21_rrca7"]
 [ext_resource type="Resource" uid="uid://cevcwtlxh06xy" path="res://Fighters/Aisha/Moves/21_Kaede_2A.tres" id="22_dqyhx"]
 [ext_resource type="Resource" uid="uid://kpb01xaib8dj" path="res://Fighters/Aisha/Moves/22_Kaede_2B.tres" id="23_rupns"]
-[ext_resource type="Resource" uid="uid://bdgxqrh6i2ska" path="res://Fighters/Aisha/Moves/23_Kaede_2C.tres" id="24_6gbic"]
+[ext_resource type="Resource" uid="uid://bdgxqrh6i2ska" path="res://Fighters/Aisha/Moves/23_Kaede_2P.tres" id="24_6gbic"]
 [ext_resource type="Resource" uid="uid://16rusnntsvpu" path="res://Fighters/Aisha/Moves/24_Kaede_j_5A.tres" id="25_1et8y"]
 [ext_resource type="Resource" uid="uid://4em6f607midw" path="res://Fighters/Aisha/Moves/25_Kaede_j_5B.tres" id="26_eiwdj"]
-[ext_resource type="Resource" uid="uid://2c1fk1awu7xk" path="res://Fighters/Aisha/Moves/26_Kaede_j_5C.tres" id="27_r8x84"]
+[ext_resource type="Resource" uid="uid://2c1fk1awu7xk" path="res://Fighters/Aisha/Moves/26_Kaede_j_5P.tres" id="27_r8x84"]
 [ext_resource type="Resource" uid="uid://bqoco81ohaovn" path="res://Fighters/Aisha/Moves/27_Kaede_66B.tres" id="28_4nxlm"]
 [ext_resource type="Resource" uid="uid://2wt0gf6rk5y3" path="res://Fighters/Aisha/Moves/28_Kaede_BC.tres" id="29_7k3bs"]
 [ext_resource type="Resource" uid="uid://dhqlo2spbq8ge" path="res://Fighters/Aisha/Moves/29_Kaede_BC_seq1.tres" id="30_mstss"]
@@ -40,6 +40,7 @@
 [ext_resource type="Resource" uid="uid://b4vdltrxbqhvm" path="res://Fighters/Aisha/Moves/37_Kaede_623C.tres" id="38_c1sph"]
 [ext_resource type="Resource" uid="uid://cfjbcxktnefog" path="res://Fighters/Aisha/Moves/38_Kaede_236BC.tres" id="39_i7w00"]
 [ext_resource type="Script" uid="uid://ddrvw4nom6hlu" path="res://Scripts/SakugaEngine/Resources/FighterStance.cs" id="40_0jso0"]
+
 
 [resource]
 script = ExtResource("40_0jso0")

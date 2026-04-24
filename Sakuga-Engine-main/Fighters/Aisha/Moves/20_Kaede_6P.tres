@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="MoveSettings" format=3 uid="uid://phbuymfgbe5x"]
+
+[ext_resource type="Script" uid="uid://dpgs1fcn5u351" path="res://Scripts/SakugaEngine/Resources/MoveCancelSettings.cs" id="1_xv477"]
+[ext_resource type="Resource" uid="uid://7tkdjgdsihn0" path="res://Fighters/Shared/Inputs/13_Input_6]P[.tres" id="2_t0amv"]
+[ext_resource type="Script" uid="uid://gk1rkw667o4n" path="res://Scripts/SakugaEngine/Resources/MoveSettings.cs" id="3_8w36d"]
+
+[sub_resource type="Resource" id="Resource_dr1tj"]
+script = ExtResource("1_xv477")
+MoveIndex = 28
+Conditions = 8
+metadata/_custom_type_script = "uid://dpgs1fcn5u351"
+
+[sub_resource type="Resource" id="Resource_2bm83"]
+script = ExtResource("1_xv477")
+MoveIndex = 38
+Conditions = 8
+metadata/_custom_type_script = "uid://dpgs1fcn5u351"
+
+[resource]
+script = ExtResource("3_8w36d")
+MoveName = "6P"
+MoveState = 54
+Inputs = ExtResource("2_t0amv")
+Priority = 5
+MoveEnd = 2
+ChargeRequired = Vector2i(0, 50)
+CanCancelTo = Array[Object]([SubResource("Resource_dr1tj"), SubResource("Resource_2bm83")])
+ExtraVariablesRequirement = null
+ExtraVariablesChange = null
+CanBeOverrided = true
+IgnoreSamePriority = false
+AcceptNullStates = true
+AcceptCombatStates = true
+UseOnGround = true

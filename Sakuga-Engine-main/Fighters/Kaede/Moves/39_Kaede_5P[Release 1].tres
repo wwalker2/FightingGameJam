@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="MoveSettings" format=3 uid="uid://dtx4oxlths0fx"]
 
 [ext_resource type="Script" uid="uid://dpgs1fcn5u351" path="res://Scripts/SakugaEngine/Resources/MoveCancelSettings.cs" id="1_r8k85"]
-[ext_resource type="Resource" uid="uid://bii142i8da7oq" path="res://Fighters/Shared/Inputs/13_Input_5C.tres" id="2_wba0w"]
+[ext_resource type="Resource" uid="uid://bii142i8da7oq" path="res://Fighters/Shared/Inputs/13_Input_5P.tres" id="2_wba0w"]
 [ext_resource type="Script" uid="uid://gk1rkw667o4n" path="res://Scripts/SakugaEngine/Resources/MoveSettings.cs" id="3_h3c0x"]
 
 [sub_resource type="Resource" id="Resource_dr1tj"]

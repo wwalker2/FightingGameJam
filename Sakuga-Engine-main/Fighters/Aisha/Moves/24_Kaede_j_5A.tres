@@ -35,7 +35,7 @@ metadata/_custom_type_script = "uid://dpgs1fcn5u351"
 [resource]
 script = ExtResource("3_l5ry1")
 MoveName = "j.5A"
-MoveState = 54
+MoveState = 60
 Inputs = ExtResource("2_833r4")
 Priority = 5
 MoveEnd = 2

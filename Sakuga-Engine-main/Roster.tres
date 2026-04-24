@@ -13,6 +13,7 @@
 [ext_resource type="Resource" uid="uid://bwehxfu2g08t8" path="res://Fighters/Aisha/Aisha_Profile.tres" id="11_hd0eg"]
 [ext_resource type="PackedScene" uid="uid://bsbv07br0uqxw" path="res://Fighters/Aisha/Instances/Fighter_Aisha.tscn" id="11_q6gag"]
 [ext_resource type="PackedScene" uid="uid://3reeyb4tcc1i" path="res://Fighters/Dummy/Instances/Dummy_Fighter_Default.tscn" id="12_f2d14"]
+[ext_resource type="PackedScene" uid="uid://cotjpjik8axwc" path="res://Fighters/Aisha/Instances/Fighter_Aisha_Alt.tscn" id="12_yn7sm"]
 
 [sub_resource type="Resource" id="Resource_q6gag"]
 script = ExtResource("2_w00mg")
@@ -68,10 +69,16 @@ PaletteName = "Default"
 Instance = ExtResource("11_q6gag")
 metadata/_custom_type_script = "uid://dg21wno6w513c"
 
+[sub_resource type="Resource" id="Resource_ljnqe"]
+script = ExtResource("2_w00mg")
+PaletteName = "Alternative"
+Instance = ExtResource("12_yn7sm")
+metadata/_custom_type_script = "uid://dg21wno6w513c"
+
 [sub_resource type="Resource" id="Resource_pfguy"]
 script = ExtResource("3_m8lbm")
 Profile = ExtResource("11_hd0eg")
-ColorPalettes = Array[Object]([SubResource("Resource_4cevj")])
+ColorPalettes = Array[Object]([SubResource("Resource_4cevj"), SubResource("Resource_ljnqe")])
 metadata/_custom_type_script = "uid://dclkxgxahdy5l"
 
 [resource]
