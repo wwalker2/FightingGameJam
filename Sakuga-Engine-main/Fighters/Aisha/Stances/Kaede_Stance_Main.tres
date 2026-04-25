@@ -22,31 +22,27 @@
 [ext_resource type="Resource" uid="uid://borouwdlb1ryv" path="res://Fighters/Aisha/Moves/19_Kaede_5B.tres" id="20_2i626"]
 [ext_resource type="Resource" uid="uid://btkujcya3br04" path="res://Fighters/Aisha/Moves/20_Kaede_5P.tres" id="21_rrca7"]
 [ext_resource type="Resource" uid="uid://cevcwtlxh06xy" path="res://Fighters/Aisha/Moves/21_Kaede_2A.tres" id="22_dqyhx"]
+[ext_resource type="Resource" uid="uid://cj57ia01o7lnx" path="res://Fighters/Aisha/Moves/20_Kaede_5]P[.tres" id="22_mrmri"]
+[ext_resource type="Resource" uid="uid://cjmmkrlncg3ta" path="res://Fighters/Aisha/Moves/18_Kaede_6A.tres" id="23_0c7pe"]
 [ext_resource type="Resource" uid="uid://kpb01xaib8dj" path="res://Fighters/Aisha/Moves/22_Kaede_2B.tres" id="23_rupns"]
 [ext_resource type="Resource" uid="uid://bdgxqrh6i2ska" path="res://Fighters/Aisha/Moves/23_Kaede_2P.tres" id="24_6gbic"]
+[ext_resource type="Resource" uid="uid://bbjvuqs1fpge7" path="res://Fighters/Aisha/Moves/19_Kaede_6B.tres" id="24_6mdcy"]
 [ext_resource type="Resource" uid="uid://16rusnntsvpu" path="res://Fighters/Aisha/Moves/24_Kaede_j_5A.tres" id="25_1et8y"]
+[ext_resource type="Resource" uid="uid://phbuymfgbe5x" path="res://Fighters/Aisha/Moves/20_Kaede_6P.tres" id="25_3s2yv"]
 [ext_resource type="Resource" uid="uid://4em6f607midw" path="res://Fighters/Aisha/Moves/25_Kaede_j_5B.tres" id="26_eiwdj"]
+[ext_resource type="Resource" uid="uid://pr0v35lixhyf" path="res://Fighters/Aisha/Moves/20_Kaede_6]P[.tres" id="26_li2yo"]
 [ext_resource type="Resource" uid="uid://2c1fk1awu7xk" path="res://Fighters/Aisha/Moves/26_Kaede_j_5P.tres" id="27_r8x84"]
-[ext_resource type="Resource" uid="uid://bqoco81ohaovn" path="res://Fighters/Aisha/Moves/27_Kaede_66B.tres" id="28_4nxlm"]
-[ext_resource type="Resource" uid="uid://2wt0gf6rk5y3" path="res://Fighters/Aisha/Moves/28_Kaede_BC.tres" id="29_7k3bs"]
-[ext_resource type="Resource" uid="uid://dhqlo2spbq8ge" path="res://Fighters/Aisha/Moves/29_Kaede_BC_seq1.tres" id="30_mstss"]
-[ext_resource type="Resource" uid="uid://bkl4u33c2nt7d" path="res://Fighters/Aisha/Moves/30_Kaede_BC_seq2.tres" id="31_dmss4"]
-[ext_resource type="Resource" uid="uid://dgqxl7kmjm1bt" path="res://Fighters/Aisha/Moves/31_Kaede_BC_seq3.tres" id="32_0i3qv"]
+[ext_resource type="Resource" uid="uid://c7cd6kvomoxe6" path="res://Fighters/Aisha/Moves/23_Kaede_2]P[.tres" id="30_v6k16"]
+[ext_resource type="Resource" uid="uid://cf1xq80leoi0n" path="res://Fighters/Aisha/Moves/25_Kaede_j_2B.tres" id="33_cbbht"]
 [ext_resource type="Resource" uid="uid://dnrry1vh54waw" path="res://Fighters/Aisha/Moves/32_Kaede_AB.tres" id="33_kjsi0"]
-[ext_resource type="Resource" uid="uid://fpgt6guh66fw" path="res://Fighters/Aisha/Moves/33_Kaede_236A.tres" id="34_ihc3u"]
-[ext_resource type="Resource" uid="uid://bev58ru4hglgh" path="res://Fighters/Aisha/Moves/34_Kaede_236B_1.tres" id="35_mii0h"]
-[ext_resource type="Resource" uid="uid://dpvpvw3ywd4a" path="res://Fighters/Aisha/Moves/35_Kaede_236B_2.tres" id="36_w3wxs"]
-[ext_resource type="Resource" uid="uid://hjhg1lyuytar" path="res://Fighters/Aisha/Moves/36_Kaede_236B_3.tres" id="37_xvbr1"]
-[ext_resource type="Resource" uid="uid://b4vdltrxbqhvm" path="res://Fighters/Aisha/Moves/37_Kaede_623C.tres" id="38_c1sph"]
-[ext_resource type="Resource" uid="uid://cfjbcxktnefog" path="res://Fighters/Aisha/Moves/38_Kaede_236BC.tres" id="39_i7w00"]
+[ext_resource type="Resource" uid="uid://cwsoagvtmiwxc" path="res://Fighters/Aisha/Moves/26_Kaede_j_5]P[.tres" id="35_v33hq"]
 [ext_resource type="Script" uid="uid://ddrvw4nom6hlu" path="res://Scripts/SakugaEngine/Resources/FighterStance.cs" id="40_0jso0"]
-
 
 [resource]
 script = ExtResource("40_0jso0")
 IsDamagePersistent = true
 IsRoundPersistent = true
-Moves = Array[Object]([ExtResource("1_3s2yv"), ExtResource("2_li2yo"), ExtResource("3_v6k16"), ExtResource("4_cbbht"), ExtResource("5_v33hq"), ExtResource("6_vefi2"), ExtResource("7_5yg0v"), ExtResource("8_5k5rx"), ExtResource("9_j4l6j"), ExtResource("10_0mu2k"), ExtResource("11_urfsr"), ExtResource("12_8ce7n"), ExtResource("13_2cxuo"), ExtResource("14_5508n"), ExtResource("15_uhg81"), ExtResource("16_2rkyo"), ExtResource("17_ouaoq"), ExtResource("18_0tcb4"), ExtResource("19_b118f"), ExtResource("20_2i626"), ExtResource("21_rrca7"), ExtResource("22_dqyhx"), ExtResource("23_rupns"), ExtResource("24_6gbic"), ExtResource("25_1et8y"), ExtResource("26_eiwdj"), ExtResource("27_r8x84"), ExtResource("28_4nxlm"), ExtResource("29_7k3bs"), ExtResource("30_mstss"), ExtResource("31_dmss4"), ExtResource("32_0i3qv"), ExtResource("33_kjsi0"), ExtResource("34_ihc3u"), ExtResource("35_mii0h"), ExtResource("36_w3wxs"), ExtResource("37_xvbr1"), ExtResource("38_c1sph"), ExtResource("39_i7w00")])
+Moves = Array[Object]([ExtResource("1_3s2yv"), ExtResource("2_li2yo"), ExtResource("3_v6k16"), ExtResource("4_cbbht"), ExtResource("5_v33hq"), ExtResource("6_vefi2"), ExtResource("7_5yg0v"), ExtResource("8_5k5rx"), ExtResource("9_j4l6j"), ExtResource("10_0mu2k"), ExtResource("11_urfsr"), ExtResource("12_8ce7n"), ExtResource("13_2cxuo"), ExtResource("14_5508n"), ExtResource("15_uhg81"), ExtResource("16_2rkyo"), ExtResource("17_ouaoq"), ExtResource("18_0tcb4"), ExtResource("19_b118f"), ExtResource("20_2i626"), ExtResource("21_rrca7"), ExtResource("22_mrmri"), ExtResource("23_0c7pe"), ExtResource("24_6mdcy"), ExtResource("25_3s2yv"), ExtResource("26_li2yo"), ExtResource("22_dqyhx"), ExtResource("23_rupns"), ExtResource("24_6gbic"), ExtResource("30_v6k16"), ExtResource("25_1et8y"), ExtResource("26_eiwdj"), ExtResource("33_cbbht"), ExtResource("27_r8x84"), ExtResource("35_v33hq"), ExtResource("33_kjsi0")])
 HitReactions = PackedInt32Array(17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 61)
 GroundBlockInitialState = 33
 CrouchBlockInitialState = 38

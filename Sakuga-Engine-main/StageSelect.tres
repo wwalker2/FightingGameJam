@@ -10,7 +10,7 @@
 [sub_resource type="Resource" id="Resource_i140w"]
 script = ExtResource("2_o2vfw")
 Instance = ExtResource("1_h8ykn")
-Name = "Sakuga Default Stage"
+Name = "Sakuga Stage Basic"
 Thumbnail = ExtResource("2_ufopn")
 metadata/_custom_type_script = "uid://dw7uv2j4bk58i"
 

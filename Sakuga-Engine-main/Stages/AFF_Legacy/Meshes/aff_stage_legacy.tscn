@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://ctu20phobjd06"]
+[gd_scene format=3 uid="uid://ctu20phobjd06"]
 
 [ext_resource type="PackedScene" uid="uid://dfj4ov83m8s44" path="res://Stages/AFF_Legacy/Meshes/AFF_Stage_Legacy.gltf" id="1_l0vme"]
 [ext_resource type="Material" uid="uid://8ki38j7140br" path="res://Stages/AFF_Legacy/Materials/AFF_Legacy_MAT.tres" id="2_w81la"]
