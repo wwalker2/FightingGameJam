@@ -2,7 +2,7 @@ using Godot;
 
 namespace SakugaEngine.Resources
 {
-     [GlobalClass]
+     [GlobalClass] [Tool]
     public partial class StatePhysics : Resource
     {
         [Export] public int Frame;

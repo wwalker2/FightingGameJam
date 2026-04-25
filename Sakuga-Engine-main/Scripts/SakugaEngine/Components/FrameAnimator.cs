@@ -4,7 +4,7 @@ using System.IO;
 
 namespace SakugaEngine
 {
-    [GlobalClass]
+    [GlobalClass] [Tool]
     public partial class FrameAnimator : Node
     {
         private SakugaActor _owner;
