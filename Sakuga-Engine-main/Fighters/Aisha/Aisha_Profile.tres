@@ -10,5 +10,5 @@ FighterName = "AISHA+BISHA"
 ShortName = "Aisha"
 Render = ExtResource("2_hqtjn")
 Portrait = ExtResource("1_hqtjn")
-AutoStage = 2
-AutoBGM = 2
+AutoStage = 1
+AutoBGM = 1
