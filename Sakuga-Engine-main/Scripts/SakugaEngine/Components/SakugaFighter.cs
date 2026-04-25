@@ -716,7 +716,10 @@ namespace SakugaEngine
 			{
 				HitstunType = 0;
 				ThrowEscapeAction();
+				FighterVars.AddContract();
+				FighterVars.AddContract();
 				GetOpponent().ThrowEscapeAction();
+				GetOpponent().FighterVars.SpendContract(2);
 			}
 		}
 		public void ThrowEscapeAction()
@@ -854,7 +857,9 @@ namespace SakugaEngine
 			if (GetOpponent().Animator.CurrentStateType() == Global.StateType.HIT_REACTION) finalHitstop = (uint)box.ThrowHitstopAfterHit;
 			
 			GetOpponent().ThrowHit(box, finalHitstop);
+			GetOpponent().FighterVars.SpendContract(1);
 			HitConfirm(0, finalHitstop, box.HitConfirmState, -1, Vector2I.Zero);
+			FighterVars.AddContract();
 			Brain.canAdvance = true;
 			GD.Print("Fighter: Throw!");
 		}
