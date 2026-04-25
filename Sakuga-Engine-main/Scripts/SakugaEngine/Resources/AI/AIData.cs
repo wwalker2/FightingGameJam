@@ -3,7 +3,7 @@ using System;
 
 namespace SakugaEngine.Resources
 {
-    [GlobalClass]
+    [GlobalClass] [Tool]
     public partial class AIData : Resource
     {
         [ExportCategory("Actions")]

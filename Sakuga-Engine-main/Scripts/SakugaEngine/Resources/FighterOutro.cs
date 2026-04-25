@@ -3,7 +3,7 @@ using System;
 
 namespace SakugaEngine.Resources
 {
-	[GlobalClass]
+	[GlobalClass] [Tool]
 	public partial class FighterOutro : Resource
 	{
 		[Export] public int StateIndex;
