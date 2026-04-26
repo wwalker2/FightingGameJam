@@ -16,6 +16,7 @@ namespace SakugaEngine
 		public ushort CurrentGravityProration;
 
 		public uint PartnerMeter;
+		public bool PartnerMeterFull;
 
 		public byte Contracts;
 		public byte Seals;
@@ -166,6 +167,7 @@ namespace SakugaEngine
 			bw.Write(CurrentGravityProration);
 
 			bw.Write(PartnerMeter);
+			bw.Write(PartnerMeterFull);
 
 			bw.Write(Contracts);
 			bw.Write(Seals);
@@ -184,6 +186,7 @@ namespace SakugaEngine
 			CurrentDamageProration = br.ReadUInt16();
 			CurrentGravityProration = br.ReadUInt16();
 			PartnerMeter = br.ReadUInt32();
+			PartnerMeterFull = br.ReadBoolean();
 			Contracts = br.ReadByte();
 			Seals = br.ReadByte();
 		}

@@ -37,6 +37,8 @@ namespace SakugaEngine
 		private byte HitstunType = 0;
 		private byte GravityDecayFactor = 0;
 		private byte HitstunDecayFactor = 0;
+		private ushort BlockCounter = 0;
+		private bool GrabSuccessful = false;
 		private SakugaSpawnable[][] Spawnables;
 		private SakugaVFX[][] VFX;
 		
@@ -108,6 +110,8 @@ namespace SakugaEngine
 			ForcePlayerSide(Mathf.Sign(Body.FixedPosition.X) < 0);
 			Animator.PlayState(0);
 			Animator.CurrentStateFrame = -1;
+			BlockCounter = 0;
+			GrabSuccessful = false;
 		}
 
 		public void InitializeAI(bool active, Global.BotDifficulty diff)
@@ -135,6 +139,8 @@ namespace SakugaEngine
 			HorizontalBounce.Stop();
 			VerticalBounce.Stop();
 			BlockStun = false;
+			BlockCounter = 0;
+			GrabSuccessful = false;
 		}
 
 		public void UpdateSide(bool leftSide)
@@ -186,8 +192,16 @@ namespace SakugaEngine
 				if (Inputs.IsBeingPressed(Inputs.CurrentHistory, Global.INPUT_FACE_C))
 				{
 					FighterVars.PartnerMeter += (uint)Data.PartnerGaugeChargeRate;
+						
 					if (FighterVars.PartnerMeter > (uint)Data.MaxPartnerGauge)
+					{
+						if (!FighterVars.PartnerMeterFull)
+						{
+							FighterVars.AddContract();
+							FighterVars.PartnerMeterFull = true;
+						}
 						FighterVars.PartnerMeter = (uint)Data.MaxPartnerGauge;
+					}
 				}
 				
 				if (Animator.GetCurrentState().HitStunFrameLimit < 0 || !IsStunLocked())
@@ -205,7 +219,10 @@ namespace SakugaEngine
 			Inputs.InputSide = Body.PlayerSide;
 			StateMachine.CheckMoves();
 			if (!Inputs.IsBeingPressed(Inputs.CurrentHistory, Global.INPUT_FACE_C))
+			{
 				FighterVars.PartnerMeter = 0;
+				FighterVars.PartnerMeterFull = false;
+			}
 
 			if (HitstunType > (int)Global.HitstunType.STAGGER)
 				ThrowPivoting();
@@ -241,6 +258,7 @@ namespace SakugaEngine
 				GravityDecayFactor = 0;
 				HitstunType = 0;
 				BlockStun = false;
+				GrabSuccessful = false;
 			}
 		}
 #region Push Force
@@ -634,7 +652,7 @@ namespace SakugaEngine
 			//GetOpponent().Tracker.HitFrame = stunFrame;
 			//GetOpponent().Tracker.StunAtHit = finalHitstunForReal;
 			GetOpponent().Tracker.FrameAdvantage = -(stunFrame - (int)finalHitstunForReal);
-
+			BlockCounter = 0;
 			if (Tracker.HitCombo >= Global.HitstunDecayMinCombo)
 				HitstunDecayFactor++;
 			if (IsAirState())
@@ -669,6 +687,9 @@ namespace SakugaEngine
 				finalDamage,
 				box.OpponentSuperGaugeGain,
 				box.ChipDeath);
+			BlockCounter++;
+			if (BlockCounter == 5)
+				FighterVars.AddContract();
 		}
 		public void GuardCrush(HitboxElement box)
 		{
@@ -711,15 +732,23 @@ namespace SakugaEngine
 		public void ThrowEscape()
 		{
 			if (!HitStop.IsRunning()) return;
+			else if (HitStop.TimeLeft == 1)
+			{
+				if (!GrabSuccessful && GetOpponent().HitstunType > (int)Global.HitstunType.STAGGER && HitstunType == 0)
+				{
+					FighterVars.AddContract();
+					GetOpponent().FighterVars.SpendContract(1);
+					GrabSuccessful = true;
+				}
+			}
 			if (HitstunType <= (int)Global.HitstunType.STAGGER) return;
 			if (Inputs.IsBeingPressed(Inputs.CurrentHistory, Global.INPUT_ANY_BUTTON))
 			{
 				HitstunType = 0;
 				ThrowEscapeAction();
 				FighterVars.AddContract();
-				FighterVars.AddContract();
 				GetOpponent().ThrowEscapeAction();
-				GetOpponent().FighterVars.SpendContract(2);
+				GetOpponent().FighterVars.SpendContract(1);
 			}
 		}
 		public void ThrowEscapeAction()
@@ -857,9 +886,9 @@ namespace SakugaEngine
 			if (GetOpponent().Animator.CurrentStateType() == Global.StateType.HIT_REACTION) finalHitstop = (uint)box.ThrowHitstopAfterHit;
 			
 			GetOpponent().ThrowHit(box, finalHitstop);
-			GetOpponent().FighterVars.SpendContract(1);
+			//GetOpponent().FighterVars.SpendContract(1);
 			HitConfirm(0, finalHitstop, box.HitConfirmState, -1, Vector2I.Zero);
-			FighterVars.AddContract();
+			//FighterVars.AddContract();
 			Brain.canAdvance = true;
 			GD.Print("Fighter: Throw!");
 		}
@@ -934,6 +963,8 @@ namespace SakugaEngine
 			bw.Write(HitstunDecayFactor);
 			bw.Write((byte)CancelConditions);
 			bw.Write((byte)AnimationStage);
+			bw.Write(BlockCounter);
+			bw.Write(GrabSuccessful);
 		}
 
 		public override void Deserialize(BinaryReader br)
@@ -969,6 +1000,8 @@ namespace SakugaEngine
 			HitstunDecayFactor = br.ReadByte();
 			CancelConditions = (Global.CancelCondition)br.ReadByte();
 			AnimationStage = (Global.AnimationStage)br.ReadByte();
+			BlockCounter = br.ReadUInt16();
+			GrabSuccessful = br.ReadBoolean();
 
 			Body.UpdateColliders();
 		}
