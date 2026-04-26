@@ -2,7 +2,7 @@ using Godot;
 
 namespace SakugaEngine.Resources
 {
-	[GlobalClass]
+	[GlobalClass] [Tool]
 	public partial class MotionInputs : Resource
 	{
 		[Export] public InputOption[] ValidInputs;
