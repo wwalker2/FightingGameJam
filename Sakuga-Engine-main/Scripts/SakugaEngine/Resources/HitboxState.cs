@@ -2,7 +2,7 @@ using Godot;
 
 namespace SakugaEngine.Resources
 {
-    [GlobalClass]
+    [GlobalClass] [Tool]
     public partial class HitboxState : Resource
     {
         [Export] public Global.AnimationStage animationStage;

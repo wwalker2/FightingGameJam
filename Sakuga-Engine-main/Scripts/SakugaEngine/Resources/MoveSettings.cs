@@ -2,7 +2,7 @@ using Godot;
 
 namespace SakugaEngine.Resources
 {
-	[GlobalClass]
+	[GlobalClass] [Tool]
 	[Icon("res://Sprites/Icons/Icon_Motion.png")]
 	public partial class MoveSettings : Resource
 	{

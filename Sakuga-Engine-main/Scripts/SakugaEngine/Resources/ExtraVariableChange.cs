@@ -2,7 +2,7 @@ using Godot;
 
 namespace SakugaEngine.Resources
 {
-    [GlobalClass]
+    [GlobalClass] [Tool]
     public partial class ExtraVariableChange : Resource
     {
         [Export] public Global.ExtraVariableChange ChangeMode;

@@ -3,7 +3,7 @@ using SakugaEngine;
 
 namespace SakugaEngine.Resources
 {
-	[GlobalClass]
+	[GlobalClass] [Tool]
 	public partial class DataContainer : Resource
 	{
 		[Export] public FighterProfile Profile;

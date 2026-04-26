@@ -3,7 +3,7 @@ using System;
 
 namespace SakugaEngine.Resources
 {
-    [GlobalClass]
+    [GlobalClass] [Tool]
     public partial class ThrowDetachmentSettings : Resource
     {
         [Export] public bool InvertSide;
