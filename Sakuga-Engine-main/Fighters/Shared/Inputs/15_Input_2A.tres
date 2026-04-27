@@ -12,8 +12,8 @@ Buttons = 1
 
 [sub_resource type="Resource" id="Resource_4uo5i"]
 script = ExtResource("2_aj32b")
-Inputs = Array[Object]([SubResource("Resource_6t0yt")])
+Inputs = [SubResource("Resource_6t0yt")]
 
 [resource]
 script = ExtResource("3_xygx0")
-ValidInputs = Array[Object]([SubResource("Resource_4uo5i")])
+ValidInputs = [SubResource("Resource_4uo5i")]

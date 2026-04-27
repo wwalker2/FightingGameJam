@@ -28,7 +28,7 @@ Buttons = 4
 
 [sub_resource type="Resource" id="Resource_26osb"]
 script = ExtResource("2_6mg61")
-Inputs = Array[Object]([SubResource("Resource_tyq07"), SubResource("Resource_h8g2y"), SubResource("Resource_kn37o"), SubResource("Resource_oj3a4"), SubResource("Resource_h2up5")])
+Inputs = [SubResource("Resource_tyq07"), SubResource("Resource_h8g2y"), SubResource("Resource_kn37o"), SubResource("Resource_oj3a4"), SubResource("Resource_h2up5")]
 
 [sub_resource type="Resource" id="Resource_ybiua"]
 script = ExtResource("1_pa1jb")
@@ -56,7 +56,7 @@ Buttons = 4
 
 [sub_resource type="Resource" id="Resource_qup6d"]
 script = ExtResource("2_6mg61")
-Inputs = Array[Object]([SubResource("Resource_ybiua"), SubResource("Resource_6pggm"), SubResource("Resource_nphqb"), SubResource("Resource_2eq4l"), SubResource("Resource_ygh5i")])
+Inputs = [SubResource("Resource_ybiua"), SubResource("Resource_6pggm"), SubResource("Resource_nphqb"), SubResource("Resource_2eq4l"), SubResource("Resource_ygh5i")]
 
 [sub_resource type="Resource" id="Resource_fc2cl"]
 script = ExtResource("1_pa1jb")
@@ -69,9 +69,9 @@ Buttons = 4
 
 [sub_resource type="Resource" id="Resource_306g7"]
 script = ExtResource("2_6mg61")
-Inputs = Array[Object]([SubResource("Resource_ybiua"), SubResource("Resource_fc2cl"), SubResource("Resource_nphqb"), SubResource("Resource_xuk8l")])
+Inputs = [SubResource("Resource_ybiua"), SubResource("Resource_fc2cl"), SubResource("Resource_nphqb"), SubResource("Resource_xuk8l")]
 
 [resource]
 script = ExtResource("3_7bqb2")
-ValidInputs = Array[Object]([SubResource("Resource_26osb"), SubResource("Resource_qup6d"), SubResource("Resource_306g7")])
+ValidInputs = [SubResource("Resource_26osb"), SubResource("Resource_qup6d"), SubResource("Resource_306g7")]
 AbsoluteDirection = true

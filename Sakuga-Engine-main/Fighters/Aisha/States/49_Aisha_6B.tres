@@ -11,46 +11,54 @@ script = ExtResource("1_epikm")
 SourceAnimation = "6B"
 metadata/_custom_type_script = "uid://b8vqwkv52qq3e"
 
-[sub_resource type="Resource" id="2"]
+[sub_resource type="Resource" id="Resource_epikm"]
 script = ExtResource("2_jl6i8")
-HitboxIndex = 5
+HitboxIndex = 36
 
-[sub_resource type="Resource" id="3"]
+[sub_resource type="Resource" id="Resource_jl6i8"]
 script = ExtResource("2_jl6i8")
 animationStage = 1
-Frame = 9
-HitboxIndex = 7
+Frame = 22
+HitboxIndex = 37
 
-[sub_resource type="Resource" id="4"]
+[sub_resource type="Resource" id="Resource_mrsol"]
 script = ExtResource("2_jl6i8")
 animationStage = 2
-Frame = 13
+Frame = 24
+HitboxIndex = 38
+
+[sub_resource type="Resource" id="Resource_n22fi"]
+script = ExtResource("2_jl6i8")
+animationStage = 2
+Frame = 27
+HitboxIndex = 39
+metadata/_custom_type_script = "uid://5qrsoteskjym"
 
 [sub_resource type="Resource" id="9"]
 script = ExtResource("4_n22fi")
 UseLateralSpeed = true
-LateralSpeed = 18000
 UseVerticalSpeed = true
 UseGravity = true
 
 [sub_resource type="Resource" id="6"]
 script = ExtResource("4_n22fi")
-Frame = 9
+Frame = 20
 UseLateralSpeed = true
+LateralSpeed = 3000
 UseVerticalSpeed = true
 UseGravity = true
 
 [sub_resource type="Resource" id="7"]
 script = ExtResource("4_n22fi")
-Frame = 15
+Frame = 21
 UseLateralSpeed = true
-LateralSpeed = -12000
+LateralSpeed = 6000
 UseVerticalSpeed = true
 UseGravity = true
 
 [sub_resource type="Resource" id="8"]
 script = ExtResource("4_n22fi")
-Frame = 23
+Frame = 22
 UseLateralSpeed = true
 UseVerticalSpeed = true
 UseGravity = true
@@ -66,11 +74,11 @@ script = ExtResource("3_mrsol")
 StateName = "6B"
 Type = 2
 Duration = 36
-stateProperties = null
+stateProperties = []
 statePhysics = [SubResource("9"), SubResource("6"), SubResource("7"), SubResource("8")]
-hitboxStates = [SubResource("2"), SubResource("3"), SubResource("4")]
-animationEvents = null
-throwPivot = null
-stateTransitions = Array[Object]([SubResource("Resource_kh7pa")])
-animationSettings = Array[Object]([SubResource("Resource_g3upw")])
+hitboxStates = [SubResource("Resource_epikm"), SubResource("Resource_jl6i8"), SubResource("Resource_mrsol"), SubResource("Resource_n22fi")]
+animationEvents = []
+throwPivot = []
+stateTransitions = [SubResource("Resource_kh7pa")]
+animationSettings = [SubResource("Resource_g3upw")]
 AIFlags = 18

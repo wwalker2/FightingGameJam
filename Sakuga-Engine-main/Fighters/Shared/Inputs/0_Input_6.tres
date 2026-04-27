@@ -11,10 +11,10 @@ DirectionalMode = 1
 
 [sub_resource type="Resource" id="Resource_i7k3e"]
 script = ExtResource("2_8b2qv")
-Inputs = Array[Object]([SubResource("Resource_rq7yo")])
+Inputs = [SubResource("Resource_rq7yo")]
 
 [resource]
 script = ExtResource("1_cdk2f")
-ValidInputs = Array[Resource]([SubResource("Resource_i7k3e")])
+ValidInputs = [SubResource("Resource_i7k3e")]
 AbsoluteDirection = true
 InputBuffer = 99999

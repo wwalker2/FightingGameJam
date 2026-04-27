@@ -20,7 +20,7 @@ Directional = 2
 
 [sub_resource type="Resource" id="Resource_4uo5i"]
 script = ExtResource("2_5q2fi")
-Inputs = Array[Object]([SubResource("Resource_8kjc8"), SubResource("Resource_giw3p"), SubResource("Resource_jx6ng")])
+Inputs = [SubResource("Resource_8kjc8"), SubResource("Resource_giw3p"), SubResource("Resource_jx6ng")]
 
 [sub_resource type="Resource" id="Resource_6t0yt"]
 script = ExtResource("1_3skax")
@@ -34,10 +34,10 @@ DirectionalMode = 3
 
 [sub_resource type="Resource" id="Resource_m46e1"]
 script = ExtResource("2_5q2fi")
-Inputs = Array[Object]([SubResource("Resource_6t0yt"), SubResource("Resource_s2due"), SubResource("Resource_jx6ng")])
+Inputs = [SubResource("Resource_6t0yt"), SubResource("Resource_s2due"), SubResource("Resource_jx6ng")]
 
 [resource]
 script = ExtResource("3_c7rr3")
-ValidInputs = Array[Object]([SubResource("Resource_4uo5i"), SubResource("Resource_m46e1")])
+ValidInputs = [SubResource("Resource_4uo5i"), SubResource("Resource_m46e1")]
 AbsoluteDirection = true
 InputBuffer = 6

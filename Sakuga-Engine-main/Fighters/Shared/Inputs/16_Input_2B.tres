@@ -12,8 +12,8 @@ Buttons = 2
 
 [sub_resource type="Resource" id="Resource_4uo5i"]
 script = ExtResource("2_a63sg")
-Inputs = Array[Object]([SubResource("Resource_6t0yt")])
+Inputs = [SubResource("Resource_6t0yt")]
 
 [resource]
 script = ExtResource("3_gpex0")
-ValidInputs = Array[Object]([SubResource("Resource_4uo5i")])
+ValidInputs = [SubResource("Resource_4uo5i")]

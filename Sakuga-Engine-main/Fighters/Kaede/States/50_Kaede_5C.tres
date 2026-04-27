@@ -14,7 +14,7 @@ ArmorValue = 3
 
 [sub_resource type="Resource" id="Resource_ix1su"]
 script = ExtResource("2_dlo0l")
-Events = Array[Object]([SubResource("Resource_fi3yh")])
+Events = [SubResource("Resource_fi3yh")]
 
 [sub_resource type="Resource" id="Resource_tmsc3"]
 script = ExtResource("1_myh1j")
@@ -22,7 +22,7 @@ script = ExtResource("1_myh1j")
 [sub_resource type="Resource" id="Resource_mq13r"]
 script = ExtResource("2_dlo0l")
 Frame = 16
-Events = Array[Object]([SubResource("Resource_tmsc3")])
+Events = [SubResource("Resource_tmsc3")]
 
 [sub_resource type="Resource" id="Resource_i24ac"]
 script = ExtResource("3_3rgdk")
@@ -69,11 +69,11 @@ script = ExtResource("1")
 StateName = "5C"
 Type = 2
 Duration = 40
-stateProperties = null
+stateProperties = []
 statePhysics = [SubResource("5"), SubResource("6")]
 hitboxStates = [SubResource("2"), SubResource("3"), SubResource("4")]
-animationEvents = Array[Object]([SubResource("Resource_ix1su"), SubResource("Resource_mq13r")])
-throwPivot = null
-stateTransitions = Array[Object]([SubResource("Resource_6gdsy")])
-animationSettings = Array[Object]([SubResource("Resource_i24ac")])
+animationEvents = [SubResource("Resource_ix1su"), SubResource("Resource_mq13r")]
+throwPivot = []
+stateTransitions = [SubResource("Resource_6gdsy")]
+animationSettings = [SubResource("Resource_i24ac")]
 AIFlags = 18

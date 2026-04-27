@@ -11,7 +11,7 @@ ButtonMode = 2
 
 [sub_resource type="Resource" id="Resource_6ria7"]
 script = ExtResource("2_v6ulc")
-Inputs = Array[Object]([SubResource("Resource_tyq07")])
+Inputs = [SubResource("Resource_tyq07")]
 
 [sub_resource type="Resource" id="Resource_ybiua"]
 script = ExtResource("1_b74gq")
@@ -20,7 +20,7 @@ ButtonMode = 2
 
 [sub_resource type="Resource" id="Resource_bam1f"]
 script = ExtResource("2_v6ulc")
-Inputs = Array[Object]([SubResource("Resource_ybiua")])
+Inputs = [SubResource("Resource_ybiua")]
 
 [sub_resource type="Resource" id="Resource_2cs3g"]
 script = ExtResource("1_b74gq")
@@ -29,10 +29,10 @@ ButtonMode = 2
 
 [sub_resource type="Resource" id="Resource_ejgb2"]
 script = ExtResource("2_v6ulc")
-Inputs = Array[Object]([SubResource("Resource_2cs3g")])
+Inputs = [SubResource("Resource_2cs3g")]
 
 [resource]
 script = ExtResource("3_mecnl")
-ValidInputs = Array[Object]([SubResource("Resource_6ria7"), SubResource("Resource_bam1f"), SubResource("Resource_ejgb2")])
+ValidInputs = [SubResource("Resource_6ria7"), SubResource("Resource_bam1f"), SubResource("Resource_ejgb2")]
 InputBuffer = 2
 ButtonChargeLimit = 40

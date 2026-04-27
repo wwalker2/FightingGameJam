@@ -11,21 +11,28 @@ script = ExtResource("1_xx1vq")
 SourceAnimation = "2B"
 metadata/_custom_type_script = "uid://b8vqwkv52qq3e"
 
-[sub_resource type="Resource" id="2"]
+[sub_resource type="Resource" id="Resource_e27qq"]
 script = ExtResource("2_nb0jo")
 HitboxIndex = 9
 
-[sub_resource type="Resource" id="3"]
+[sub_resource type="Resource" id="Resource_fw5kp"]
 script = ExtResource("2_nb0jo")
 animationStage = 1
-Frame = 8
+Frame = 10
 HitboxIndex = 11
 
-[sub_resource type="Resource" id="4"]
+[sub_resource type="Resource" id="Resource_taai2"]
 script = ExtResource("2_nb0jo")
 animationStage = 2
 Frame = 13
-HitboxIndex = 1
+HitboxIndex = 40
+
+[sub_resource type="Resource" id="Resource_urpru"]
+script = ExtResource("2_nb0jo")
+animationStage = 2
+Frame = 16
+HitboxIndex = 41
+metadata/_custom_type_script = "uid://5qrsoteskjym"
 
 [sub_resource type="Resource" id="9"]
 script = ExtResource("4_8unxa")
@@ -63,11 +70,11 @@ StateName = "2B"
 BaseStance = 1
 Type = 2
 Duration = 24
-stateProperties = null
+stateProperties = []
 statePhysics = [SubResource("9"), SubResource("6"), SubResource("7"), SubResource("8")]
-hitboxStates = [SubResource("2"), SubResource("3"), SubResource("4")]
-animationEvents = null
-throwPivot = null
-stateTransitions = Array[Object]([SubResource("Resource_tct07")])
-animationSettings = Array[Object]([SubResource("Resource_4o1yk")])
+hitboxStates = [SubResource("Resource_e27qq"), SubResource("Resource_fw5kp"), SubResource("Resource_taai2"), SubResource("Resource_urpru")]
+animationEvents = []
+throwPivot = []
+stateTransitions = [SubResource("Resource_tct07")]
+animationSettings = [SubResource("Resource_4o1yk")]
 AIFlags = 18

@@ -11,10 +11,10 @@ DirectionalMode = 4
 
 [sub_resource type="Resource" id="Resource_birhb"]
 script = ExtResource("2_0auth")
-Inputs = Array[Object]([SubResource("Resource_vyw6d")])
+Inputs = [SubResource("Resource_vyw6d")]
 
 [resource]
 script = ExtResource("3_us2qx")
-ValidInputs = Array[Object]([SubResource("Resource_birhb")])
+ValidInputs = [SubResource("Resource_birhb")]
 AbsoluteDirection = true
 InputBuffer = 0

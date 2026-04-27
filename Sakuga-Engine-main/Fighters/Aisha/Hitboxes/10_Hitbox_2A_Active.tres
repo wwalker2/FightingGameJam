@@ -63,8 +63,8 @@ BounceYState = 0
 
 [sub_resource type="Resource" id="Resource_aqr4w"]
 script = ExtResource("1_titwg")
-Center = Vector2i(6200, 1300)
-Size = Vector2i(5000, 3000)
+Center = Vector2i(2500, 2800)
+Size = Vector2i(5000, 5000)
 HitboxType = 1
 HitType = 2
 CrouchHitReaction = 2

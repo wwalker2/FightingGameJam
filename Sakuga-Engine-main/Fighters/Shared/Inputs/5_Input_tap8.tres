@@ -10,10 +10,10 @@ Directional = 8
 
 [sub_resource type="Resource" id="Resource_hjmdv"]
 script = ExtResource("2_bb1t1")
-Inputs = Array[Object]([SubResource("Resource_mrv1m")])
+Inputs = [SubResource("Resource_mrv1m")]
 
 [resource]
 script = ExtResource("2_vitx0")
-ValidInputs = Array[Object]([SubResource("Resource_hjmdv")])
+ValidInputs = [SubResource("Resource_hjmdv")]
 AbsoluteDirection = true
 InputBuffer = 0

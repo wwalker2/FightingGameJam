@@ -1,0 +1,68 @@
+[gd_resource type="Resource" script_class="HitboxSettings" format=3 uid="uid://bfl78xvulp7w4"]
+
+[ext_resource type="Script" uid="uid://c0y740kryylcs" path="res://Scripts/SakugaEngine/Resources/HitboxElement.cs" id="1_cgric"]
+[ext_resource type="Script" uid="uid://dxuwyhds75mce" path="res://Scripts/SakugaEngine/Resources/HitboxSettings.cs" id="2_b0hy1"]
+
+[sub_resource type="Resource" id="Resource_rjb2a"]
+script = ExtResource("1_cgric")
+Center = Vector2i(0, 6250)
+Size = Vector2i(5000, 12500)
+SelfSuperGaugeGain = 25
+OpponentSuperGaugeGain = 10
+HitEffectIndex = 1
+BlockEffectIndex = 2
+ClashEffectIndex = 3
+ArmorHitEffectIndex = 4
+AirHitKnockbackGravity = 300000
+AirBlockKnockbackGravity = 30
+SelfPushbackForce = 0
+SelfPushbackDuration = 0
+BounceXIntensity = 0
+BounceXState = 0
+BounceYIntensity = 0
+BounceYState = 0
+
+[sub_resource type="Resource" id="Resource_bfoef"]
+script = ExtResource("1_cgric")
+Center = Vector2i(5000, 1000)
+Size = Vector2i(9000, 2000)
+HitboxType = 2
+SelfSuperGaugeGain = 25
+OpponentSuperGaugeGain = 10
+HitEffectIndex = 1
+BlockEffectIndex = 2
+ClashEffectIndex = 3
+ArmorHitEffectIndex = 4
+AirHitKnockbackGravity = 300000
+AirBlockKnockbackGravity = 30
+SelfPushbackForce = 0
+SelfPushbackDuration = 0
+BounceXIntensity = 0
+BounceXState = 0
+BounceYIntensity = 0
+BounceYState = 0
+
+[sub_resource type="Resource" id="Resource_c6fi4"]
+script = ExtResource("1_cgric")
+Center = Vector2i(3000, 6000)
+Size = Vector2i(3000, 12000)
+SelfSuperGaugeGain = 25
+OpponentSuperGaugeGain = 10
+HitEffectIndex = 1
+BlockEffectIndex = 2
+ClashEffectIndex = 3
+ArmorHitEffectIndex = 4
+AirHitKnockbackGravity = 300000
+AirBlockKnockbackGravity = 30
+SelfPushbackForce = 0
+SelfPushbackDuration = 0
+BounceXIntensity = 0
+BounceXState = 0
+BounceYIntensity = 0
+BounceYState = 0
+
+[resource]
+script = ExtResource("2_b0hy1")
+PushboxCenter = Vector2i(0, 6000)
+PushboxSize = Vector2i(4000, 12000)
+Hitboxes = [SubResource("Resource_rjb2a"), SubResource("Resource_bfoef"), SubResource("Resource_c6fi4")]

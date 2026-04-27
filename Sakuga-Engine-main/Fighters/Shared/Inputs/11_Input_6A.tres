@@ -12,9 +12,9 @@ Buttons = 1
 
 [sub_resource type="Resource" id="Resource_4uo5i"]
 script = ExtResource("2_xi2v1")
-Inputs = Array[Object]([SubResource("Resource_6t0yt")])
+Inputs = [SubResource("Resource_6t0yt")]
 
 [resource]
 script = ExtResource("3_sjg7a")
-ValidInputs = Array[Object]([SubResource("Resource_4uo5i")])
+ValidInputs = [SubResource("Resource_4uo5i")]
 AbsoluteDirection = true

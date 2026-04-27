@@ -64,10 +64,10 @@ BounceYState = 0
 [sub_resource type="Resource" id="Resource_xorsx"]
 script = ExtResource("1_1nnld")
 Center = Vector2i(7900, 3800)
-Size = Vector2i(6000, 2400)
+Size = Vector2i(12000, 2400)
 HitboxType = 1
-HitType = 1
-BaseDamage = 180
+HitType = 2
+BaseDamage = 500
 CrouchHitReaction = 2
 GroundHitKnockback = Vector2i(-30000, 0)
 GroundHitstun = 18

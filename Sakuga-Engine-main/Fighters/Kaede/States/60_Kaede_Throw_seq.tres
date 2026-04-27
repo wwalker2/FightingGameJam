@@ -22,7 +22,7 @@ KillingBlow = true
 [sub_resource type="Resource" id="Resource_npwel"]
 script = ExtResource("2_x2ffj")
 Frame = 26
-Events = Array[Object]([SubResource("Resource_ld3k7")])
+Events = [SubResource("Resource_ld3k7")]
 
 [sub_resource type="Resource" id="Resource_bcfn1"]
 script = ExtResource("3_xljix")
@@ -84,11 +84,11 @@ script = ExtResource("2_264bk")
 StateName = "Throw_Sequence"
 Type = 2
 Duration = 42
-stateProperties = Array[Object]([])
-statePhysics = Array[Object]([SubResource("Resource_mpd63")])
-hitboxStates = Array[Object]([SubResource("Resource_5e2ap")])
-animationEvents = Array[Object]([SubResource("Resource_npwel")])
-throwPivot = Array[Object]([SubResource("Resource_ksa0j"), SubResource("Resource_cwgmc"), SubResource("Resource_id3s2"), SubResource("Resource_anryf"), SubResource("Resource_yley4")])
-stateTransitions = Array[Object]([SubResource("Resource_ejds0")])
-animationSettings = Array[Object]([SubResource("Resource_bcfn1")])
+stateProperties = []
+statePhysics = [SubResource("Resource_mpd63")]
+hitboxStates = [SubResource("Resource_5e2ap")]
+animationEvents = [SubResource("Resource_npwel")]
+throwPivot = [SubResource("Resource_ksa0j"), SubResource("Resource_cwgmc"), SubResource("Resource_id3s2"), SubResource("Resource_anryf"), SubResource("Resource_yley4")]
+stateTransitions = [SubResource("Resource_ejds0")]
+animationSettings = [SubResource("Resource_bcfn1")]
 AIFlags = 4114

@@ -10,7 +10,7 @@ Directional = 10
 
 [sub_resource type="Resource" id="Resource_1kgrx"]
 script = ExtResource("2_tsu76")
-Inputs = Array[Object]([SubResource("Resource_ifuqk")])
+Inputs = [SubResource("Resource_ifuqk")]
 
 [sub_resource type="Resource" id="Resource_ffh1r"]
 script = ExtResource("1_grvii")
@@ -23,9 +23,9 @@ Directional = 8
 
 [sub_resource type="Resource" id="Resource_tp86r"]
 script = ExtResource("2_tsu76")
-Inputs = Array[Object]([SubResource("Resource_ffh1r"), SubResource("Resource_k2c0r")])
+Inputs = [SubResource("Resource_ffh1r"), SubResource("Resource_k2c0r")]
 
 [resource]
 script = ExtResource("2_blcbs")
-ValidInputs = Array[Object]([SubResource("Resource_1kgrx"), SubResource("Resource_tp86r")])
+ValidInputs = [SubResource("Resource_1kgrx"), SubResource("Resource_tp86r")]
 InputBuffer = 99999

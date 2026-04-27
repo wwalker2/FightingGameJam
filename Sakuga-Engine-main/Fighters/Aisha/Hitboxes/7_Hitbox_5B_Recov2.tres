@@ -1,0 +1,87 @@
+[gd_resource type="Resource" script_class="HitboxSettings" format=3 uid="uid://cq3xhkrn1njsi"]
+
+[ext_resource type="Script" uid="uid://c0y740kryylcs" path="res://Scripts/SakugaEngine/Resources/HitboxElement.cs" id="1_6rf0v"]
+[ext_resource type="Script" uid="uid://dxuwyhds75mce" path="res://Scripts/SakugaEngine/Resources/HitboxSettings.cs" id="2_dssu1"]
+
+[sub_resource type="Resource" id="Resource_6rf0v"]
+script = ExtResource("1_6rf0v")
+Center = Vector2i(0, 6250)
+Size = Vector2i(5000, 12500)
+SelfSuperGaugeGain = 25
+OpponentSuperGaugeGain = 10
+HitEffectIndex = 1
+BlockEffectIndex = 2
+ClashEffectIndex = 3
+ArmorHitEffectIndex = 4
+AirHitKnockbackGravity = 300000
+AirBlockKnockbackGravity = 30
+SelfPushbackForce = 0
+SelfPushbackDuration = 0
+BounceXIntensity = 0
+BounceXState = 0
+BounceYIntensity = 0
+BounceYState = 0
+
+[sub_resource type="Resource" id="Resource_dssu1"]
+script = ExtResource("1_6rf0v")
+Center = Vector2i(650, 14000)
+Size = Vector2i(3000, 3000)
+SelfSuperGaugeGain = 25
+OpponentSuperGaugeGain = 10
+HitEffectIndex = 1
+BlockEffectIndex = 2
+ClashEffectIndex = 3
+ArmorHitEffectIndex = 4
+AirHitKnockbackGravity = 300000
+AirBlockKnockbackGravity = 30
+SelfPushbackForce = 0
+SelfPushbackDuration = 0
+BounceXIntensity = 0
+BounceXState = 0
+BounceYIntensity = 0
+BounceYState = 0
+
+[sub_resource type="Resource" id="Resource_ee2tl"]
+script = ExtResource("1_6rf0v")
+Center = Vector2i(10000, 10605)
+Size = Vector2i(15000, 2000)
+HitboxType = 2
+SelfSuperGaugeGain = 25
+OpponentSuperGaugeGain = 10
+HitEffectIndex = 1
+BlockEffectIndex = 2
+ClashEffectIndex = 3
+ArmorHitEffectIndex = 4
+AirHitKnockbackGravity = 300000
+AirBlockKnockbackGravity = 30
+SelfPushbackForce = 0
+SelfPushbackDuration = 0
+BounceXIntensity = 0
+BounceXState = 0
+BounceYIntensity = 0
+BounceYState = 0
+
+[sub_resource type="Resource" id="Resource_06ff8"]
+script = ExtResource("1_6rf0v")
+Center = Vector2i(4500, 10000)
+Size = Vector2i(4000, 5500)
+SelfSuperGaugeGain = 25
+OpponentSuperGaugeGain = 10
+HitEffectIndex = 1
+BlockEffectIndex = 2
+ClashEffectIndex = 3
+ArmorHitEffectIndex = 4
+AirHitKnockbackGravity = 300000
+AirBlockKnockbackGravity = 30
+SelfPushbackForce = 0
+SelfPushbackDuration = 0
+BounceXIntensity = 0
+BounceXState = 0
+BounceYIntensity = 0
+BounceYState = 0
+
+[resource]
+script = ExtResource("2_dssu1")
+PushboxCenter = Vector2i(0, 6000)
+PushboxSize = Vector2i(4000, 12000)
+Hitboxes = [SubResource("Resource_6rf0v"), SubResource("Resource_dssu1"), SubResource("Resource_ee2tl"), SubResource("Resource_06ff8")]

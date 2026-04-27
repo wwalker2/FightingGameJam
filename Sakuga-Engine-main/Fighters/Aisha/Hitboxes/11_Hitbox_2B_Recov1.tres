@@ -1,0 +1,69 @@
+[gd_resource type="Resource" script_class="HitboxSettings" format=3 uid="uid://6efrs8qt0d4w"]
+
+[ext_resource type="Script" uid="uid://c0y740kryylcs" path="res://Scripts/SakugaEngine/Resources/HitboxElement.cs" id="1_mo3lx"]
+[ext_resource type="Script" uid="uid://dxuwyhds75mce" path="res://Scripts/SakugaEngine/Resources/HitboxSettings.cs" id="2_d86bn"]
+
+[sub_resource type="Resource" id="Resource_ehq5d"]
+script = ExtResource("1_mo3lx")
+Center = Vector2i(0, 3000)
+Size = Vector2i(6000, 6000)
+SelfSuperGaugeGain = 25
+OpponentSuperGaugeGain = 10
+HitEffectIndex = 1
+BlockEffectIndex = 2
+ClashEffectIndex = 3
+ArmorHitEffectIndex = 4
+AirHitKnockbackGravity = 300000
+AirBlockKnockbackGravity = 30
+SelfPushbackForce = 0
+SelfPushbackDuration = 0
+BounceXIntensity = 0
+BounceXState = 0
+BounceYIntensity = 0
+BounceYState = 0
+
+[sub_resource type="Resource" id="Resource_8tjlo"]
+script = ExtResource("1_mo3lx")
+Center = Vector2i(5000, 1500)
+Size = Vector2i(15000, 3000)
+SelfSuperGaugeGain = 25
+OpponentSuperGaugeGain = 10
+HitEffectIndex = 1
+BlockEffectIndex = 2
+ClashEffectIndex = 3
+ArmorHitEffectIndex = 4
+AirHitKnockbackGravity = 300000
+AirBlockKnockbackGravity = 30
+SelfPushbackForce = 0
+SelfPushbackDuration = 0
+BounceXIntensity = 0
+BounceXState = 0
+BounceYIntensity = 0
+BounceYState = 0
+
+[sub_resource type="Resource" id="Resource_ywk84"]
+script = ExtResource("1_mo3lx")
+Center = Vector2i(10000, 2700)
+Size = Vector2i(15000, 2000)
+HitboxType = 2
+HitType = 2
+SelfSuperGaugeGain = 25
+OpponentSuperGaugeGain = 10
+HitEffectIndex = 1
+BlockEffectIndex = 2
+ClashEffectIndex = 3
+ArmorHitEffectIndex = 4
+AirHitKnockbackGravity = 300000
+AirBlockKnockbackGravity = 30
+SelfPushbackForce = 0
+SelfPushbackDuration = 0
+BounceXIntensity = 0
+BounceXState = 0
+BounceYIntensity = 0
+BounceYState = 0
+
+[resource]
+script = ExtResource("2_d86bn")
+PushboxCenter = Vector2i(0, 3000)
+PushboxSize = Vector2i(4000, 6000)
+Hitboxes = [SubResource("Resource_ehq5d"), SubResource("Resource_8tjlo"), SubResource("Resource_ywk84")]
