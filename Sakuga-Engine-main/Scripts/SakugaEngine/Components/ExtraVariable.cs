@@ -137,6 +137,13 @@ namespace SakugaEngine
 				else
 					CurrentValue = behavior.Value;
 			}
+			else
+			{
+				if (behavior.IsRandom)
+					CurrentValue += Global.RNG.Next(behavior.Value, behavior.Range);
+				else
+					CurrentValue += behavior.Value;
+			}
 
 			CurrentFactor = behavior.Factor;
 			CurrentMode = (byte)behavior.Mode;
