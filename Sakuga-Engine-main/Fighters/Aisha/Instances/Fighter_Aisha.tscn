@@ -67,6 +67,7 @@
 [ext_resource type="Texture2D" uid="uid://br5da87l13tya" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_JUMPING_2B_FRAME0004.png" id="75_c5vbk"]
 [ext_resource type="PackedScene" uid="uid://csdgicelabg4n" path="res://Scenes/Instances/HitboxPreviewer.tscn" id="85_1xkln"]
 [ext_resource type="Resource" uid="uid://busjhjtdntp0s" path="res://Fighters/Aisha/States/59_Kaede_Throw.tres" id="86_1xkln"]
+[ext_resource type="Script" uid="uid://b4erq62og5quv" path="res://Scripts/SakugaEngine/Resources/ExtraVariableBehavior.cs" id="95_grfcy"]
 [ext_resource type="Texture2D" uid="uid://duend0hak5026" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_STAND_HITSTUN.png" id="123_uj7x7"]
 [ext_resource type="Texture2D" uid="uid://ctt3j7edev74n" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_CROUCH_HITSTUN.png" id="124_c6whb"]
 [ext_resource type="Texture2D" uid="uid://tacvifa0gubm" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_RECOVERY_FRAME0001.png" id="142_nwgtu"]
@@ -2785,6 +2786,13 @@ _data = {
 &"j_5RP": SubResource("Animation_b8l1j")
 }
 
+[sub_resource type="Resource" id="Resource_c5vbk"]
+script = ExtResource("95_grfcy")
+Factor = 1
+Value = 100
+Mode = 1
+metadata/_custom_type_script = "uid://b4erq62og5quv"
+
 [node name="Aisha_Viewer" type="Node3D" unique_id=704857862 node_paths=PackedStringArray("HitStun", "HitStop", "MoveBuffer", "PushForce", "HorizontalBounce", "VerticalBounce", "Brain", "Body", "Inputs", "Variables", "Animator", "StateMachine", "Tracker", "Sounds", "Graphics")]
 script = ExtResource("1_p8mvr")
 HitStun = NodePath("Timers/HitStun")
@@ -2896,6 +2904,7 @@ MaxValue = 10000
 StartingValue = 5000
 StartingFactor = 1
 StartingMode = 1
+BehaviorOnDamage = SubResource("Resource_c5vbk")
 
 [node name="ChargeGauge" type="Node" parent="Variables" unique_id=638132930]
 script = ExtResource("292_wgu3i")

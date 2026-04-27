@@ -16,7 +16,7 @@ namespace SakugaEngine.Utils
 		public override void _Process(double delta)
 		{
 			if (!Engine.IsEditorHint()) return;
-			if (Animator == null || State == null)
+			if (Animator == null || State == null || Data == null)
 			{
 				for(int j = 0; j < hitboxGraphics.Length; j++)
 					hitboxGraphics[j].Visible = false;
