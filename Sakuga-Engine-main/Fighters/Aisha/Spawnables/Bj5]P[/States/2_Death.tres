@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="FighterState" format=3 uid="uid://bq1aekxn0xis5"]
+
+[ext_resource type="Script" uid="uid://b8vqwkv52qq3e" path="res://Scripts/SakugaEngine/Resources/AnimationSettings.cs" id="1_61ygu"]
+[ext_resource type="Script" uid="uid://5qrsoteskjym" path="res://Scripts/SakugaEngine/Resources/HitboxState.cs" id="2_c7qq1"]
+[ext_resource type="Script" uid="uid://da1el624050no" path="res://Scripts/SakugaEngine/Resources/FighterState.cs" id="3_4u1vw"]
+[ext_resource type="Script" uid="uid://5you05l2efnd" path="res://Scripts/SakugaEngine/Resources/StatePhysics.cs" id="4_nvld7"]
+
+[sub_resource type="Resource" id="Resource_w716p"]
+script = ExtResource("1_61ygu")
+SourceAnimation = "Death"
+metadata/_custom_type_script = "uid://b8vqwkv52qq3e"
+
+[sub_resource type="Resource" id="1"]
+script = ExtResource("2_c7qq1")
+HitboxIndex = -1
+
+[sub_resource type="Resource" id="2"]
+script = ExtResource("4_nvld7")
+UseLateralSpeed = true
+UseVerticalSpeed = true
+
+[resource]
+script = ExtResource("3_4u1vw")
+StateName = "Death"
+Duration = 12
+stateProperties = []
+statePhysics = [SubResource("2")]
+hitboxStates = [SubResource("1")]
+animationEvents = []
+throwPivot = []
+stateTransitions = []
+animationSettings = [SubResource("Resource_w716p")]

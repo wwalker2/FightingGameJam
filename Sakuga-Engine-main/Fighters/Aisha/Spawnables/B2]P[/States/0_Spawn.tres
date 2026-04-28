@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="FighterState" format=3 uid="uid://25l161gtj7x2"]
+
+[ext_resource type="Script" uid="uid://b8vqwkv52qq3e" path="res://Scripts/SakugaEngine/Resources/AnimationSettings.cs" id="1_hta3q"]
+[ext_resource type="Script" uid="uid://5qrsoteskjym" path="res://Scripts/SakugaEngine/Resources/HitboxState.cs" id="2_wyie6"]
+[ext_resource type="Script" uid="uid://da1el624050no" path="res://Scripts/SakugaEngine/Resources/FighterState.cs" id="3_2ky64"]
+[ext_resource type="Script" uid="uid://5you05l2efnd" path="res://Scripts/SakugaEngine/Resources/StatePhysics.cs" id="4_sw3iq"]
+[ext_resource type="Script" uid="uid://bia88bspuvxd" path="res://Scripts/SakugaEngine/Resources/StateTransitionSettings.cs" id="5_0h812"]
+
+[sub_resource type="Resource" id="Resource_qjnuj"]
+script = ExtResource("1_hta3q")
+SourceAnimation = "Spawn"
+metadata/_custom_type_script = "uid://b8vqwkv52qq3e"
+
+[sub_resource type="Resource" id="1"]
+script = ExtResource("2_wyie6")
+
+[sub_resource type="Resource" id="2"]
+script = ExtResource("4_sw3iq")
+UseLateralSpeed = true
+LateralSpeed = 60000
+UseVerticalSpeed = true
+
+[sub_resource type="Resource" id="Resource_k3l4c"]
+script = ExtResource("5_0h812")
+StateIndex = 1
+Condition = 1
+DistanceArea = Vector2i(0, 99999)
+
+[resource]
+script = ExtResource("3_2ky64")
+StateName = "Spawn"
+Duration = 6
+Loop = true
+stateProperties = []
+statePhysics = [SubResource("2")]
+hitboxStates = [SubResource("1")]
+animationEvents = []
+throwPivot = []
+stateTransitions = [SubResource("Resource_k3l4c")]
+animationSettings = [SubResource("Resource_qjnuj")]

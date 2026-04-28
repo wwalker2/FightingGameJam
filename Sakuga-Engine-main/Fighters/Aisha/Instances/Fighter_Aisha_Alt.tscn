@@ -84,7 +84,7 @@
 [ext_resource type="Texture2D" uid="uid://cfp2dixt0amsh" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_JUMPING_B_FRAME0003.png" id="79_uxvio"]
 [ext_resource type="Texture2D" uid="uid://vuqrpbhapu4r" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_JUMPING_B_FRAME0004.png" id="80_k0x6t"]
 [ext_resource type="PackedScene" uid="uid://csdgicelabg4n" path="res://Scenes/Instances/HitboxPreviewer.tscn" id="85_22y3o"]
-[ext_resource type="Resource" uid="uid://busjhjtdntp0s" path="res://Fighters/Aisha/States/59_Kaede_Throw.tres" id="86_3m02a"]
+[ext_resource type="Resource" uid="uid://7tupw85c8lcd" path="res://Fighters/Aisha/Spawnables/B5P/States/1_Travel.tres" id="86_e4atf"]
 [ext_resource type="Script" uid="uid://b4erq62og5quv" path="res://Scripts/SakugaEngine/Resources/ExtraVariableBehavior.cs" id="95_e4atf"]
 [ext_resource type="PackedScene" uid="uid://dduf0jsq56ggk" path="res://Scenes/Instances/HitboxViewer.tscn" id="285_q8rqk"]
 [ext_resource type="Script" uid="uid://3uu6r0mhj3p3" path="res://Scripts/SakugaEngine/Components/SoundQueue.cs" id="286_qf8wn"]
@@ -2786,7 +2786,7 @@ _data = {
 &"j_5RP": SubResource("Animation_b8l1j")
 }
 
-[sub_resource type="Resource" id="Resource_txk3n"]
+[sub_resource type="Resource" id="Resource_c5vbk"]
 script = ExtResource("95_e4atf")
 Factor = 1
 Value = 100
@@ -2845,8 +2845,7 @@ body = NodePath("../PhysicsBody")
 
 [node name="HitboxPreviewer" parent="." unique_id=1706011 node_paths=PackedStringArray("Animator") instance=ExtResource("85_22y3o")]
 Animator = NodePath("../Graphics/Mesh")
-State = ExtResource("86_3m02a")
-Frame = 3
+State = ExtResource("86_e4atf")
 
 [node name="Sounds" type="Node3D" parent="." unique_id=1869837634]
 
@@ -2904,7 +2903,7 @@ MaxValue = 10000
 StartingValue = 5000
 StartingFactor = 1
 StartingMode = 1
-BehaviorOnDamage = SubResource("Resource_txk3n")
+BehaviorOnDamage = SubResource("Resource_c5vbk")
 
 [node name="ChargeGauge" type="Node" parent="Variables" unique_id=638132930]
 script = ExtResource("293_rqy6c")

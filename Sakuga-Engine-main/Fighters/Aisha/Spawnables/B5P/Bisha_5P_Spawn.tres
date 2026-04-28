@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="DataContainer" format=3 uid="uid://b42gg3r58t1yu"]
+
+[ext_resource type="Resource" uid="uid://c1d31hdkho8vq" path="res://Fighters/Aisha/Spawnables/B5P/Hitboxes/0_Hitbox_Spawnable_Basic.tres" id="1_tybrb"]
+[ext_resource type="Resource" uid="uid://jau4qag15hj7" path="res://Fighters/Aisha/Spawnables/B5P/Hitboxes/0_Hitbox_Empty.tres" id="2_q7t4c"]
+[ext_resource type="Resource" uid="uid://bwqp4k41wo57f" path="res://Fighters/Aisha/Spawnables/B5P/States/0_Spawn.tres" id="2_tkghs"]
+[ext_resource type="Resource" uid="uid://7tupw85c8lcd" path="res://Fighters/Aisha/Spawnables/B5P/States/1_Travel.tres" id="3_ciwjp"]
+[ext_resource type="Resource" uid="uid://bpuqv8aogp8ks" path="res://Fighters/Aisha/Spawnables/B5P/Hitboxes/1_Aisha_5P_Hitbox.tres" id="3_sguwu"]
+[ext_resource type="Resource" uid="uid://clgeouqk26xyh" path="res://Fighters/Aisha/Spawnables/B5P/States/2_Death.tres" id="4_ifitd"]
+[ext_resource type="Script" uid="uid://pdsqprbkhgv4" path="res://Scripts/SakugaEngine/Resources/DataContainer.cs" id="5_5c3pv"]
+
+[resource]
+script = ExtResource("5_5c3pv")
+Hitboxes = [ExtResource("1_tybrb"), ExtResource("2_q7t4c"), ExtResource("3_sguwu")]
+States = [ExtResource("2_tkghs"), ExtResource("3_ciwjp"), ExtResource("4_ifitd")]
+Stances = []
+MaxHealth = 1
+Intros = []
+Outros = []
+VictoryPoses = []

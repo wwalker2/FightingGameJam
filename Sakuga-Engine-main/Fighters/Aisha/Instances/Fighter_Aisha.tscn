@@ -66,7 +66,7 @@
 [ext_resource type="Texture2D" uid="uid://rymoaixtrsrh" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_JUMPING_2B_FRAME0003.png" id="74_grfcy"]
 [ext_resource type="Texture2D" uid="uid://br5da87l13tya" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_JUMPING_2B_FRAME0004.png" id="75_c5vbk"]
 [ext_resource type="PackedScene" uid="uid://csdgicelabg4n" path="res://Scenes/Instances/HitboxPreviewer.tscn" id="85_1xkln"]
-[ext_resource type="Resource" uid="uid://busjhjtdntp0s" path="res://Fighters/Aisha/States/59_Kaede_Throw.tres" id="86_1xkln"]
+[ext_resource type="Resource" uid="uid://7tupw85c8lcd" path="res://Fighters/Aisha/Spawnables/B5P/States/1_Travel.tres" id="86_grfcy"]
 [ext_resource type="Script" uid="uid://b4erq62og5quv" path="res://Scripts/SakugaEngine/Resources/ExtraVariableBehavior.cs" id="95_grfcy"]
 [ext_resource type="Texture2D" uid="uid://duend0hak5026" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_STAND_HITSTUN.png" id="123_uj7x7"]
 [ext_resource type="Texture2D" uid="uid://ctt3j7edev74n" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_CROUCH_HITSTUN.png" id="124_c6whb"]
@@ -2845,8 +2845,7 @@ body = NodePath("../PhysicsBody")
 
 [node name="HitboxPreviewer" parent="." unique_id=1706011 node_paths=PackedStringArray("Animator") instance=ExtResource("85_1xkln")]
 Animator = NodePath("../Graphics/Mesh")
-State = ExtResource("86_1xkln")
-Frame = 3
+State = ExtResource("86_grfcy")
 
 [node name="Sounds" type="Node3D" parent="." unique_id=1869837634]
 

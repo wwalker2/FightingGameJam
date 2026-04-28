@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="FighterState" format=3 uid="uid://dkhhc18rjmcv5"]
+
+[ext_resource type="Script" uid="uid://b8vqwkv52qq3e" path="res://Scripts/SakugaEngine/Resources/AnimationSettings.cs" id="1_anefo"]
+[ext_resource type="Script" uid="uid://da1el624050no" path="res://Scripts/SakugaEngine/Resources/FighterState.cs" id="2_umvkc"]
+[ext_resource type="Script" uid="uid://5you05l2efnd" path="res://Scripts/SakugaEngine/Resources/StatePhysics.cs" id="3_xmus0"]
+
+[sub_resource type="Resource" id="Resource_xe43b"]
+script = ExtResource("1_anefo")
+SourceAnimation = "Travel"
+metadata/_custom_type_script = "uid://b8vqwkv52qq3e"
+
+[sub_resource type="Resource" id="Resource_goxqg"]
+script = ExtResource("3_xmus0")
+UseLateralSpeed = true
+LateralSpeed = 60000
+UseVerticalSpeed = true
+
+[resource]
+script = ExtResource("2_umvkc")
+StateName = "Travel"
+Duration = 12
+Loop = true
+LoopFrames = Vector2i(0, 11)
+stateProperties = []
+statePhysics = [SubResource("Resource_goxqg")]
+hitboxStates = []
+animationEvents = []
+throwPivot = []
+stateTransitions = []
+animationSettings = [SubResource("Resource_xe43b")]

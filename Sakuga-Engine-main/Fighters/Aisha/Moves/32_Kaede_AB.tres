@@ -6,13 +6,13 @@
 [resource]
 script = ExtResource("2_6ryl7")
 MoveName = "Throw"
-MoveState = 59
+MoveState = 65
 Inputs = ExtResource("1_3guow")
 Priority = 6
 MoveEnd = 2
-CanCancelTo = null
-ExtraVariablesRequirement = null
-ExtraVariablesChange = null
+CanCancelTo = []
+ExtraVariablesRequirement = []
+ExtraVariablesChange = []
 IgnoreSamePriority = false
 AcceptNullStates = true
 AcceptCombatStates = true
