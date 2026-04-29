@@ -18,7 +18,6 @@ Frame = 3
 [sub_resource type="Resource" id="2"]
 script = ExtResource("4_q3w5d")
 UseLateralSpeed = true
-LateralSpeed = 60000
 UseVerticalSpeed = true
 
 [sub_resource type="Resource" id="Resource_k3l4c"]
@@ -30,7 +29,7 @@ DistanceArea = Vector2i(0, 99999)
 [resource]
 script = ExtResource("3_lt5qp")
 StateName = "Spawn"
-Duration = 6
+Duration = 5
 Loop = true
 stateProperties = []
 statePhysics = [SubResource("2")]

@@ -12,7 +12,8 @@ metadata/_custom_type_script = "uid://b8vqwkv52qq3e"
 
 [sub_resource type="Resource" id="1"]
 script = ExtResource("2_spri0")
-HitboxIndex = -1
+animationStage = 2
+HitboxIndex = 1
 
 [sub_resource type="Resource" id="2"]
 script = ExtResource("4_gppv0")
@@ -22,7 +23,7 @@ UseVerticalSpeed = true
 [resource]
 script = ExtResource("3_ig5xb")
 StateName = "Death"
-Duration = 12
+Duration = 9
 stateProperties = []
 statePhysics = [SubResource("2")]
 hitboxStates = [SubResource("1")]

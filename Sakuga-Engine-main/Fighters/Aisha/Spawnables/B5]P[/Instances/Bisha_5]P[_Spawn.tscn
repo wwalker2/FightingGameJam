@@ -4,25 +4,22 @@
 [ext_resource type="Resource" uid="uid://cqecbn1h04fko" path="res://Fighters/Aisha/Spawnables/B5]P[/Bisha_5]P[_Spawn.tres" id="2_c2pr3"]
 [ext_resource type="Script" uid="uid://cqd8ai3a40alf" path="res://Scripts/SakugaEngine/Utils/FOV_Correction.cs" id="3_gyijm"]
 [ext_resource type="Script" uid="uid://bx452hpssiy38" path="res://Scripts/SakugaEngine/Components/FrameAnimator.cs" id="4_uccmu"]
+[ext_resource type="Texture2D" uid="uid://cndgysxkqonu8" path="res://Fighters/Aisha/Spawnables/B5]P[/Sprites/DOPPELGANGER_ANIM_STAND_CHARGE_P_FRAME0004.png" id="5_1758a"]
 [ext_resource type="PackedScene" uid="uid://dduf0jsq56ggk" path="res://Scenes/Instances/HitboxViewer.tscn" id="5_v4emx"]
+[ext_resource type="Texture2D" uid="uid://b4nqko255vldq" path="res://Fighters/Aisha/Spawnables/B5]P[/Sprites/DOPPELGANGER_ANIM_STAND_CHARGE_P_FRAME0005.png" id="6_1vqsd"]
+[ext_resource type="PackedScene" uid="uid://csdgicelabg4n" path="res://Scenes/Instances/HitboxPreviewer.tscn" id="6_4seug"]
 [ext_resource type="Script" uid="uid://3uu6r0mhj3p3" path="res://Scripts/SakugaEngine/Components/SoundQueue.cs" id="6_j7brw"]
 [ext_resource type="Script" uid="uid://eajl6jjh3s1t" path="res://Scripts/SakugaEngine/Components/SakugaStateMachine.cs" id="7_4ygmo"]
+[ext_resource type="Texture2D" uid="uid://ug864nwy8pyn" path="res://Fighters/Aisha/Spawnables/B5]P[/Sprites/DOPPELGANGER_ANIM_STAND_CHARGE_P_FRAME0001.png" id="7_incbq"]
+[ext_resource type="Texture2D" uid="uid://bo36xfmcok4ct" path="res://Fighters/Aisha/Spawnables/B5]P[/Sprites/DOPPELGANGER_ANIM_STAND_CHARGE_P_FRAME0002.png" id="8_bl675"]
 [ext_resource type="Script" uid="uid://hg0vcp1gy2ny" path="res://Scripts/SakugaEngine/Collision/PhysicsBody.cs" id="8_ntlei"]
 [ext_resource type="Script" uid="uid://cmq3cp1n0copp" path="res://Scripts/SakugaEngine/Components/FrameTimer.cs" id="9_irn7w"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_llmh3"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_v7aee"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_646df"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_abc1c"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cvcwq"]
+[ext_resource type="Texture2D" uid="uid://bix43xqlwt8mk" path="res://Fighters/Aisha/Spawnables/B5]P[/Sprites/DOPPELGANGER_ANIM_STAND_CHARGE_P_FRAME0003.png" id="9_jayq2"]
+[ext_resource type="Resource" uid="uid://tx2mwkirb31e" path="res://Fighters/Aisha/Spawnables/B5]P[/States/1_Travel.tres" id="12_x8dfw"]
 
 [sub_resource type="Animation" id="Animation_b1ng2"]
 resource_name = "Death"
-length = 0.200002
+length = 0.15
 step = 0.0166667
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -31,10 +28,10 @@ tracks/0/path = NodePath("Sprite3D:texture")
 tracks/0/interp = 0
 tracks/0/loop_wrap = false
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [SubResource("CompressedTexture2D_v7aee"), SubResource("CompressedTexture2D_646df"), SubResource("CompressedTexture2D_abc1c"), SubResource("CompressedTexture2D_cvcwq"), null]
+"values": [ExtResource("6_1vqsd")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -46,16 +43,39 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [Vector2(-250, -120)]
+"values": [Vector2(-600, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite3D:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.05, 0.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kbe7n"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4myn6"]
+[sub_resource type="Animation" id="Animation_8v7qy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_7romc"]
 resource_name = "Spawn"
-length = 0.100002
+length = 0.13333334
 step = 0.0166667
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -64,45 +84,10 @@ tracks/0/path = NodePath("Sprite3D:texture")
 tracks/0/interp = 0
 tracks/0/loop_wrap = false
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.05, 0.1),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [SubResource("CompressedTexture2D_kbe7n"), SubResource("CompressedTexture2D_4myn6"), SubResource("CompressedTexture2D_llmh3")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite3D:offset")
-tracks/1/interp = 0
-tracks/1/loop_wrap = false
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.05, 0.1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [Vector2(-120, -60), Vector2(-185, -90), Vector2(-250, -120)]
-}
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ff62h"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_d4x0b"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w8hq0"]
-
-[sub_resource type="Animation" id="Animation_4g5j5"]
-resource_name = "Travel"
-length = 0.200002
-step = 0.0166667
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite3D:texture")
-tracks/0/interp = 0
-tracks/0/loop_wrap = false
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.0666667, 0.133333, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [SubResource("CompressedTexture2D_llmh3"), SubResource("CompressedTexture2D_ff62h"), SubResource("CompressedTexture2D_d4x0b"), SubResource("CompressedTexture2D_w8hq0")]
+"values": [ExtResource("7_incbq")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -114,12 +99,66 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [Vector2(-250, -120)]
+"values": [Vector2(-600, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite3D:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_4g5j5"]
+resource_name = "Travel"
+length = 0.2
+step = 0.0166667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:texture")
+tracks/0/interp = 0
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.083333336, 0.11666667, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("8_bl675"), ExtResource("9_jayq2"), ExtResource("5_1758a"), ExtResource("6_1vqsd")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite3D:offset")
+tracks/1/interp = 0
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(-600, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite3D:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_efsgm"]
 _data = {
 &"Death": SubResource("Animation_b1ng2"),
+&"RESET": SubResource("Animation_8v7qy"),
 &"Spawn": SubResource("Animation_7romc"),
 &"Travel": SubResource("Animation_4g5j5")
 }
@@ -129,10 +168,8 @@ script = ExtResource("1_beiwr")
 LifeTime = NodePath("Timers/LifeTime")
 HitStop = NodePath("Timers/HitStop")
 DeathState = 2
-DieOnGround = true
 DieOnWalls = true
 DieOnHit = true
-Deflectable = true
 Data = ExtResource("2_c2pr3")
 Body = NodePath("PhysicsBody")
 Animator = NodePath("Graphics/Mesh")
@@ -151,12 +188,13 @@ OffsetNode = NodePath("..")
 [node name="ProjectileGraphics" type="Node3D" parent="Graphics/Mesh" unique_id=644125608]
 
 [node name="Sprite3D" type="Sprite3D" parent="Graphics/Mesh/ProjectileGraphics" unique_id=2112109300]
+transform = Transform3D(0.71, 0, 0, 0, 0.71, 0, 0, 0, 0.71, 0, 0, 0)
 layers = 2
 centered = false
-offset = Vector2(-250, -120)
+offset = Vector2(-600, 0)
 pixel_size = 0.003
 texture_filter = 0
-texture = SubResource("CompressedTexture2D_llmh3")
+texture = ExtResource("5_1758a")
 region_rect = Rect2(711.25, 46.25, 2, 0)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Graphics/Mesh/ProjectileGraphics" unique_id=1676508825]
@@ -164,6 +202,12 @@ libraries/ = SubResource("AnimationLibrary_efsgm")
 
 [node name="HitboxViewer" parent="." unique_id=15469309 node_paths=PackedStringArray("body") instance=ExtResource("5_v4emx")]
 body = NodePath("../PhysicsBody")
+
+[node name="HitboxPreviewer" parent="." unique_id=72235597 node_paths=PackedStringArray("Animator") instance=ExtResource("6_4seug")]
+Data = ExtResource("2_c2pr3")
+Animator = NodePath("../Graphics/Mesh")
+State = ExtResource("12_x8dfw")
+Frame = 6
 
 [node name="Sounds" type="Node3D" parent="." unique_id=1697435538]
 

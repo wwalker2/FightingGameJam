@@ -34,4 +34,3 @@ animationEvents = []
 throwPivot = []
 stateTransitions = [SubResource("Resource_arxlv")]
 animationSettings = [SubResource("Resource_1gg1l")]
-metadata/_custom_type_script = "uid://bf60srwkccsm8"

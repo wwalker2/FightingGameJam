@@ -23,7 +23,7 @@ UseVerticalSpeed = true
 [resource]
 script = ExtResource("3_nbn14")
 StateName = "Death"
-Duration = 12
+Duration = 5
 stateProperties = []
 statePhysics = [SubResource("2")]
 hitboxStates = [SubResource("1")]

@@ -1,19 +1,19 @@
 [gd_resource type="Resource" script_class="MoveSettings" format=3 uid="uid://pr0v35lixhyf"]
 
-[ext_resource type="Resource" uid="uid://fnernd2rfpal" path="res://Fighters/Shared/Inputs/13_Input_]P[.tres" id="2_il3vk"]
+[ext_resource type="Resource" uid="uid://7tkdjgdsihn0" path="res://Fighters/Shared/Inputs/13_Input_6]P[.tres" id="1_ypyu0"]
 [ext_resource type="Script" uid="uid://gk1rkw667o4n" path="res://Scripts/SakugaEngine/Resources/MoveSettings.cs" id="3_sslt4"]
 
 [resource]
 script = ExtResource("3_sslt4")
 MoveName = "6]P["
 MoveState = 55
-Inputs = ExtResource("2_il3vk")
+Inputs = ExtResource("1_ypyu0")
 Priority = 5
 MoveEnd = 2
 ChargeRequired = Vector2i(1000, 1000)
-CanCancelTo = Array[Object]([])
-ExtraVariablesRequirement = null
-ExtraVariablesChange = null
+CanCancelTo = []
+ExtraVariablesRequirement = []
+ExtraVariablesChange = []
 CanBeOverrided = true
 IgnoreSamePriority = false
 AcceptNullStates = true

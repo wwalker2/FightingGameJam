@@ -30,14 +30,12 @@ metadata/_custom_type_script = "uid://5qrsoteskjym"
 [sub_resource type="Resource" id="Resource_goxqg"]
 script = ExtResource("3_3tfhv")
 UseLateralSpeed = true
-LateralSpeed = 60000
 UseVerticalSpeed = true
 
 [resource]
 script = ExtResource("2_85vcb")
 StateName = "Travel"
-Duration = 12
-Loop = true
+Duration = 8
 LoopFrames = Vector2i(0, 11)
 stateProperties = []
 statePhysics = [SubResource("Resource_goxqg")]

@@ -3,10 +3,10 @@
 [ext_resource type="Script" uid="uid://c0y740kryylcs" path="res://Scripts/SakugaEngine/Resources/HitboxElement.cs" id="1_mox3i"]
 [ext_resource type="Script" uid="uid://dxuwyhds75mce" path="res://Scripts/SakugaEngine/Resources/HitboxSettings.cs" id="2_xikn8"]
 
-[sub_resource type="Resource" id="Resource_8567p"]
+[sub_resource type="Resource" id="Resource_jjlyq"]
 script = ExtResource("1_mox3i")
-Center = Vector2i(6000, 5000)
-Size = Vector2i(15000, 3000)
+Center = Vector2i(6000, 11500)
+Size = Vector2i(15000, 2000)
 HitboxType = 2
 SelfSuperGaugeGain = 25
 OpponentSuperGaugeGain = 10
@@ -15,11 +15,24 @@ AirBlockKnockbackGravity = 300000
 SelfPushbackForce = 0
 SelfPushbackDuration = 0
 
-[sub_resource type="Resource" id="1"]
+[sub_resource type="Resource" id="Resource_l3rl1"]
 script = ExtResource("1_mox3i")
-Center = Vector2i(0, 4000)
-Size = Vector2i(3000, 8000)
+Center = Vector2i(0, 8000)
+Size = Vector2i(5500, 16000)
+HitboxType = 3
 HitType = 1
+BaseDamage = 0
+KillingBlow = false
+GuardCrushDamage = 0
+SelfSuperGaugeGain = 0
+OpponentSuperGaugeGain = 0
+ArmorDamage = 0
+SelfHitStopDuration = 0
+OpponentHitStopDuration = 0
+BlockStopDuration = 0
+CounterHitStopDuration = 0
+ClashHitStopDuration = 0
+DamageScalingSubtract = 0
 CrouchHitReaction = 1
 GroundHitKnockback = Vector2i(-30000, 0)
 GroundHitstun = 20
@@ -30,6 +43,7 @@ AirHitKnockback = Vector2i(-20000, 40000)
 AirHitstun = 20
 AirBlockKnockback = Vector2i(-20000, 0)
 AirBlockstun = 20
+AllowSelfPushback = false
 SelfPushbackForce = 0
 SelfPushbackDuration = 0
 BounceXIntensity = 0
@@ -37,4 +51,4 @@ BounceYIntensity = 0
 
 [resource]
 script = ExtResource("2_xikn8")
-Hitboxes = [SubResource("Resource_8567p"), SubResource("1")]
+Hitboxes = [SubResource("Resource_jjlyq"), SubResource("Resource_l3rl1")]

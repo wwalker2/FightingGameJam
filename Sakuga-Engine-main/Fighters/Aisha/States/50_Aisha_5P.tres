@@ -15,7 +15,7 @@ ArmorValue = 1
 
 [sub_resource type="Resource" id="Resource_kue52"]
 script = ExtResource("2_dbo0f")
-Frame = 5
+Frame = 7
 Events = [SubResource("Resource_fi3yh")]
 
 [sub_resource type="Resource" id="Resource_6umav"]
@@ -24,20 +24,20 @@ metadata/_custom_type_script = "uid://bx8e460frmhfd"
 
 [sub_resource type="Resource" id="Resource_5j46b"]
 script = ExtResource("2_dbo0f")
-Frame = 11
+Frame = 15
 Events = [SubResource("Resource_6umav")]
 metadata/_custom_type_script = "uid://bwm15ys7iwmfc"
 
 [sub_resource type="Resource" id="Resource_mif1v"]
 script = ExtResource("3_dbo0f")
-TargetPosition = Vector2i(4000, 0)
+TargetPosition = Vector2i(6000, 0)
 xRelativeTo = 1
 yRelativeTo = 1
 metadata/_custom_type_script = "uid://gkg7v04bkm2y"
 
 [sub_resource type="Resource" id="Resource_flimu"]
 script = ExtResource("2_dbo0f")
-Frame = 5
+Frame = 7
 Events = [SubResource("Resource_mif1v")]
 metadata/_custom_type_script = "uid://bwm15ys7iwmfc"
 
@@ -73,7 +73,7 @@ DistanceArea = Vector2i(0, 99999)
 script = ExtResource("5_5j46b")
 StateName = "5P"
 Type = 2
-Duration = 20
+Duration = 22
 stateProperties = []
 statePhysics = [SubResource("Resource_60pnb")]
 hitboxStates = [SubResource("2"), SubResource("4")]

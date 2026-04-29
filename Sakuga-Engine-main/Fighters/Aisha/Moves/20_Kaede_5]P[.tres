@@ -5,15 +5,15 @@
 
 [resource]
 script = ExtResource("3_4j23n")
-MoveName = "5C"
+MoveName = "5]P["
 MoveState = 51
 Inputs = ExtResource("2_243wq")
 Priority = 5
 MoveEnd = 2
 ChargeRequired = Vector2i(1000, 1000)
-CanCancelTo = Array[Object]([])
-ExtraVariablesRequirement = null
-ExtraVariablesChange = null
+CanCancelTo = []
+ExtraVariablesRequirement = []
+ExtraVariablesChange = []
 CanBeOverrided = true
 IgnoreSamePriority = false
 AcceptNullStates = true

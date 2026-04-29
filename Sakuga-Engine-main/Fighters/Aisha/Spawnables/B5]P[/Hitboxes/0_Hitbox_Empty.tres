@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="HitboxSettings" format=3 uid="uid://ir12kq4mvknx"]
+
+[ext_resource type="Script" uid="uid://dxuwyhds75mce" path="res://Scripts/SakugaEngine/Resources/HitboxSettings.cs" id="1_n8qpt"]
+
+[resource]
+script = ExtResource("1_n8qpt")
+Hitboxes = []
