@@ -17,7 +17,7 @@ namespace SakugaEngine.Resources
 		[Export] public ushort BaseDefense = 100;
 
 		[Export] public int MaxPartnerGauge = 1000;
-		[Export] public int PartnerGaugeChargeRate = 10;
+		[Export] public int PartnerGaugeChargeRate = 30;
 		[Export] public int MaxContracts = 4;
 
 		[Export] public AIData _aiData;

@@ -254,183 +254,183 @@ namespace SakugaEngine
 			}
 
 			//Check if someone is KO'ed
-            bool someoneLose = false;
-            for (int i = 0; i < _fighters.Length; i++)
-            {
-                if (_fighters[i].IsKO())
-                    someoneLose = true;
-            }
-            if (someoneLose)
-                CheckVictoryConditions();
-        }
+			bool someoneLose = false;
+			for (int i = 0; i < _fighters.Length; i++)
+			{
+				if (_fighters[i].IsKO())
+					someoneLose = true;
+			}
+			if (someoneLose)
+				CheckVictoryConditions();
+		}
 
-        public void ResetRound()
-        {
-            FadeOut(20);
-            MatchState = Global.MatchState.NEXT_ROUND_TRANSITION;
-        }
+		public void ResetRound()
+		{
+			FadeOut(20);
+			MatchState = Global.MatchState.NEXT_ROUND_TRANSITION;
+		}
 
-        private void GoToRound()
-        {
-            if (FadeMode == Global.FadeScreenMode.NONE)
-            {
-                for (int i = 0; i < _fighters.Length; i++)
-                {
-                    _fighters[i].Reset(i);
-                }
-                
-                ResetTimer();
-                Cards.PlayRoundStartAnimation(CurrentRound, false);
-                DelayTimer.Start(Cards.GetStateDelay());
-                FadeIn(40);
-                MatchState = Global.MatchState.ROUND_START;
-                GD.Print($"Round {CurrentRound + 1}...");
-            }
-        }
+		private void GoToRound()
+		{
+			if (FadeMode == Global.FadeScreenMode.NONE)
+			{
+				for (int i = 0; i < _fighters.Length; i++)
+				{
+					_fighters[i].Reset(i);
+				}
+				
+				ResetTimer();
+				Cards.PlayRoundStartAnimation(CurrentRound, false);
+				DelayTimer.Start(Cards.GetStateDelay());
+				FadeIn(40);
+				MatchState = Global.MatchState.ROUND_START;
+				GD.Print($"Round {CurrentRound + 1}...");
+			}
+		}
 
-        public void ResetTimer()
-        {
-            Clock = Mathf.Max(0, ClockLimit * Global.TicksPerSecond);
-        }
+		public void ResetTimer()
+		{
+			Clock = Mathf.Max(0, ClockLimit * Global.TicksPerSecond);
+		}
 
-        public void FadeIn(int time)
-        {
-            FadeTime = time;
-            FadeProgress = FadeTime;
-            FadeMode = Global.FadeScreenMode.FADE_IN;
-        }
+		public void FadeIn(int time)
+		{
+			FadeTime = time;
+			FadeProgress = FadeTime;
+			FadeMode = Global.FadeScreenMode.FADE_IN;
+		}
 
-        public void FadeOut(int time)
-        {
-            FadeTime = time;
-            FadeProgress = 0;
-            FadeMode = Global.FadeScreenMode.FADE_OUT;
-        }
+		public void FadeOut(int time)
+		{
+			FadeTime = time;
+			FadeProgress = 0;
+			FadeMode = Global.FadeScreenMode.FADE_OUT;
+		}
 
-        public void FadeController()
-        {
-            if (FadeMode == Global.FadeScreenMode.NONE) return;
+		public void FadeController()
+		{
+			if (FadeMode == Global.FadeScreenMode.NONE) return;
 
-            switch (FadeMode)
-            {
-                case Global.FadeScreenMode.FADE_IN:
-                    FadeProgress--;
-                    break;
-                case Global.FadeScreenMode.FADE_OUT:
-                    FadeProgress++;
-                    break;
-            }
-            if (FadeTime > 0) FadeScreenIntensity = Global.IntLerp(0, 100, FadeTime, FadeProgress);
+			switch (FadeMode)
+			{
+				case Global.FadeScreenMode.FADE_IN:
+					FadeProgress--;
+					break;
+				case Global.FadeScreenMode.FADE_OUT:
+					FadeProgress++;
+					break;
+			}
+			if (FadeTime > 0) FadeScreenIntensity = Global.IntLerp(0, 100, FadeTime, FadeProgress);
 
-            if ((FadeMode == Global.FadeScreenMode.FADE_IN && FadeProgress <= 0) ||
-                (FadeMode == Global.FadeScreenMode.FADE_OUT && FadeProgress >= FadeTime + 20))
-                FadeMode = Global.FadeScreenMode.NONE;
-        }
+			if ((FadeMode == Global.FadeScreenMode.FADE_IN && FadeProgress <= 0) ||
+				(FadeMode == Global.FadeScreenMode.FADE_OUT && FadeProgress >= FadeTime + 20))
+				FadeMode = Global.FadeScreenMode.NONE;
+		}
 
-        private bool MatchEndCondition()
-        {
-            if (RoundWinner == -1) return true;
-            if (RoundWinner == 2) return _fighters[0].Animator.CurrentState == 0 && _fighters[1].Animator.CurrentState == 0;
+		private bool MatchEndCondition()
+		{
+			if (RoundWinner == -1) return true;
+			if (RoundWinner == 2) return _fighters[0].Animator.CurrentState == 0 && _fighters[1].Animator.CurrentState == 0;
 
-            return _fighters[RoundWinner].Animator.CurrentState == 0 && ((_fighters[RoundLoser].IsKO() && _fighters[RoundLoser].Body.IsOnGround && 
-                    _fighters[RoundLoser].Animator.StateEnded()) || _fighters[RoundLoser].Animator.CurrentState == 0);
-        }
+			return _fighters[RoundWinner].Animator.CurrentState == 0 && ((_fighters[RoundLoser].IsKO() && _fighters[RoundLoser].Body.IsOnGround && 
+					_fighters[RoundLoser].Animator.StateEnded()) || _fighters[RoundLoser].Animator.CurrentState == 0);
+		}
 
-        private void SelectWinnerToAnimate()
-        {
-            switch (RoundWinner)
-            {
-                case -1: // Double K.O
-                    break;
-                case 0: // Player 1 win
-                    _fighters[0].PlayVictoryPose(_fighters[1].Data.Profile.ShortName);
-                    break;
-                case 1: // Player 2 win
-                    _fighters[1].PlayVictoryPose(_fighters[0].Data.Profile.ShortName);
-                    break;
-                case 2: // Draw
-                    _fighters[0].PlayDefeatPose();
-                    _fighters[1].PlayDefeatPose();
-                    break;
-            }
-        }
+		private void SelectWinnerToAnimate()
+		{
+			switch (RoundWinner)
+			{
+				case -1: // Double K.O
+					break;
+				case 0: // Player 1 win
+					_fighters[0].PlayVictoryPose(_fighters[1].Data.Profile.ShortName);
+					break;
+				case 1: // Player 2 win
+					_fighters[1].PlayVictoryPose(_fighters[0].Data.Profile.ShortName);
+					break;
+				case 2: // Draw
+					_fighters[0].PlayDefeatPose();
+					_fighters[1].PlayDefeatPose();
+					break;
+			}
+		}
 
-        private void ShowResultScreen()
-        {
-            if (ResultsScreen == null) return;
-            if (ResultsScreen.Visible) return;
+		private void ShowResultScreen()
+		{
+			if (ResultsScreen == null) return;
+			if (ResultsScreen.Visible) return;
 
-            Control winP1 = ResultsScreen.GetNode<Control>("WinBannerP1");
-            Control winP2 = ResultsScreen.GetNode<Control>("WinBannerP2");
-            Label VictoryMessage = ResultsScreen.GetNode<Label>("VictoryMessage");
+			Control winP1 = ResultsScreen.GetNode<Control>("WinBannerP1");
+			Control winP2 = ResultsScreen.GetNode<Control>("WinBannerP2");
+			Label VictoryMessage = ResultsScreen.GetNode<Label>("VictoryMessage");
 
-            if (Winner == 0) 
-            {
-                winP1.GetNode<Label>("NamePlayer1").Text = _fighters[Winner].Data.Profile.ShortName;
-                winP2.Visible = false;
-            }
-            else if (Winner == 1)
-            {
-                winP2.GetNode<Label>("NamePlayer2").Text = _fighters[Winner].Data.Profile.ShortName;
-                winP1.Visible = false;
-            }
+			if (Winner == 0) 
+			{
+				winP1.GetNode<Label>("NamePlayer1").Text = _fighters[Winner].Data.Profile.ShortName;
+				winP2.Visible = false;
+			}
+			else if (Winner == 1)
+			{
+				winP2.GetNode<Label>("NamePlayer2").Text = _fighters[Winner].Data.Profile.ShortName;
+				winP1.Visible = false;
+			}
 
-            VictoryMessage.Text = winnerMessage;
-            ResultsScreen.Visible = true;
-        }
+			VictoryMessage.Text = winnerMessage;
+			ResultsScreen.Visible = true;
+		}
 
-        private bool AnyButtonPressed()
-        {
-            foreach(SakugaFighter fighter in _fighters)
-            {
-                if (fighter.Inputs.WasPressed(fighter.Inputs.CurrentHistory, Global.INPUT_ANY_BUTTON))
-                    return true;
-            }
-            return false;
-        }
+		private bool AnyButtonPressed()
+		{
+			foreach(SakugaFighter fighter in _fighters)
+			{
+				if (fighter.Inputs.WasPressed(fighter.Inputs.CurrentHistory, Global.INPUT_ANY_BUTTON))
+					return true;
+			}
+			return false;
+		}
 
-        public void Serialize(BinaryWriter bw) 
-        {
-            bw.Write((byte)FadeMode);
-            DelayTimer.Serialize(bw);
-            bw.Write(Clock);
-            bw.Write(CurrentRound);
-            bw.Write(Winner);
-            bw.Write(FadeScreenIntensity);
-            bw.Write(FadeTime);
-            bw.Write(FadeProgress);
-            bw.Write((byte)MatchState);
-            bw.Write(RoundWinner);
+		public void Serialize(BinaryWriter bw) 
+		{
+			bw.Write((byte)FadeMode);
+			DelayTimer.Serialize(bw);
+			bw.Write(Clock);
+			bw.Write(CurrentRound);
+			bw.Write(Winner);
+			bw.Write(FadeScreenIntensity);
+			bw.Write(FadeTime);
+			bw.Write(FadeProgress);
+			bw.Write((byte)MatchState);
+			bw.Write(RoundWinner);
 
-            bw.Write(Cards.CurrentAnimation);
-            bw.Write(Cards.Frame);
+			bw.Write(Cards.CurrentAnimation);
+			bw.Write(Cards.Frame);
 
-            for (int i = 0; i < VictoryCounter.Length; ++i)
-            {
-                bw.Write(VictoryCounter[i]);
-            }
-        }
+			for (int i = 0; i < VictoryCounter.Length; ++i)
+			{
+				bw.Write(VictoryCounter[i]);
+			}
+		}
 
-        public void Deserialize(BinaryReader br) 
-        {
-            FadeMode = (Global.FadeScreenMode)br.ReadByte();
-            DelayTimer.Deserialize(br);
-            Clock = br.ReadInt32();
-            CurrentRound = br.ReadInt32();
-            Winner = br.ReadInt32();
-            FadeScreenIntensity = br.ReadInt32();
-            FadeTime = br.ReadInt32();
-            FadeProgress = br.ReadInt32();
-            MatchState = (Global.MatchState)br.ReadByte();
-            RoundWinner = br.ReadInt32();
+		public void Deserialize(BinaryReader br) 
+		{
+			FadeMode = (Global.FadeScreenMode)br.ReadByte();
+			DelayTimer.Deserialize(br);
+			Clock = br.ReadInt32();
+			CurrentRound = br.ReadInt32();
+			Winner = br.ReadInt32();
+			FadeScreenIntensity = br.ReadInt32();
+			FadeTime = br.ReadInt32();
+			FadeProgress = br.ReadInt32();
+			MatchState = (Global.MatchState)br.ReadByte();
+			RoundWinner = br.ReadInt32();
 
-            Cards.CurrentAnimation = br.ReadInt32();
-            Cards.Frame = br.ReadInt32();
-            
-            for (int i = 0; i < VictoryCounter.Length; ++i)
-            {
-                VictoryCounter[i] = br.ReadInt32();
-            }
-        }
-    }
+			Cards.CurrentAnimation = br.ReadInt32();
+			Cards.Frame = br.ReadInt32();
+			
+			for (int i = 0; i < VictoryCounter.Length; ++i)
+			{
+				VictoryCounter[i] = br.ReadInt32();
+			}
+		}
+	}
 }

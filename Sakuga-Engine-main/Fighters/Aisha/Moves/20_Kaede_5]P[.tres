@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="MoveSettings" format=3 uid="uid://cj57ia01o7lnx"]
 
-[ext_resource type="Resource" uid="uid://fnernd2rfpal" path="res://Fighters/Shared/Inputs/13_Input_]P[.tres" id="2_243wq"]
+[ext_resource type="Resource" uid="uid://bii142i8da7oq" path="res://Fighters/Shared/Inputs/13_Input_5P.tres" id="1_2ehas"]
 [ext_resource type="Script" uid="uid://gk1rkw667o4n" path="res://Scripts/SakugaEngine/Resources/MoveSettings.cs" id="3_4j23n"]
 
 [resource]
 script = ExtResource("3_4j23n")
 MoveName = "5]P["
 MoveState = 51
-Inputs = ExtResource("2_243wq")
+Inputs = ExtResource("1_2ehas")
 Priority = 5
 MoveEnd = 2
 ChargeRequired = Vector2i(1000, 1000)

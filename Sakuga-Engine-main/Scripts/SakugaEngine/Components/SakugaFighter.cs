@@ -189,7 +189,7 @@ namespace SakugaEngine
 				HorizontalBounce.Run();
 				VerticalBounce.Run();
 				MoveBuffer.Run();
-				if (Inputs.IsBeingPressed(Inputs.CurrentHistory, Global.INPUT_FACE_C))
+				if (Inputs.IsBeingPressed(Inputs.CurrentHistory, Global.INPUT_FACE_E))
 				{
 					FighterVars.PartnerMeter += (uint)Data.PartnerGaugeChargeRate;
 						
@@ -218,7 +218,12 @@ namespace SakugaEngine
 			ChangePlayerSide();
 			Inputs.InputSide = Body.PlayerSide;
 			StateMachine.CheckMoves();
-			if (!Inputs.IsBeingPressed(Inputs.CurrentHistory, Global.INPUT_FACE_C))
+			if (!Inputs.IsBeingPressed(Inputs.CurrentHistory, Global.INPUT_FACE_E))
+			{
+				FighterVars.PartnerMeter = 0;
+				FighterVars.PartnerMeterFull = false;
+			}
+			if (Inputs.IsBeingPressed(Inputs.CurrentHistory, Global.INPUT_FACE_C))
 			{
 				FighterVars.PartnerMeter = 0;
 				FighterVars.PartnerMeterFull = false;
