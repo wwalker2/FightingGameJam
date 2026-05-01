@@ -1,13 +1,20 @@
 [gd_resource type="Resource" script_class="AIData" format=3 uid="uid://cjsv6v7fu8202"]
 
+[ext_resource type="Resource" uid="uid://bjcpxce0q6yxw" path="res://Fighters/Aisha/AI/Aisha_AI_Medium.tres" id="1_o2fu7"]
 [ext_resource type="Script" uid="uid://dhvotekjrqw07" path="res://Scripts/SakugaEngine/Resources/AI/AIData.cs" id="4_3kded"]
 
 [resource]
 script = ExtResource("4_3kded")
-Actions = null
+Actions = []
 HighBlockAction = 1
 LowBlockAction = 8
 ForwardRecoveryAction = 15
 BackRecoveryAction = 15
 ThrowEscapeAction = 15
+BehaviorBeginner = ExtResource("1_o2fu7")
+BehaviorEasy = ExtResource("1_o2fu7")
+BehaviorMedium = ExtResource("1_o2fu7")
+BehaviorHard = ExtResource("1_o2fu7")
+BehaviorVeryHard = ExtResource("1_o2fu7")
+BehaviorPro = ExtResource("1_o2fu7")
 metadata/_custom_type_script = "uid://dhvotekjrqw07"
