@@ -15,7 +15,7 @@
 [ext_resource type="Script" uid="uid://hg0vcp1gy2ny" path="res://Scripts/SakugaEngine/Collision/PhysicsBody.cs" id="8_ntlei"]
 [ext_resource type="Script" uid="uid://cmq3cp1n0copp" path="res://Scripts/SakugaEngine/Components/FrameTimer.cs" id="9_irn7w"]
 [ext_resource type="Texture2D" uid="uid://bix43xqlwt8mk" path="res://Fighters/Aisha/Spawnables/B5]P[/Sprites/DOPPELGANGER_ANIM_STAND_CHARGE_P_FRAME0003.png" id="9_jayq2"]
-[ext_resource type="Resource" uid="uid://tx2mwkirb31e" path="res://Fighters/Aisha/Spawnables/B5]P[/States/1_Travel.tres" id="12_x8dfw"]
+[ext_resource type="Resource" uid="uid://dtyqek5p7smet" path="res://Fighters/Aisha/Spawnables/B5]P[/States/0_Spawn.tres" id="12_1758a"]
 
 [sub_resource type="Animation" id="Animation_b1ng2"]
 resource_name = "Death"
@@ -194,7 +194,7 @@ centered = false
 offset = Vector2(-600, 0)
 pixel_size = 0.003
 texture_filter = 0
-texture = ExtResource("5_1758a")
+texture = ExtResource("7_incbq")
 region_rect = Rect2(711.25, 46.25, 2, 0)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Graphics/Mesh/ProjectileGraphics" unique_id=1676508825]
@@ -206,7 +206,7 @@ body = NodePath("../PhysicsBody")
 [node name="HitboxPreviewer" parent="." unique_id=72235597 node_paths=PackedStringArray("Animator") instance=ExtResource("6_4seug")]
 Data = ExtResource("2_c2pr3")
 Animator = NodePath("../Graphics/Mesh")
-State = ExtResource("12_x8dfw")
+State = ExtResource("12_1758a")
 Frame = 6
 
 [node name="Sounds" type="Node3D" parent="." unique_id=1697435538]

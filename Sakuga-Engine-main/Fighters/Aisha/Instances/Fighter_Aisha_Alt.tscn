@@ -1,101 +1,101 @@
 [gd_scene format=3 uid="uid://cotjpjik8axwc"]
 
-[ext_resource type="Script" uid="uid://bkhlpeqky2g1r" path="res://Scripts/SakugaEngine/Components/SakugaFighter.cs" id="1_lo0ai"]
-[ext_resource type="Resource" uid="uid://dercsjnhtrhqq" path="res://Fighters/Aisha/Aisha_Data.tres" id="2_n03lc"]
-[ext_resource type="Resource" uid="uid://5w0ffcesv6ec" path="res://Fighters/Shared/Shared_SpawnablesList.tres" id="3_2rkqd"]
-[ext_resource type="Resource" uid="uid://b6a4cqdykhhg" path="res://Fighters/Shared/Shared_VFXList.tres" id="4_ta1o7"]
-[ext_resource type="Resource" uid="uid://k31pv0ejfv2s" path="res://Fighters/Shared/Shared_SFXList.tres" id="5_ci63n"]
-[ext_resource type="Resource" uid="uid://c8h8jltu6u5pb" path="res://Fighters/Shared/Shared_VoiceLines.tres" id="6_pvnca"]
-[ext_resource type="Script" uid="uid://cqd8ai3a40alf" path="res://Scripts/SakugaEngine/Utils/FOV_Correction.cs" id="7_tvu04"]
-[ext_resource type="Script" uid="uid://bx452hpssiy38" path="res://Scripts/SakugaEngine/Components/FrameAnimator.cs" id="8_fpanc"]
-[ext_resource type="Texture2D" uid="uid://8m8dkei6cgfs" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_STAND_IDLE.png" id="9_0iua7"]
-[ext_resource type="Texture2D" uid="uid://bt8pqvi4svo7" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_CROUCH_A_FRAME0001.png" id="10_n2fir"]
-[ext_resource type="Texture2D" uid="uid://bmatjuqvonutm" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_CROUCH_A_FRAME0002.png" id="11_0pg0r"]
-[ext_resource type="Texture2D" uid="uid://dgtmgp7rqnr6w" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_CROUCH_A_FRAME0003.png" id="12_lrdsh"]
-[ext_resource type="Texture2D" uid="uid://cefjdagp807sm" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_CROUCH_A_FRAME0004.png" id="13_r6psd"]
-[ext_resource type="Texture2D" uid="uid://cavfyqqai2ka" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_CROUCH_IDLE.png" id="14_8re7t"]
-[ext_resource type="Texture2D" uid="uid://hgois6py4bwc" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_CROUCH_B_FRAME0001.png" id="15_e4atf"]
-[ext_resource type="Texture2D" uid="uid://eq1l6rtptiy5" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_CROUCH_B_FRAME0002.png" id="16_6ehmw"]
-[ext_resource type="Texture2D" uid="uid://d2h4q1acqhkxk" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_CROUCH_B_FRAME0003.png" id="17_txk3n"]
-[ext_resource type="Texture2D" uid="uid://375x02n5lrh3" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_CROUCH_B_FRAME0004.png" id="18_22y3o"]
-[ext_resource type="Texture2D" uid="uid://cpk8nl184qhrt" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_STAND_FRAME0001.png" id="19_3m02a"]
-[ext_resource type="Texture2D" uid="uid://cvr0usiqop3as" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_STAND_FRAME0002.png" id="20_b3gtg"]
-[ext_resource type="Texture2D" uid="uid://dqu4s4ukenaxi" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_STAND_FRAME0003.png" id="21_xhu5d"]
-[ext_resource type="Texture2D" uid="uid://bt2y2c1tlj44g" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_STAND_FRAME0005.png" id="22_n012i"]
-[ext_resource type="Texture2D" uid="uid://cy4itk5fxtr0a" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_STAND_B_FRAME0001.png" id="23_min7c"]
-[ext_resource type="Texture2D" uid="uid://b413y7aqid4v3" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_STAND_B_FRAME0002.png" id="24_fmqbp"]
-[ext_resource type="Texture2D" uid="uid://codjnxtvtqe8f" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_STAND_B_FRAME0003.png" id="25_g3oc7"]
-[ext_resource type="Texture2D" uid="uid://ciohqqcq2lv8h" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_STAND_B_FRAME0004.png" id="26_82csf"]
-[ext_resource type="Texture2D" uid="uid://cjdue3flplq4n" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_FORWARD_A_FRAME0001.png" id="27_l8d27"]
-[ext_resource type="Texture2D" uid="uid://4fpdaep6itep" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_FORWARD_A_FRAME0002.png" id="28_trlmy"]
-[ext_resource type="Texture2D" uid="uid://cmw7c2m4k6xyu" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_FORWARD_A_FRAME0003.png" id="29_3qa2g"]
-[ext_resource type="Texture2D" uid="uid://bdwdaoe0tdau0" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_FORWARD_A_FRAME0004.png" id="30_r8k1q"]
-[ext_resource type="Texture2D" uid="uid://baruskm2p01w7" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_FORWARD_B_FRAME0001.png" id="31_vnja1"]
-[ext_resource type="Texture2D" uid="uid://odya6282h3as" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_FORWARD_B_FRAME0002.png" id="32_nrqlk"]
-[ext_resource type="Texture2D" uid="uid://b8amooml2xk6j" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_FORWARD_B_FRAME0003.png" id="33_ps6l3"]
-[ext_resource type="Texture2D" uid="uid://bpoit5fw736ik" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_FORWARD_B_FRAME0004.png" id="34_24yr8"]
-[ext_resource type="Texture2D" uid="uid://n0oqs1ft622n" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_C_FOLLOWUP_P.png" id="35_5aeml"]
-[ext_resource type="Texture2D" uid="uid://d1oe62gom7q05" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_JUMPING_FRAME0003.png" id="36_eeev0"]
-[ext_resource type="Texture2D" uid="uid://dijm7xups4jrg" path="res://Fighters/Aisha/Sprites/Combined/DOPPELGANGER_ANIM_BURST.png" id="37_vbd2f"]
-[ext_resource type="Texture2D" uid="uid://nbvymfpvuxbu" path="res://Fighters/Aisha/Sprites/Combined/DOPPELGANGER_ANIM_C_FOLLOWUP_BACKWARD_FRAME0001.png" id="38_46msj"]
-[ext_resource type="Texture2D" uid="uid://dno0u5wyqbe0t" path="res://Fighters/Aisha/Sprites/Combined/DOPPELGANGER_ANIM_C_FOLLOWUP_BACKWARD_FRAME0002.png" id="39_xjpb3"]
-[ext_resource type="Texture2D" uid="uid://bxr0xia2rqnui" path="res://Fighters/Aisha/Sprites/Combined/DOPPELGANGER_ANIM_C_FOLLOWUP_BACKWARD_FRAME0003.png" id="40_vtexq"]
-[ext_resource type="Texture2D" uid="uid://nr6cwr3ka81p" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_WALK_BACKWARD0004.png" id="41_kpn8a"]
-[ext_resource type="Texture2D" uid="uid://dk8venbqld737" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_C_FOLLOWUP_DOWN_AISHA_FRAME0001.png" id="42_dlxea"]
-[ext_resource type="Texture2D" uid="uid://buo0vvvnkexgd" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_C_FOLLOWUP_FORWARD_AISHA_FRAME0003.png" id="43_op0i3"]
-[ext_resource type="Texture2D" uid="uid://diegcf8ajcjgk" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_C_FOLLOWUP_FORWARD_AISHA_FRAME0009.png" id="44_10rl4"]
-[ext_resource type="Texture2D" uid="uid://bx20nro4ev2e4" path="res://Fighters/Aisha/Sprites/Combined/DOPPELGANGER_ANIM_C_FOLLOWUP_UP_FRAME0002.png" id="45_y7foi"]
-[ext_resource type="Texture2D" uid="uid://dviqil4n2pwi1" path="res://Fighters/Aisha/Sprites/Combined/DOPPELGANGER_ANIM_C_FOLLOWUP_UP_FRAME0003.png" id="46_5mutr"]
-[ext_resource type="Texture2D" uid="uid://cv8oc40r1eftd" path="res://Fighters/Aisha/Sprites/Combined/DOPPELGANGER_ANIM_C_FOLLOWUP_UP_FRAME0004.png" id="47_3tdss"]
-[ext_resource type="Texture2D" uid="uid://ds38mm3yswcp2" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_LAUNCHED.png" id="49_cpd4r"]
-[ext_resource type="Texture2D" uid="uid://ctt3j7edev74n" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_CROUCH_HITSTUN.png" id="50_5e7wy"]
-[ext_resource type="Texture2D" uid="uid://tacvifa0gubm" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_RECOVERY_FRAME0001.png" id="51_tonqq"]
-[ext_resource type="Texture2D" uid="uid://dqjbx3glp7a6b" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_RECOVERY_FRAME0003.png" id="52_ck8yl"]
-[ext_resource type="Texture2D" uid="uid://cmw3lnfw7hlug" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_RECOVERY_FRAME0002.png" id="53_phuc1"]
-[ext_resource type="Texture2D" uid="uid://e2qsejhibhl7" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_RECOVERY_FRAME0004.png" id="54_briro"]
-[ext_resource type="Texture2D" uid="uid://duend0hak5026" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_STAND_HITSTUN.png" id="55_7ufed"]
-[ext_resource type="Texture2D" uid="uid://dhism22am7dcs" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_JUMPING_FRAME0001.png" id="56_go0hu"]
-[ext_resource type="Texture2D" uid="uid://gouqbh6yqvpf" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_JUMPING_FRAME0002.png" id="57_ank0h"]
-[ext_resource type="Texture2D" uid="uid://tlxkvqly6jno" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_JUMPING_FRAME0005.png" id="58_yc23q"]
-[ext_resource type="Texture2D" uid="uid://d3o62p57h16f7" path="res://Fighters/Aisha/Sprites/Combined/DOPPELGANGER_ANIM_THROW_FORWARD0001.png" id="59_qv0hf"]
-[ext_resource type="Texture2D" uid="uid://b12l2cjv1puet" path="res://Fighters/Aisha/Sprites/Combined/DOPPELGANGER_ANIM_THROW_FORWARD0003.png" id="60_3l6sf"]
-[ext_resource type="Texture2D" uid="uid://bs1auejghx04j" path="res://Fighters/Aisha/Sprites/Combined/DOPPELGANGER_ANIM_THROW_FORWARD0002.png" id="61_osflv"]
-[ext_resource type="Texture2D" uid="uid://crsa3lduphaex" path="res://Fighters/Aisha/Sprites/Combined/DOPPELGANGER_ANIM_THROW_FORWARD0004.png" id="62_02t6s"]
-[ext_resource type="Texture2D" uid="uid://d1lswjdfcl7ft" path="res://Fighters/Aisha/Sprites/Combined/DOPPELGANGER_ANIM_THROW_FORWARD0005.png" id="63_j54ox"]
-[ext_resource type="Texture2D" uid="uid://cbcj1knpfmefx" path="res://Fighters/Aisha/Sprites/Combined/DOPPELGANGER_ANIM_THROW_FORWARD0006.png" id="64_w7mct"]
-[ext_resource type="Texture2D" uid="uid://fnr80g4brocd" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_WALK_BACKWARD0001.png" id="65_1e53s"]
-[ext_resource type="Texture2D" uid="uid://bs3i4pptrcu33" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_WALK_BACKWARD0002.png" id="66_6am8b"]
-[ext_resource type="Texture2D" uid="uid://601qla2mn1y6" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_WALK_BACKWARD0003.png" id="67_6iki5"]
-[ext_resource type="Texture2D" uid="uid://daccbtwvqsd55" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_WALK_FORWARD0001.png" id="68_p1f51"]
-[ext_resource type="Texture2D" uid="uid://binjhfg1puale" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_WALK_FORWARD0002.png" id="69_ke5gw"]
-[ext_resource type="Texture2D" uid="uid://cxxlgl0lchoyn" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_WALK_FORWARD0003.png" id="70_w13kw"]
-[ext_resource type="Texture2D" uid="uid://uaioka55k53k" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_JUMPING_2B_FRAME0001.png" id="71_8re7t"]
-[ext_resource type="Texture2D" uid="uid://ben8584f3y4wx" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_WALK_FORWARD0004.png" id="71_pbkxw"]
-[ext_resource type="Texture2D" uid="uid://b21vsmi38weej" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_JUMPING_2B_FRAME0002.png" id="72_e4atf"]
-[ext_resource type="Texture2D" uid="uid://bgupwvgh4150o" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_JUMPING_A_FRAME0001.png" id="72_gbgq5"]
-[ext_resource type="Texture2D" uid="uid://rymoaixtrsrh" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_JUMPING_2B_FRAME0003.png" id="73_6ehmw"]
-[ext_resource type="Texture2D" uid="uid://xi2pdmmrdtni" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_JUMPING_A_FRAME0002.png" id="73_g3kdk"]
-[ext_resource type="Texture2D" uid="uid://08xeke2jn0nl" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_JUMPING_A_FRAME0003.png" id="74_3gneb"]
-[ext_resource type="Texture2D" uid="uid://br5da87l13tya" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_JUMPING_2B_FRAME0004.png" id="74_txk3n"]
-[ext_resource type="Texture2D" uid="uid://dafo84brq7vxo" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_JUMPING_A_FRAME0004.png" id="75_bkhb2"]
-[ext_resource type="Texture2D" uid="uid://qtna3roeflf2" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_JUMPING_A_FRAME0005.png" id="76_hjnct"]
-[ext_resource type="Texture2D" uid="uid://c5h2dbh3bf2ig" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_JUMPING_B_FRAME0001.png" id="77_vasds"]
-[ext_resource type="Texture2D" uid="uid://bmit6u1bghgur" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_JUMPING_B_FRAME0002.png" id="78_q5rhk"]
-[ext_resource type="Texture2D" uid="uid://cfp2dixt0amsh" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_JUMPING_B_FRAME0003.png" id="79_uxvio"]
-[ext_resource type="Texture2D" uid="uid://vuqrpbhapu4r" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_JUMPING_B_FRAME0004.png" id="80_k0x6t"]
-[ext_resource type="PackedScene" uid="uid://csdgicelabg4n" path="res://Scenes/Instances/HitboxPreviewer.tscn" id="85_22y3o"]
-[ext_resource type="Resource" uid="uid://7tupw85c8lcd" path="res://Fighters/Aisha/Spawnables/B5P/States/1_Travel.tres" id="86_e4atf"]
-[ext_resource type="Script" uid="uid://b4erq62og5quv" path="res://Scripts/SakugaEngine/Resources/ExtraVariableBehavior.cs" id="95_e4atf"]
-[ext_resource type="PackedScene" uid="uid://dduf0jsq56ggk" path="res://Scenes/Instances/HitboxViewer.tscn" id="285_q8rqk"]
-[ext_resource type="Script" uid="uid://3uu6r0mhj3p3" path="res://Scripts/SakugaEngine/Components/SoundQueue.cs" id="286_qf8wn"]
-[ext_resource type="Script" uid="uid://hg0vcp1gy2ny" path="res://Scripts/SakugaEngine/Collision/PhysicsBody.cs" id="287_njjt5"]
-[ext_resource type="Script" uid="uid://66semq5e6yt" path="res://Scripts/SakugaEngine/Components/InputManager.cs" id="288_pnpw4"]
-[ext_resource type="Script" uid="uid://eajl6jjh3s1t" path="res://Scripts/SakugaEngine/Components/SakugaStateMachine.cs" id="289_queat"]
-[ext_resource type="Script" uid="uid://jxgdxccucllx" path="res://Scripts/SakugaEngine/Components/CombatTracker.cs" id="290_qpuuq"]
-[ext_resource type="Script" uid="uid://dvqrejewx20e3" path="res://Scripts/SakugaEngine/Components/AIBrain.cs" id="291_agn3c"]
-[ext_resource type="Script" uid="uid://v7id8u3160fg" path="res://Scripts/SakugaEngine/Components/FighterVariables.cs" id="292_dl0de"]
-[ext_resource type="Script" uid="uid://be15qkgbfwwhd" path="res://Scripts/SakugaEngine/Components/ExtraVariable.cs" id="293_rqy6c"]
-[ext_resource type="Script" uid="uid://cmq3cp1n0copp" path="res://Scripts/SakugaEngine/Components/FrameTimer.cs" id="294_1x0qu"]
+[ext_resource type="Script" uid="uid://bkhlpeqky2g1r" path="res://Scripts/SakugaEngine/Components/SakugaFighter.cs" id="1_e4atf"]
+[ext_resource type="Resource" uid="uid://dercsjnhtrhqq" path="res://Fighters/Aisha/Aisha_Data.tres" id="2_6ehmw"]
+[ext_resource type="Resource" uid="uid://ctj5snxmpsbys" path="res://Fighters/Aisha/Aisha_SpawnablesList.tres" id="3_txk3n"]
+[ext_resource type="Resource" uid="uid://b6a4cqdykhhg" path="res://Fighters/Shared/Shared_VFXList.tres" id="4_22y3o"]
+[ext_resource type="Resource" uid="uid://k31pv0ejfv2s" path="res://Fighters/Shared/Shared_SFXList.tres" id="5_3m02a"]
+[ext_resource type="Resource" uid="uid://c8h8jltu6u5pb" path="res://Fighters/Shared/Shared_VoiceLines.tres" id="6_b3gtg"]
+[ext_resource type="Script" uid="uid://cqd8ai3a40alf" path="res://Scripts/SakugaEngine/Utils/FOV_Correction.cs" id="7_xhu5d"]
+[ext_resource type="Script" uid="uid://bx452hpssiy38" path="res://Scripts/SakugaEngine/Components/FrameAnimator.cs" id="8_n012i"]
+[ext_resource type="Texture2D" uid="uid://8m8dkei6cgfs" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_STAND_IDLE.png" id="9_min7c"]
+[ext_resource type="Texture2D" uid="uid://bt8pqvi4svo7" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_CROUCH_A_FRAME0001.png" id="10_fmqbp"]
+[ext_resource type="Texture2D" uid="uid://bmatjuqvonutm" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_CROUCH_A_FRAME0002.png" id="11_g3oc7"]
+[ext_resource type="Texture2D" uid="uid://dgtmgp7rqnr6w" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_CROUCH_A_FRAME0003.png" id="12_82csf"]
+[ext_resource type="Texture2D" uid="uid://cefjdagp807sm" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_CROUCH_A_FRAME0004.png" id="13_l8d27"]
+[ext_resource type="Texture2D" uid="uid://cavfyqqai2ka" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_CROUCH_IDLE.png" id="14_trlmy"]
+[ext_resource type="Texture2D" uid="uid://hgois6py4bwc" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_CROUCH_B_FRAME0001.png" id="15_3qa2g"]
+[ext_resource type="Texture2D" uid="uid://eq1l6rtptiy5" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_CROUCH_B_FRAME0002.png" id="16_r8k1q"]
+[ext_resource type="Texture2D" uid="uid://d2h4q1acqhkxk" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_CROUCH_B_FRAME0003.png" id="17_vnja1"]
+[ext_resource type="Texture2D" uid="uid://375x02n5lrh3" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_CROUCH_B_FRAME0004.png" id="18_nrqlk"]
+[ext_resource type="Texture2D" uid="uid://cpk8nl184qhrt" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_STAND_FRAME0001.png" id="19_ps6l3"]
+[ext_resource type="Texture2D" uid="uid://cvr0usiqop3as" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_STAND_FRAME0002.png" id="20_24yr8"]
+[ext_resource type="Texture2D" uid="uid://dqu4s4ukenaxi" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_STAND_FRAME0003.png" id="21_5aeml"]
+[ext_resource type="Texture2D" uid="uid://bt2y2c1tlj44g" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_STAND_FRAME0005.png" id="22_eeev0"]
+[ext_resource type="Texture2D" uid="uid://cy4itk5fxtr0a" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_STAND_B_FRAME0001.png" id="23_vbd2f"]
+[ext_resource type="Texture2D" uid="uid://b413y7aqid4v3" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_STAND_B_FRAME0002.png" id="24_46msj"]
+[ext_resource type="Texture2D" uid="uid://codjnxtvtqe8f" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_STAND_B_FRAME0003.png" id="25_xjpb3"]
+[ext_resource type="Texture2D" uid="uid://ciohqqcq2lv8h" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_STAND_B_FRAME0004.png" id="26_vtexq"]
+[ext_resource type="Texture2D" uid="uid://cjdue3flplq4n" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_FORWARD_A_FRAME0001.png" id="27_kpn8a"]
+[ext_resource type="Texture2D" uid="uid://4fpdaep6itep" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_FORWARD_A_FRAME0002.png" id="28_dlxea"]
+[ext_resource type="Texture2D" uid="uid://cmw7c2m4k6xyu" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_FORWARD_A_FRAME0003.png" id="29_op0i3"]
+[ext_resource type="Texture2D" uid="uid://bdwdaoe0tdau0" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_FORWARD_A_FRAME0004.png" id="30_10rl4"]
+[ext_resource type="Texture2D" uid="uid://baruskm2p01w7" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_FORWARD_B_FRAME0001.png" id="31_y7foi"]
+[ext_resource type="Texture2D" uid="uid://odya6282h3as" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_FORWARD_B_FRAME0002.png" id="32_5mutr"]
+[ext_resource type="Texture2D" uid="uid://b8amooml2xk6j" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_FORWARD_B_FRAME0003.png" id="33_3tdss"]
+[ext_resource type="Texture2D" uid="uid://bpoit5fw736ik" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_FORWARD_B_FRAME0004.png" id="34_jxvup"]
+[ext_resource type="Texture2D" uid="uid://n0oqs1ft622n" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_C_FOLLOWUP_P.png" id="35_cpd4r"]
+[ext_resource type="Texture2D" uid="uid://d1oe62gom7q05" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_JUMPING_FRAME0003.png" id="36_5e7wy"]
+[ext_resource type="Texture2D" uid="uid://dijm7xups4jrg" path="res://Fighters/Aisha/Sprites/Combined/DOPPELGANGER_ANIM_BURST.png" id="37_tonqq"]
+[ext_resource type="Texture2D" uid="uid://nbvymfpvuxbu" path="res://Fighters/Aisha/Sprites/Combined/DOPPELGANGER_ANIM_C_FOLLOWUP_BACKWARD_FRAME0001.png" id="38_ck8yl"]
+[ext_resource type="Texture2D" uid="uid://dno0u5wyqbe0t" path="res://Fighters/Aisha/Sprites/Combined/DOPPELGANGER_ANIM_C_FOLLOWUP_BACKWARD_FRAME0002.png" id="39_phuc1"]
+[ext_resource type="Texture2D" uid="uid://bxr0xia2rqnui" path="res://Fighters/Aisha/Sprites/Combined/DOPPELGANGER_ANIM_C_FOLLOWUP_BACKWARD_FRAME0003.png" id="40_briro"]
+[ext_resource type="Texture2D" uid="uid://nr6cwr3ka81p" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_WALK_BACKWARD0004.png" id="41_7ufed"]
+[ext_resource type="Texture2D" uid="uid://dk8venbqld737" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_C_FOLLOWUP_DOWN_AISHA_FRAME0001.png" id="42_go0hu"]
+[ext_resource type="Texture2D" uid="uid://buo0vvvnkexgd" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_C_FOLLOWUP_FORWARD_AISHA_FRAME0003.png" id="43_ank0h"]
+[ext_resource type="Texture2D" uid="uid://diegcf8ajcjgk" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_C_FOLLOWUP_FORWARD_AISHA_FRAME0009.png" id="44_yc23q"]
+[ext_resource type="Texture2D" uid="uid://bx20nro4ev2e4" path="res://Fighters/Aisha/Sprites/Combined/DOPPELGANGER_ANIM_C_FOLLOWUP_UP_FRAME0002.png" id="45_qv0hf"]
+[ext_resource type="Texture2D" uid="uid://dviqil4n2pwi1" path="res://Fighters/Aisha/Sprites/Combined/DOPPELGANGER_ANIM_C_FOLLOWUP_UP_FRAME0003.png" id="46_3l6sf"]
+[ext_resource type="Texture2D" uid="uid://cv8oc40r1eftd" path="res://Fighters/Aisha/Sprites/Combined/DOPPELGANGER_ANIM_C_FOLLOWUP_UP_FRAME0004.png" id="47_osflv"]
+[ext_resource type="Texture2D" uid="uid://ds38mm3yswcp2" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_LAUNCHED.png" id="48_02t6s"]
+[ext_resource type="Texture2D" uid="uid://ctt3j7edev74n" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_CROUCH_HITSTUN.png" id="49_j54ox"]
+[ext_resource type="Texture2D" uid="uid://tacvifa0gubm" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_RECOVERY_FRAME0001.png" id="50_w7mct"]
+[ext_resource type="Texture2D" uid="uid://dqjbx3glp7a6b" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_RECOVERY_FRAME0003.png" id="51_1e53s"]
+[ext_resource type="Texture2D" uid="uid://cmw3lnfw7hlug" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_RECOVERY_FRAME0002.png" id="52_6am8b"]
+[ext_resource type="Texture2D" uid="uid://e2qsejhibhl7" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_RECOVERY_FRAME0004.png" id="53_6iki5"]
+[ext_resource type="Texture2D" uid="uid://duend0hak5026" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_STAND_HITSTUN.png" id="54_p1f51"]
+[ext_resource type="Texture2D" uid="uid://dhism22am7dcs" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_JUMPING_FRAME0001.png" id="55_ke5gw"]
+[ext_resource type="Texture2D" uid="uid://gouqbh6yqvpf" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_JUMPING_FRAME0002.png" id="56_w13kw"]
+[ext_resource type="Texture2D" uid="uid://tlxkvqly6jno" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_JUMPING_FRAME0005.png" id="57_pbkxw"]
+[ext_resource type="Texture2D" uid="uid://d3o62p57h16f7" path="res://Fighters/Aisha/Sprites/Combined/DOPPELGANGER_ANIM_THROW_FORWARD0001.png" id="58_gbgq5"]
+[ext_resource type="Texture2D" uid="uid://b12l2cjv1puet" path="res://Fighters/Aisha/Sprites/Combined/DOPPELGANGER_ANIM_THROW_FORWARD0003.png" id="59_g3kdk"]
+[ext_resource type="Texture2D" uid="uid://bs1auejghx04j" path="res://Fighters/Aisha/Sprites/Combined/DOPPELGANGER_ANIM_THROW_FORWARD0002.png" id="60_3gneb"]
+[ext_resource type="Texture2D" uid="uid://crsa3lduphaex" path="res://Fighters/Aisha/Sprites/Combined/DOPPELGANGER_ANIM_THROW_FORWARD0004.png" id="61_bkhb2"]
+[ext_resource type="Texture2D" uid="uid://d1lswjdfcl7ft" path="res://Fighters/Aisha/Sprites/Combined/DOPPELGANGER_ANIM_THROW_FORWARD0005.png" id="62_hjnct"]
+[ext_resource type="Texture2D" uid="uid://cbcj1knpfmefx" path="res://Fighters/Aisha/Sprites/Combined/DOPPELGANGER_ANIM_THROW_FORWARD0006.png" id="63_vasds"]
+[ext_resource type="Texture2D" uid="uid://fnr80g4brocd" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_WALK_BACKWARD0001.png" id="64_q5rhk"]
+[ext_resource type="Texture2D" uid="uid://bs3i4pptrcu33" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_WALK_BACKWARD0002.png" id="65_uxvio"]
+[ext_resource type="Texture2D" uid="uid://601qla2mn1y6" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_WALK_BACKWARD0003.png" id="66_k0x6t"]
+[ext_resource type="Texture2D" uid="uid://daccbtwvqsd55" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_WALK_FORWARD0001.png" id="67_x43yi"]
+[ext_resource type="Texture2D" uid="uid://binjhfg1puale" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_WALK_FORWARD0002.png" id="68_31q8a"]
+[ext_resource type="Texture2D" uid="uid://cxxlgl0lchoyn" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_WALK_FORWARD0003.png" id="69_4r5lg"]
+[ext_resource type="Texture2D" uid="uid://ben8584f3y4wx" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_WALK_FORWARD0004.png" id="70_48txm"]
+[ext_resource type="Texture2D" uid="uid://uaioka55k53k" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_JUMPING_2B_FRAME0001.png" id="71_4p7r5"]
+[ext_resource type="Texture2D" uid="uid://b21vsmi38weej" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_JUMPING_2B_FRAME0002.png" id="72_kw22y"]
+[ext_resource type="Texture2D" uid="uid://rymoaixtrsrh" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_JUMPING_2B_FRAME0003.png" id="73_7u2y2"]
+[ext_resource type="Texture2D" uid="uid://br5da87l13tya" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_JUMPING_2B_FRAME0004.png" id="74_cd2sd"]
+[ext_resource type="Texture2D" uid="uid://bgupwvgh4150o" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_JUMPING_A_FRAME0001.png" id="75_2yf2c"]
+[ext_resource type="Texture2D" uid="uid://xi2pdmmrdtni" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_JUMPING_A_FRAME0002.png" id="76_2rbro"]
+[ext_resource type="Texture2D" uid="uid://08xeke2jn0nl" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_JUMPING_A_FRAME0003.png" id="77_3jrw3"]
+[ext_resource type="Texture2D" uid="uid://dafo84brq7vxo" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_JUMPING_A_FRAME0004.png" id="78_dgn1o"]
+[ext_resource type="Texture2D" uid="uid://qtna3roeflf2" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_JUMPING_A_FRAME0005.png" id="79_qe8nx"]
+[ext_resource type="Texture2D" uid="uid://c5h2dbh3bf2ig" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_JUMPING_B_FRAME0001.png" id="80_iw86f"]
+[ext_resource type="Texture2D" uid="uid://bmit6u1bghgur" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_JUMPING_B_FRAME0002.png" id="81_1yb3j"]
+[ext_resource type="Texture2D" uid="uid://cfp2dixt0amsh" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_JUMPING_B_FRAME0003.png" id="82_1uwjy"]
+[ext_resource type="Texture2D" uid="uid://vuqrpbhapu4r" path="res://Fighters/Aisha/Sprites/Aisha/DOPPELGANGER_ANIM_JUMPING_B_FRAME0004.png" id="83_0iukl"]
+[ext_resource type="PackedScene" uid="uid://dduf0jsq56ggk" path="res://Scenes/Instances/HitboxViewer.tscn" id="84_3c6ox"]
+[ext_resource type="PackedScene" uid="uid://csdgicelabg4n" path="res://Scenes/Instances/HitboxPreviewer.tscn" id="85_5e08t"]
+[ext_resource type="Resource" uid="uid://7tupw85c8lcd" path="res://Fighters/Aisha/Spawnables/B5P/States/1_Travel.tres" id="86_sw653"]
+[ext_resource type="Script" uid="uid://3uu6r0mhj3p3" path="res://Scripts/SakugaEngine/Components/SoundQueue.cs" id="87_s5b7a"]
+[ext_resource type="Script" uid="uid://hg0vcp1gy2ny" path="res://Scripts/SakugaEngine/Collision/PhysicsBody.cs" id="88_4dmcf"]
+[ext_resource type="Script" uid="uid://66semq5e6yt" path="res://Scripts/SakugaEngine/Components/InputManager.cs" id="89_xraty"]
+[ext_resource type="Script" uid="uid://eajl6jjh3s1t" path="res://Scripts/SakugaEngine/Components/SakugaStateMachine.cs" id="90_ae1rs"]
+[ext_resource type="Script" uid="uid://jxgdxccucllx" path="res://Scripts/SakugaEngine/Components/CombatTracker.cs" id="91_57b7s"]
+[ext_resource type="Script" uid="uid://dvqrejewx20e3" path="res://Scripts/SakugaEngine/Components/AIBrain.cs" id="92_2hnj2"]
+[ext_resource type="Script" uid="uid://v7id8u3160fg" path="res://Scripts/SakugaEngine/Components/FighterVariables.cs" id="93_wnh0t"]
+[ext_resource type="Script" uid="uid://be15qkgbfwwhd" path="res://Scripts/SakugaEngine/Components/ExtraVariable.cs" id="94_8cuyd"]
+[ext_resource type="Script" uid="uid://b4erq62og5quv" path="res://Scripts/SakugaEngine/Resources/ExtraVariableBehavior.cs" id="95_5r1lm"]
+[ext_resource type="Script" uid="uid://cmq3cp1n0copp" path="res://Scripts/SakugaEngine/Components/FrameTimer.cs" id="96_56lh2"]
 
 [sub_resource type="Animation" id="42"]
 resource_name = "2A"
@@ -112,7 +112,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.06666667, 0.083333336, 0.11666667, 0.2),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [ExtResource("10_n2fir"), ExtResource("11_0pg0r"), ExtResource("12_lrdsh"), ExtResource("13_r6psd"), ExtResource("14_8re7t")]
+"values": [ExtResource("10_fmqbp"), ExtResource("11_g3oc7"), ExtResource("12_82csf"), ExtResource("13_l8d27"), ExtResource("14_trlmy")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -136,7 +136,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.06666667, 0.083333336, 0.11666667, 0.2),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("10_n2fir"), ExtResource("11_0pg0r"), ExtResource("12_lrdsh"), ExtResource("13_r6psd"), ExtResource("14_8re7t")]
+"values": [ExtResource("10_fmqbp"), ExtResource("11_g3oc7"), ExtResource("12_82csf"), ExtResource("13_l8d27"), ExtResource("14_trlmy")]
 }
 
 [sub_resource type="Animation" id="43"]
@@ -153,7 +153,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.16666667, 0.21666667, 0.26666668, 0.4),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [ExtResource("15_e4atf"), ExtResource("16_6ehmw"), ExtResource("17_txk3n"), ExtResource("18_22y3o"), ExtResource("14_8re7t")]
+"values": [ExtResource("15_3qa2g"), ExtResource("16_r8k1q"), ExtResource("17_vnja1"), ExtResource("18_nrqlk"), ExtResource("14_trlmy")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -177,7 +177,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.16666667, 0.21666667, 0.26666668, 0.4),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("15_e4atf"), ExtResource("16_6ehmw"), ExtResource("17_txk3n"), ExtResource("18_22y3o"), ExtResource("14_8re7t")]
+"values": [ExtResource("15_3qa2g"), ExtResource("16_r8k1q"), ExtResource("17_vnja1"), ExtResource("18_nrqlk"), ExtResource("14_trlmy")]
 }
 
 [sub_resource type="Animation" id="44"]
@@ -194,7 +194,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [ExtResource("10_n2fir"), ExtResource("12_lrdsh"), ExtResource("13_r6psd")]
+"values": [ExtResource("10_fmqbp"), ExtResource("12_82csf"), ExtResource("13_l8d27")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -218,7 +218,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [ExtResource("10_n2fir"), ExtResource("12_lrdsh"), ExtResource("13_r6psd")]
+"values": [ExtResource("10_fmqbp"), ExtResource("12_82csf"), ExtResource("13_l8d27")]
 }
 
 [sub_resource type="Animation" id="Animation_nqftt"]
@@ -235,7 +235,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [ExtResource("10_n2fir"), ExtResource("12_lrdsh"), ExtResource("13_r6psd")]
+"values": [ExtResource("10_fmqbp"), ExtResource("12_82csf"), ExtResource("13_l8d27")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -259,7 +259,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [ExtResource("10_n2fir"), ExtResource("12_lrdsh"), ExtResource("13_r6psd")]
+"values": [ExtResource("10_fmqbp"), ExtResource("12_82csf"), ExtResource("13_l8d27")]
 }
 
 [sub_resource type="Resource" id="Resource_7xoqi"]
@@ -288,7 +288,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.05, 0.1, 0.11666667, 0.233333),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [ExtResource("19_3m02a"), ExtResource("20_b3gtg"), ExtResource("21_xhu5d"), ExtResource("22_n012i"), ExtResource("9_0iua7")]
+"values": [ExtResource("19_ps6l3"), ExtResource("20_24yr8"), ExtResource("21_5aeml"), ExtResource("22_eeev0"), ExtResource("9_min7c")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -312,7 +312,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.05, 0.1, 0.11666667, 0.233333),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("19_3m02a"), SubResource("Resource_7xoqi"), SubResource("Resource_2g6gi"), SubResource("Resource_lk8cs"), SubResource("Resource_0mjxf")]
+"values": [ExtResource("19_ps6l3"), SubResource("Resource_7xoqi"), SubResource("Resource_2g6gi"), SubResource("Resource_lk8cs"), SubResource("Resource_0mjxf")]
 }
 
 [sub_resource type="Animation" id="16"]
@@ -329,7 +329,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.16666667, 0.21666667, 0.26666668),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [ExtResource("23_min7c"), ExtResource("24_fmqbp"), ExtResource("25_g3oc7"), ExtResource("26_82csf")]
+"values": [ExtResource("23_vbd2f"), ExtResource("24_46msj"), ExtResource("25_xjpb3"), ExtResource("26_vtexq")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -353,12 +353,12 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.16666667, 0.21666667, 0.26666668),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("23_min7c"), ExtResource("24_fmqbp"), ExtResource("25_g3oc7"), ExtResource("26_82csf")]
+"values": [ExtResource("23_vbd2f"), ExtResource("24_46msj"), ExtResource("25_xjpb3"), ExtResource("26_vtexq")]
 }
 
 [sub_resource type="Animation" id="17"]
 resource_name = "5C"
-length = 0.33333334
+length = 0.36666667
 step = 0.0166667
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -367,10 +367,10 @@ tracks/0/path = NodePath("Sprite3D:texture")
 tracks/0/interp = 0
 tracks/0/loop_wrap = false
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.083333336, 0.2),
+"times": PackedFloat32Array(0, 0.11666667, 0.25),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [ExtResource("19_3m02a"), ExtResource("21_xhu5d"), ExtResource("22_n012i")]
+"values": [ExtResource("19_ps6l3"), ExtResource("21_5aeml"), ExtResource("22_eeev0")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -391,10 +391,10 @@ tracks/2/path = NodePath("Sprite3D:material_override:shader_parameter/albedo_tex
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.083333336, 0.2),
+"times": PackedFloat32Array(0, 0.11666667, 0.25),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [ExtResource("19_3m02a"), ExtResource("21_xhu5d"), ExtResource("22_n012i")]
+"values": [ExtResource("19_ps6l3"), ExtResource("21_5aeml"), ExtResource("22_eeev0")]
 }
 
 [sub_resource type="Animation" id="Animation_dvlgr"]
@@ -411,7 +411,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.083333336, 0.2),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [ExtResource("19_3m02a"), ExtResource("21_xhu5d"), ExtResource("22_n012i")]
+"values": [ExtResource("19_ps6l3"), ExtResource("21_5aeml"), ExtResource("22_eeev0")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -435,7 +435,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.083333336, 0.2),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [ExtResource("19_3m02a"), ExtResource("21_xhu5d"), ExtResource("22_n012i")]
+"values": [ExtResource("19_ps6l3"), ExtResource("21_5aeml"), ExtResource("22_eeev0")]
 }
 
 [sub_resource type="Animation" id="Animation_fk0b6"]
@@ -452,7 +452,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.23333333, 0.26666668, 0.46666667),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [ExtResource("27_l8d27"), ExtResource("28_trlmy"), ExtResource("29_3qa2g"), ExtResource("30_r8k1q"), ExtResource("9_0iua7")]
+"values": [ExtResource("27_kpn8a"), ExtResource("28_dlxea"), ExtResource("29_op0i3"), ExtResource("30_10rl4"), ExtResource("9_min7c")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -476,7 +476,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.23333333, 0.26666668, 0.46666667),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("19_3m02a"), ExtResource("28_trlmy"), ExtResource("29_3qa2g"), ExtResource("30_r8k1q"), ExtResource("9_0iua7")]
+"values": [ExtResource("19_ps6l3"), ExtResource("28_dlxea"), ExtResource("29_op0i3"), ExtResource("30_10rl4"), ExtResource("9_min7c")]
 }
 
 [sub_resource type="Animation" id="Animation_wc0nh"]
@@ -493,7 +493,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.36666667, 0.4, 0.45, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [ExtResource("31_vnja1"), ExtResource("32_nrqlk"), ExtResource("33_ps6l3"), ExtResource("34_24yr8"), ExtResource("9_0iua7")]
+"values": [ExtResource("31_y7foi"), ExtResource("32_5mutr"), ExtResource("33_3tdss"), ExtResource("34_jxvup"), ExtResource("9_min7c")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -517,7 +517,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.36666667, 0.4, 0.45, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("31_vnja1"), ExtResource("32_nrqlk"), ExtResource("33_ps6l3"), ExtResource("34_24yr8"), ExtResource("9_0iua7")]
+"values": [ExtResource("31_y7foi"), ExtResource("32_5mutr"), ExtResource("33_3tdss"), ExtResource("34_jxvup"), ExtResource("9_min7c")]
 }
 
 [sub_resource type="Animation" id="Animation_vljnw"]
@@ -534,7 +534,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.15, 0.233333),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [ExtResource("27_l8d27"), ExtResource("30_r8k1q"), ExtResource("9_0iua7")]
+"values": [ExtResource("27_kpn8a"), ExtResource("30_10rl4"), ExtResource("9_min7c")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -558,7 +558,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.15, 0.233333),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [ExtResource("27_l8d27"), ExtResource("30_r8k1q"), ExtResource("9_0iua7")]
+"values": [ExtResource("27_kpn8a"), ExtResource("30_10rl4"), ExtResource("9_min7c")]
 }
 
 [sub_resource type="Animation" id="Animation_csy66"]
@@ -575,7 +575,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.15, 0.233333),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [ExtResource("27_l8d27"), ExtResource("30_r8k1q"), ExtResource("9_0iua7")]
+"values": [ExtResource("27_kpn8a"), ExtResource("30_10rl4"), ExtResource("9_min7c")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -599,7 +599,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.15, 0.233333),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [ExtResource("27_l8d27"), ExtResource("30_r8k1q"), ExtResource("9_0iua7")]
+"values": [ExtResource("27_kpn8a"), ExtResource("30_10rl4"), ExtResource("9_min7c")]
 }
 
 [sub_resource type="Animation" id="Animation_33wlg"]
@@ -616,7 +616,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ExtResource("35_5aeml")]
+"values": [ExtResource("35_cpd4r")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -640,7 +640,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("35_5aeml")]
+"values": [ExtResource("35_cpd4r")]
 }
 
 [sub_resource type="Animation" id="40"]
@@ -657,7 +657,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ExtResource("36_eeev0")]
+"values": [ExtResource("36_5e7wy")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -681,7 +681,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("36_eeev0")]
+"values": [ExtResource("36_5e7wy")]
 }
 
 [sub_resource type="Animation" id="Animation_txuxe"]
@@ -698,7 +698,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ExtResource("36_eeev0")]
+"values": [ExtResource("36_5e7wy")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -722,7 +722,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("36_eeev0")]
+"values": [ExtResource("36_5e7wy")]
 }
 
 [sub_resource type="Animation" id="36"]
@@ -739,7 +739,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ExtResource("14_8re7t")]
+"values": [ExtResource("14_trlmy")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -763,7 +763,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("14_8re7t")]
+"values": [ExtResource("14_trlmy")]
 }
 
 [sub_resource type="Animation" id="Animation_crfff"]
@@ -780,7 +780,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ExtResource("14_8re7t")]
+"values": [ExtResource("14_trlmy")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -804,7 +804,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("14_8re7t")]
+"values": [ExtResource("14_trlmy")]
 }
 
 [sub_resource type="Animation" id="33"]
@@ -821,7 +821,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ExtResource("9_0iua7")]
+"values": [ExtResource("9_min7c")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -845,7 +845,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("9_0iua7")]
+"values": [ExtResource("9_min7c")]
 }
 
 [sub_resource type="Animation" id="Animation_duoc8"]
@@ -862,7 +862,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ExtResource("9_0iua7")]
+"values": [ExtResource("9_min7c")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -886,7 +886,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("9_0iua7")]
+"values": [ExtResource("9_min7c")]
 }
 
 [sub_resource type="Animation" id="Animation_t64oh"]
@@ -903,7 +903,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ExtResource("36_eeev0")]
+"values": [ExtResource("36_5e7wy")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -927,7 +927,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("36_eeev0")]
+"values": [ExtResource("36_5e7wy")]
 }
 
 [sub_resource type="Animation" id="Animation_paxrn"]
@@ -944,7 +944,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ExtResource("14_8re7t")]
+"values": [ExtResource("14_trlmy")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -968,7 +968,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("14_8re7t")]
+"values": [ExtResource("14_trlmy")]
 }
 
 [sub_resource type="Animation" id="Animation_xhfwr"]
@@ -985,7 +985,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ExtResource("9_0iua7")]
+"values": [ExtResource("9_min7c")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -1009,7 +1009,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("9_0iua7")]
+"values": [ExtResource("9_min7c")]
 }
 
 [sub_resource type="Animation" id="Animation_y7ime"]
@@ -1026,7 +1026,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ExtResource("36_eeev0")]
+"values": [ExtResource("36_5e7wy")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -1050,7 +1050,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("36_eeev0")]
+"values": [ExtResource("36_5e7wy")]
 }
 
 [sub_resource type="Animation" id="Animation_iffb2"]
@@ -1067,7 +1067,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ExtResource("14_8re7t")]
+"values": [ExtResource("14_trlmy")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -1091,7 +1091,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("14_8re7t")]
+"values": [ExtResource("14_trlmy")]
 }
 
 [sub_resource type="Animation" id="Animation_ek508"]
@@ -1108,7 +1108,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ExtResource("9_0iua7")]
+"values": [ExtResource("9_min7c")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -1132,7 +1132,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("9_0iua7")]
+"values": [ExtResource("9_min7c")]
 }
 
 [sub_resource type="Animation" id="Animation_gb4v7"]
@@ -1149,7 +1149,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ExtResource("37_vbd2f")]
+"values": [ExtResource("37_tonqq")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -1173,7 +1173,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("37_vbd2f")]
+"values": [ExtResource("37_tonqq")]
 }
 
 [sub_resource type="Animation" id="Animation_4momo"]
@@ -1191,7 +1191,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.083333336),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [ExtResource("9_0iua7"), ExtResource("38_46msj")]
+"values": [ExtResource("9_min7c"), ExtResource("38_ck8yl")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -1215,7 +1215,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.083333336),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [ExtResource("9_0iua7"), ExtResource("38_46msj")]
+"values": [ExtResource("9_min7c"), ExtResource("38_ck8yl")]
 }
 
 [sub_resource type="Animation" id="Animation_1oxr2"]
@@ -1232,7 +1232,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ExtResource("14_8re7t")]
+"values": [ExtResource("14_trlmy")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -1256,7 +1256,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("14_8re7t")]
+"values": [ExtResource("14_trlmy")]
 }
 
 [sub_resource type="Animation" id="Animation_sx14q"]
@@ -1273,7 +1273,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ExtResource("14_8re7t")]
+"values": [ExtResource("14_trlmy")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -1297,7 +1297,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("14_8re7t")]
+"values": [ExtResource("14_trlmy")]
 }
 
 [sub_resource type="Animation" id="6"]
@@ -1314,7 +1314,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ExtResource("14_8re7t")]
+"values": [ExtResource("14_trlmy")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -1338,7 +1338,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("14_8re7t")]
+"values": [ExtResource("14_trlmy")]
 }
 
 [sub_resource type="Animation" id="Animation_88aq6"]
@@ -1356,7 +1356,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.06666667, 0.083333336, 0.28333333),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [ExtResource("38_46msj"), ExtResource("39_xjpb3"), ExtResource("40_vtexq"), ExtResource("41_kpn8a")]
+"values": [ExtResource("38_ck8yl"), ExtResource("39_phuc1"), ExtResource("40_briro"), ExtResource("41_7ufed")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -1380,7 +1380,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.06666667, 0.083333336, 0.28333333),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("38_46msj"), ExtResource("39_xjpb3"), ExtResource("40_vtexq"), ExtResource("41_kpn8a")]
+"values": [ExtResource("38_ck8yl"), ExtResource("39_phuc1"), ExtResource("40_briro"), ExtResource("41_7ufed")]
 }
 
 [sub_resource type="Animation" id="Animation_myjg4"]
@@ -1398,7 +1398,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.10004495),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [ExtResource("38_46msj"), ExtResource("42_dlxea")]
+"values": [ExtResource("38_ck8yl"), ExtResource("42_go0hu")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -1422,7 +1422,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.10004495),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [ExtResource("38_46msj"), ExtResource("42_dlxea")]
+"values": [ExtResource("38_ck8yl"), ExtResource("42_go0hu")]
 }
 
 [sub_resource type="Animation" id="Animation_x43ij"]
@@ -1440,7 +1440,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.10004495, 0.2),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [ExtResource("38_46msj"), ExtResource("43_op0i3"), ExtResource("44_10rl4")]
+"values": [ExtResource("38_ck8yl"), ExtResource("43_ank0h"), ExtResource("44_yc23q")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -1464,7 +1464,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.10004495, 0.2),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [ExtResource("38_46msj"), ExtResource("43_op0i3"), ExtResource("44_10rl4")]
+"values": [ExtResource("38_ck8yl"), ExtResource("43_ank0h"), ExtResource("44_yc23q")]
 }
 
 [sub_resource type="Animation" id="Animation_r8fkc"]
@@ -1481,7 +1481,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ExtResource("35_5aeml")]
+"values": [ExtResource("35_cpd4r")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -1505,7 +1505,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("35_5aeml")]
+"values": [ExtResource("35_cpd4r")]
 }
 
 [sub_resource type="Resource" id="Resource_ewqb2"]
@@ -1525,7 +1525,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.033333335, 0.06666667, 0.13333334),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [ExtResource("45_y7foi"), ExtResource("46_5mutr"), ExtResource("47_3tdss"), ExtResource("36_eeev0")]
+"values": [ExtResource("45_qv0hf"), ExtResource("46_3l6sf"), ExtResource("47_osflv"), ExtResource("36_5e7wy")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -1549,7 +1549,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.033333335, 0.06666667, 0.13333334),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("45_y7foi"), ExtResource("46_5mutr"), ExtResource("47_3tdss"), SubResource("Resource_ewqb2")]
+"values": [ExtResource("45_qv0hf"), ExtResource("46_3l6sf"), ExtResource("47_osflv"), SubResource("Resource_ewqb2")]
 }
 
 [sub_resource type="Animation" id="10"]
@@ -1566,7 +1566,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ExtResource("36_eeev0")]
+"values": [ExtResource("36_5e7wy")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -1590,7 +1590,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("36_eeev0")]
+"values": [ExtResource("36_5e7wy")]
 }
 
 [sub_resource type="Animation" id="20"]
@@ -1607,7 +1607,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ExtResource("49_cpd4r")]
+"values": [ExtResource("48_02t6s")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -1631,7 +1631,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("49_cpd4r")]
+"values": [ExtResource("48_02t6s")]
 }
 
 [sub_resource type="Animation" id="Animation_jq08k"]
@@ -1648,7 +1648,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ExtResource("49_cpd4r")]
+"values": [ExtResource("48_02t6s")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -1672,7 +1672,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("49_cpd4r")]
+"values": [ExtResource("48_02t6s")]
 }
 
 [sub_resource type="Animation" id="21"]
@@ -1689,7 +1689,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ExtResource("50_5e7wy")]
+"values": [ExtResource("49_j54ox")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -1713,7 +1713,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("50_5e7wy")]
+"values": [ExtResource("49_j54ox")]
 }
 
 [sub_resource type="Animation" id="25"]
@@ -1741,7 +1741,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ExtResource("51_tonqq")]
+"values": [ExtResource("50_w7mct")]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -1753,7 +1753,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("51_tonqq")]
+"values": [ExtResource("50_w7mct")]
 }
 
 [sub_resource type="Animation" id="23"]
@@ -1770,7 +1770,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ExtResource("52_ck8yl")]
+"values": [ExtResource("51_1e53s")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -1794,7 +1794,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("52_ck8yl")]
+"values": [ExtResource("51_1e53s")]
 }
 
 [sub_resource type="Animation" id="26"]
@@ -1811,7 +1811,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.11666667, 0.21666667, 0.3),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [ExtResource("51_tonqq"), ExtResource("53_phuc1"), ExtResource("52_ck8yl"), ExtResource("54_briro")]
+"values": [ExtResource("50_w7mct"), ExtResource("52_6am8b"), ExtResource("51_1e53s"), ExtResource("53_6iki5")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -1835,7 +1835,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.11666667, 0.21666667, 0.3),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("51_tonqq"), ExtResource("53_phuc1"), ExtResource("52_ck8yl"), ExtResource("54_briro")]
+"values": [ExtResource("50_w7mct"), ExtResource("52_6am8b"), ExtResource("51_1e53s"), ExtResource("53_6iki5")]
 }
 
 [sub_resource type="Animation" id="Animation_3al6a"]
@@ -1863,7 +1863,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ExtResource("51_tonqq")]
+"values": [ExtResource("50_w7mct")]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -1875,7 +1875,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("51_tonqq")]
+"values": [ExtResource("50_w7mct")]
 }
 
 [sub_resource type="Animation" id="19"]
@@ -1892,7 +1892,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ExtResource("55_7ufed")]
+"values": [ExtResource("54_p1f51")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -1916,7 +1916,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("55_7ufed")]
+"values": [ExtResource("54_p1f51")]
 }
 
 [sub_resource type="Animation" id="30"]
@@ -1933,7 +1933,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ExtResource("49_cpd4r")]
+"values": [ExtResource("48_02t6s")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -1957,7 +1957,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("49_cpd4r")]
+"values": [ExtResource("48_02t6s")]
 }
 
 [sub_resource type="Animation" id="18"]
@@ -1974,7 +1974,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ExtResource("55_7ufed")]
+"values": [ExtResource("54_p1f51")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -1998,7 +1998,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("55_7ufed")]
+"values": [ExtResource("54_p1f51")]
 }
 
 [sub_resource type="Animation" id="1"]
@@ -2015,7 +2015,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ExtResource("9_0iua7")]
+"values": [ExtResource("9_min7c")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -2039,7 +2039,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ExtResource("9_0iua7")]
+"values": [ExtResource("9_min7c")]
 }
 
 [sub_resource type="Animation" id="Animation_m6j4n"]
@@ -2056,7 +2056,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0.00047153234),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("9_0iua7")]
+"values": [ExtResource("9_min7c")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -2080,7 +2080,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0.00047153234),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("9_0iua7")]
+"values": [ExtResource("9_min7c")]
 }
 
 [sub_resource type="Resource" id="Resource_sm8aa"]
@@ -2103,7 +2103,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.06666669, 0.116667),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [ExtResource("56_go0hu"), ExtResource("57_ank0h"), ExtResource("36_eeev0")]
+"values": [ExtResource("55_ke5gw"), ExtResource("56_w13kw"), ExtResource("36_5e7wy")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -2144,7 +2144,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.06666669, 0.116667),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [ExtResource("56_go0hu"), ExtResource("57_ank0h"), ExtResource("36_eeev0")]
+"values": [ExtResource("55_ke5gw"), ExtResource("56_w13kw"), ExtResource("36_5e7wy")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -2185,7 +2185,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.06666669, 0.116667),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [ExtResource("56_go0hu"), ExtResource("57_ank0h"), ExtResource("36_eeev0")]
+"values": [ExtResource("55_ke5gw"), ExtResource("56_w13kw"), ExtResource("36_5e7wy")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -2226,7 +2226,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ExtResource("58_yc23q")]
+"values": [ExtResource("57_pbkxw")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -2250,7 +2250,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("58_yc23q")]
+"values": [ExtResource("57_pbkxw")]
 }
 
 [sub_resource type="Animation" id="2"]
@@ -2265,7 +2265,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("9_0iua7")]
+"values": [ExtResource("9_min7c")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -2321,7 +2321,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.13333334),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [ExtResource("59_qv0hf"), ExtResource("60_3l6sf")]
+"values": [ExtResource("58_gbgq5"), ExtResource("59_g3kdk")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -2345,7 +2345,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.13333334),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [SubResource("Resource_tgtqf"), ExtResource("60_3l6sf")]
+"values": [SubResource("Resource_tgtqf"), ExtResource("59_g3kdk")]
 }
 
 [sub_resource type="Animation" id="Animation_d1oj1"]
@@ -2362,7 +2362,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.3, 0.433333, 0.500001),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [ExtResource("55_7ufed"), ExtResource("49_cpd4r"), ExtResource("53_phuc1"), ExtResource("51_tonqq")]
+"values": [ExtResource("54_p1f51"), ExtResource("48_02t6s"), ExtResource("52_6am8b"), ExtResource("50_w7mct")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -2386,7 +2386,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.3, 0.433333, 0.500001),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("55_7ufed"), ExtResource("49_cpd4r"), ExtResource("53_phuc1"), ExtResource("51_tonqq")]
+"values": [ExtResource("54_p1f51"), ExtResource("48_02t6s"), ExtResource("52_6am8b"), ExtResource("50_w7mct")]
 }
 
 [sub_resource type="Animation" id="Animation_3ljre"]
@@ -2403,7 +2403,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.36666667, 0.46666667, 0.6333333, 0.674788),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [ExtResource("59_qv0hf"), ExtResource("61_osflv"), ExtResource("60_3l6sf"), ExtResource("62_02t6s"), ExtResource("63_j54ox"), ExtResource("64_w7mct")]
+"values": [ExtResource("58_gbgq5"), ExtResource("60_3gneb"), ExtResource("59_g3kdk"), ExtResource("61_bkhb2"), ExtResource("62_hjnct"), ExtResource("63_vasds")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -2427,7 +2427,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.36666667, 0.46666667, 0.6333333, 0.674788),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("59_qv0hf"), ExtResource("61_osflv"), ExtResource("60_3l6sf"), ExtResource("62_02t6s"), ExtResource("63_j54ox"), ExtResource("64_w7mct")]
+"values": [ExtResource("58_gbgq5"), ExtResource("60_3gneb"), ExtResource("59_g3kdk"), ExtResource("61_bkhb2"), ExtResource("62_hjnct"), ExtResource("63_vasds")]
 }
 
 [sub_resource type="Animation" id="4"]
@@ -2445,7 +2445,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.083333336, 0.16666667, 0.25),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [ExtResource("65_1e53s"), ExtResource("66_6am8b"), ExtResource("67_6iki5"), ExtResource("41_kpn8a")]
+"values": [ExtResource("64_q5rhk"), ExtResource("65_uxvio"), ExtResource("66_k0x6t"), ExtResource("41_7ufed")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -2469,7 +2469,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.083333336, 0.16666667, 0.25),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("65_1e53s"), ExtResource("66_6am8b"), ExtResource("67_6iki5"), ExtResource("41_kpn8a")]
+"values": [ExtResource("64_q5rhk"), ExtResource("65_uxvio"), ExtResource("66_k0x6t"), ExtResource("41_7ufed")]
 }
 
 [sub_resource type="Animation" id="3"]
@@ -2487,7 +2487,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.083333336, 0.16666667, 0.25),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [ExtResource("68_p1f51"), ExtResource("69_ke5gw"), ExtResource("70_w13kw"), ExtResource("71_pbkxw")]
+"values": [ExtResource("67_x43yi"), ExtResource("68_31q8a"), ExtResource("69_4r5lg"), ExtResource("70_48txm")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -2511,7 +2511,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.083333336, 0.16666667, 0.25),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("68_p1f51"), ExtResource("69_ke5gw"), ExtResource("70_w13kw"), ExtResource("71_pbkxw")]
+"values": [ExtResource("67_x43yi"), ExtResource("68_31q8a"), ExtResource("69_4r5lg"), ExtResource("70_48txm")]
 }
 
 [sub_resource type="Animation" id="Animation_62dyo"]
@@ -2528,7 +2528,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.26666668, 0.33333334, 0.46666667),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [ExtResource("71_8re7t"), ExtResource("72_e4atf"), ExtResource("73_6ehmw"), ExtResource("74_txk3n")]
+"values": [ExtResource("71_4p7r5"), ExtResource("72_kw22y"), ExtResource("73_7u2y2"), ExtResource("74_cd2sd")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -2552,7 +2552,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.26666668, 0.33333334, 0.46666667),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("71_8re7t"), ExtResource("72_e4atf"), ExtResource("73_6ehmw"), ExtResource("74_txk3n")]
+"values": [ExtResource("71_4p7r5"), ExtResource("72_kw22y"), ExtResource("73_7u2y2"), ExtResource("74_cd2sd")]
 }
 
 [sub_resource type="Animation" id="45"]
@@ -2569,7 +2569,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.083333336, 0.11666667, 0.15, 0.23333333),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [ExtResource("72_gbgq5"), ExtResource("73_g3kdk"), ExtResource("74_3gneb"), ExtResource("75_bkhb2"), ExtResource("76_hjnct")]
+"values": [ExtResource("75_2yf2c"), ExtResource("76_2rbro"), ExtResource("77_3jrw3"), ExtResource("78_dgn1o"), ExtResource("79_qe8nx")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -2593,7 +2593,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.083333336, 0.11666667, 0.15, 0.23333333),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("72_gbgq5"), ExtResource("73_g3kdk"), ExtResource("74_3gneb"), ExtResource("75_bkhb2"), ExtResource("76_hjnct")]
+"values": [ExtResource("75_2yf2c"), ExtResource("76_2rbro"), ExtResource("77_3jrw3"), ExtResource("78_dgn1o"), ExtResource("79_qe8nx")]
 }
 
 [sub_resource type="Animation" id="Animation_cofou"]
@@ -2610,7 +2610,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.25, 0.31518072),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [ExtResource("77_vasds"), ExtResource("78_q5rhk"), ExtResource("79_uxvio"), ExtResource("80_k0x6t")]
+"values": [ExtResource("80_iw86f"), ExtResource("81_1yb3j"), ExtResource("82_1uwjy"), ExtResource("83_0iukl")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -2634,7 +2634,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.25, 0.31518072),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("77_vasds"), ExtResource("78_q5rhk"), ExtResource("79_uxvio"), ExtResource("80_k0x6t")]
+"values": [ExtResource("80_iw86f"), ExtResource("81_1yb3j"), ExtResource("82_1uwjy"), ExtResource("83_0iukl")]
 }
 
 [sub_resource type="Animation" id="Animation_o4vdc"]
@@ -2651,7 +2651,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.050000004, 0.083333336),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [ExtResource("72_gbgq5"), ExtResource("73_g3kdk"), ExtResource("75_bkhb2")]
+"values": [ExtResource("75_2yf2c"), ExtResource("76_2rbro"), ExtResource("78_dgn1o")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -2675,7 +2675,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.050000004, 0.083333336),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [ExtResource("72_gbgq5"), ExtResource("73_g3kdk"), ExtResource("75_bkhb2")]
+"values": [ExtResource("75_2yf2c"), ExtResource("76_2rbro"), ExtResource("78_dgn1o")]
 }
 
 [sub_resource type="Animation" id="Animation_b8l1j"]
@@ -2692,7 +2692,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.050000004, 0.083333336),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [ExtResource("72_gbgq5"), ExtResource("73_g3kdk"), ExtResource("75_bkhb2")]
+"values": [ExtResource("75_2yf2c"), ExtResource("76_2rbro"), ExtResource("78_dgn1o")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -2716,7 +2716,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.050000004, 0.083333336),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [ExtResource("72_gbgq5"), ExtResource("73_g3kdk"), ExtResource("75_bkhb2")]
+"values": [ExtResource("75_2yf2c"), ExtResource("76_2rbro"), ExtResource("78_dgn1o")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_n2gjo"]
@@ -2787,14 +2787,14 @@ _data = {
 }
 
 [sub_resource type="Resource" id="Resource_c5vbk"]
-script = ExtResource("95_e4atf")
+script = ExtResource("95_5r1lm")
 Factor = 1
 Value = 100
 Mode = 1
 metadata/_custom_type_script = "uid://b4erq62og5quv"
 
 [node name="Aisha_Viewer" type="Node3D" unique_id=704857862 node_paths=PackedStringArray("HitStun", "HitStop", "MoveBuffer", "PushForce", "HorizontalBounce", "VerticalBounce", "Brain", "Body", "Inputs", "Variables", "Animator", "StateMachine", "Tracker", "Sounds", "Graphics")]
-script = ExtResource("1_lo0ai")
+script = ExtResource("1_e4atf")
 HitStun = NodePath("Timers/HitStun")
 HitStop = NodePath("Timers/HitStop")
 MoveBuffer = NodePath("Timers/MoveBuffer")
@@ -2802,7 +2802,7 @@ PushForce = NodePath("Timers/Pushback")
 HorizontalBounce = NodePath("Timers/HBounce")
 VerticalBounce = NodePath("Timers/VBounce")
 Brain = NodePath("AIBrain")
-Data = ExtResource("2_n03lc")
+Data = ExtResource("2_6ehmw")
 Body = NodePath("PhysicsBody")
 Inputs = NodePath("InputManager")
 Variables = NodePath("Variables")
@@ -2811,17 +2811,17 @@ StateMachine = NodePath("StateMachine")
 Tracker = NodePath("CombatTracker")
 Sounds = [NodePath("Sounds/SFX_0"), NodePath("Sounds/SFX_1"), NodePath("Sounds/SFX_2"), NodePath("Sounds/SFX_3"), NodePath("Sounds/SFX_4")]
 Graphics = [NodePath("Graphics/Mesh/AishaGraphics")]
-SpawnablesList = ExtResource("3_2rkqd")
-VFXList = ExtResource("4_ta1o7")
-SFXList = ExtResource("5_ci63n")
-VoiceLines = ExtResource("6_pvnca")
+SpawnablesList = ExtResource("3_txk3n")
+VFXList = ExtResource("4_22y3o")
+SFXList = ExtResource("5_3m02a")
+VoiceLines = ExtResource("6_b3gtg")
 
 [node name="Graphics" type="Node3D" parent="." unique_id=1785253019]
-script = ExtResource("7_tvu04")
+script = ExtResource("7_xhu5d")
 intensity = 0.25
 
 [node name="Mesh" type="Node3D" parent="Graphics" unique_id=1695269247 node_paths=PackedStringArray("players", "OffsetNode")]
-script = ExtResource("8_fpanc")
+script = ExtResource("8_n012i")
 players = [NodePath("AishaGraphics/AnimationPlayer")]
 OffsetNode = NodePath("AishaGraphics")
 
@@ -2834,71 +2834,71 @@ centered = false
 offset = Vector2(-290, 0)
 pixel_size = 0.006
 texture_filter = 0
-texture = ExtResource("9_0iua7")
+texture = ExtResource("9_min7c")
 region_rect = Rect2(711.25, 46.25, 2, 0)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Graphics/Mesh/AishaGraphics" unique_id=2069111782]
 libraries/ = SubResource("AnimationLibrary_n2gjo")
 
-[node name="HitboxViewer" parent="." unique_id=648540791 node_paths=PackedStringArray("body") instance=ExtResource("285_q8rqk")]
+[node name="HitboxViewer" parent="." unique_id=648540791 node_paths=PackedStringArray("body") instance=ExtResource("84_3c6ox")]
 body = NodePath("../PhysicsBody")
 
-[node name="HitboxPreviewer" parent="." unique_id=1706011 node_paths=PackedStringArray("Animator") instance=ExtResource("85_22y3o")]
+[node name="HitboxPreviewer" parent="." unique_id=1706011 node_paths=PackedStringArray("Animator") instance=ExtResource("85_5e08t")]
 Animator = NodePath("../Graphics/Mesh")
-State = ExtResource("86_e4atf")
+State = ExtResource("86_sw653")
 
 [node name="Sounds" type="Node3D" parent="." unique_id=1869837634]
 
 [node name="SFX_0" type="AudioStreamPlayer3D" parent="Sounds" unique_id=1474946629]
-script = ExtResource("286_qf8wn")
+script = ExtResource("87_s5b7a")
 
 [node name="SFX_1" type="AudioStreamPlayer3D" parent="Sounds" unique_id=1380543775]
-script = ExtResource("286_qf8wn")
+script = ExtResource("87_s5b7a")
 
 [node name="SFX_2" type="AudioStreamPlayer3D" parent="Sounds" unique_id=276843560]
-script = ExtResource("286_qf8wn")
+script = ExtResource("87_s5b7a")
 
 [node name="SFX_3" type="AudioStreamPlayer3D" parent="Sounds" unique_id=691516727]
-script = ExtResource("286_qf8wn")
+script = ExtResource("87_s5b7a")
 
 [node name="SFX_4" type="AudioStreamPlayer3D" parent="Sounds" unique_id=364957293]
-script = ExtResource("286_qf8wn")
+script = ExtResource("87_s5b7a")
 
 [node name="PhysicsBody" type="Node" parent="." unique_id=1649937678]
-script = ExtResource("287_njjt5")
+script = ExtResource("88_4dmcf")
 StayOnBounds = true
 
 [node name="InputManager" type="Node" parent="." unique_id=226915908]
-script = ExtResource("288_pnpw4")
+script = ExtResource("89_xraty")
 
 [node name="StateMachine" type="Node" parent="." unique_id=1368758457]
-script = ExtResource("289_queat")
+script = ExtResource("90_ae1rs")
 
 [node name="CombatTracker" type="Node" parent="." unique_id=1061147868]
-script = ExtResource("290_qpuuq")
+script = ExtResource("91_57b7s")
 
 [node name="AIBrain" type="Node" parent="." unique_id=1454306328]
-script = ExtResource("291_agn3c")
+script = ExtResource("92_2hnj2")
 metadata/_custom_type_script = "uid://dvqrejewx20e3"
 
 [node name="Variables" type="Node" parent="." unique_id=1057331048 node_paths=PackedStringArray("ExtraVariables")]
-script = ExtResource("292_dl0de")
+script = ExtResource("93_wnh0t")
 ExtraVariables = [NodePath("AirJumpLimit"), NodePath("AirDashLimit"), NodePath("IsDashJump"), NodePath("BurstGauge"), NodePath("ChargeGauge"), NodePath("Contract Gauge"), NodePath("Seal Gauge")]
 
 [node name="AirJumpLimit" type="Node" parent="Variables" unique_id=894000032]
-script = ExtResource("293_rqy6c")
+script = ExtResource("94_8cuyd")
 MaxValue = 1
 
 [node name="AirDashLimit" type="Node" parent="Variables" unique_id=493534727]
-script = ExtResource("293_rqy6c")
+script = ExtResource("94_8cuyd")
 MaxValue = 1
 
 [node name="IsDashJump" type="Node" parent="Variables" unique_id=1085956616]
-script = ExtResource("293_rqy6c")
+script = ExtResource("94_8cuyd")
 MaxValue = 1
 
 [node name="BurstGauge" type="Node" parent="Variables" unique_id=1898735335]
-script = ExtResource("293_rqy6c")
+script = ExtResource("94_8cuyd")
 MaxValue = 10000
 StartingValue = 5000
 StartingFactor = 1
@@ -2906,38 +2906,38 @@ StartingMode = 1
 BehaviorOnDamage = SubResource("Resource_c5vbk")
 
 [node name="ChargeGauge" type="Node" parent="Variables" unique_id=638132930]
-script = ExtResource("293_rqy6c")
+script = ExtResource("94_8cuyd")
 MaxValue = 10000
 
 [node name="Contract Gauge" type="Node" parent="Variables" unique_id=1271149228]
-script = ExtResource("293_rqy6c")
+script = ExtResource("94_8cuyd")
 MaxValue = 4
 StartingValue = 1
 
 [node name="Seal Gauge" type="Node" parent="Variables" unique_id=484597930]
-script = ExtResource("293_rqy6c")
+script = ExtResource("94_8cuyd")
 MaxValue = 4
 
 [node name="Timers" type="Node" parent="." unique_id=1886312484]
 
 [node name="HitStun" type="Node" parent="Timers" unique_id=678548641]
-script = ExtResource("294_1x0qu")
+script = ExtResource("96_56lh2")
 
 [node name="HitStop" type="Node" parent="Timers" unique_id=940769911]
-script = ExtResource("294_1x0qu")
+script = ExtResource("96_56lh2")
 
 [node name="MoveBuffer" type="Node" parent="Timers" unique_id=218621002]
-script = ExtResource("294_1x0qu")
+script = ExtResource("96_56lh2")
 WaitTime = 10
 
 [node name="Pushback" type="Node" parent="Timers" unique_id=1273295046]
-script = ExtResource("294_1x0qu")
+script = ExtResource("96_56lh2")
 WaitTime = 10
 
 [node name="HBounce" type="Node" parent="Timers" unique_id=485421058]
-script = ExtResource("294_1x0qu")
+script = ExtResource("96_56lh2")
 WaitTime = 10
 
 [node name="VBounce" type="Node" parent="Timers" unique_id=1747633475]
-script = ExtResource("294_1x0qu")
+script = ExtResource("96_56lh2")
 WaitTime = 10

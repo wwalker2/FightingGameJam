@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://gkg7v04bkm2y" path="res://Scripts/SakugaEngine/Resources/Animation Events/SpawnObjectAnimationEvent.cs" id="1_o0roj"]
 [ext_resource type="Script" uid="uid://bwm15ys7iwmfc" path="res://Scripts/SakugaEngine/Resources/AnimationEventsList.cs" id="2_54d0s"]
 [ext_resource type="Script" uid="uid://b8vqwkv52qq3e" path="res://Scripts/SakugaEngine/Resources/AnimationSettings.cs" id="3_1jivq"]
+[ext_resource type="Script" uid="uid://bx8e460frmhfd" path="res://Scripts/SakugaEngine/Resources/Animation Events/SuperArmorAnimationEvent.cs" id="3_54d0s"]
 [ext_resource type="Script" uid="uid://5qrsoteskjym" path="res://Scripts/SakugaEngine/Resources/HitboxState.cs" id="4_pfy82"]
 [ext_resource type="Script" uid="uid://da1el624050no" path="res://Scripts/SakugaEngine/Resources/FighterState.cs" id="5_xjwnx"]
 [ext_resource type="Script" uid="uid://5you05l2efnd" path="res://Scripts/SakugaEngine/Resources/StatePhysics.cs" id="6_2l5e5"]
@@ -19,6 +20,17 @@ metadata/_custom_type_script = "uid://gkg7v04bkm2y"
 [sub_resource type="Resource" id="Resource_1jivq"]
 script = ExtResource("2_54d0s")
 Events = [SubResource("Resource_54d0s")]
+metadata/_custom_type_script = "uid://bwm15ys7iwmfc"
+
+[sub_resource type="Resource" id="Resource_pfy82"]
+script = ExtResource("3_54d0s")
+ArmorValue = 1
+metadata/_custom_type_script = "uid://bx8e460frmhfd"
+
+[sub_resource type="Resource" id="Resource_xjwnx"]
+script = ExtResource("2_54d0s")
+Frame = 20
+Events = [SubResource("Resource_pfy82")]
 metadata/_custom_type_script = "uid://bwm15ys7iwmfc"
 
 [sub_resource type="Resource" id="Resource_i24ac"]
@@ -55,7 +67,7 @@ Duration = 20
 stateProperties = []
 statePhysics = [SubResource("5")]
 hitboxStates = [SubResource("2"), SubResource("4")]
-animationEvents = [SubResource("Resource_1jivq")]
+animationEvents = [SubResource("Resource_1jivq"), SubResource("Resource_xjwnx"), SubResource("Resource_xjwnx")]
 throwPivot = []
 stateTransitions = [SubResource("Resource_6gdsy")]
 animationSettings = [SubResource("Resource_i24ac")]
