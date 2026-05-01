@@ -4,7 +4,7 @@ using System;
 
 namespace SakugaEngine.Resources
 {
-    [GlobalClass]
+    [GlobalClass] [Tool]
     public partial class AIActionPack : Resource
     {
         [Export] public int HorizontalDistance;

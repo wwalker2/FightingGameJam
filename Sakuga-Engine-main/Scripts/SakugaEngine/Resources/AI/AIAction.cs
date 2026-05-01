@@ -3,7 +3,7 @@ using System;
 
 namespace SakugaEngine.Resources
 {
-    [GlobalClass]
+    [GlobalClass] [Tool]
     public partial class AIAction : Resource
     {
         [Export] private string InputName; // For identification purposes

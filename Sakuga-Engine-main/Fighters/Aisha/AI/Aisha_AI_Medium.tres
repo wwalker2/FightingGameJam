@@ -40,7 +40,7 @@ metadata/_custom_type_script = "uid://bogcblgipf4f7"
 [sub_resource type="Resource" id="Resource_f0wxx"]
 script = ExtResource("2_gpcng")
 HorizontalDistance = 75000
-Conditions = Array[Object]([SubResource("Resource_t1rw4"), SubResource("Resource_41abm"), SubResource("Resource_4mnbe"), SubResource("Resource_6xj6i")])
+Conditions = [SubResource("Resource_t1rw4"), SubResource("Resource_41abm"), SubResource("Resource_4mnbe"), SubResource("Resource_6xj6i")]
 metadata/_custom_type_script = "uid://c6pe4r5xpq803"
 
 [sub_resource type="Resource" id="Resource_2c6wa"]
@@ -70,7 +70,7 @@ metadata/_custom_type_script = "uid://bogcblgipf4f7"
 [sub_resource type="Resource" id="Resource_26iwr"]
 script = ExtResource("2_gpcng")
 HorizontalDistance = 60000
-Conditions = Array[Object]([SubResource("Resource_2c6wa"), SubResource("Resource_qyayx"), SubResource("Resource_1nm2w")])
+Conditions = [SubResource("Resource_2c6wa"), SubResource("Resource_qyayx"), SubResource("Resource_1nm2w")]
 metadata/_custom_type_script = "uid://c6pe4r5xpq803"
 
 [sub_resource type="Resource" id="Resource_wcyki"]
@@ -117,7 +117,7 @@ metadata/_custom_type_script = "uid://bogcblgipf4f7"
 [sub_resource type="Resource" id="Resource_qd3le"]
 script = ExtResource("2_gpcng")
 HorizontalDistance = 45000
-Conditions = Array[Object]([SubResource("Resource_wcyki"), SubResource("Resource_7bmri"), SubResource("Resource_1gtum"), SubResource("Resource_cexdi"), SubResource("Resource_2yj2e")])
+Conditions = [SubResource("Resource_wcyki"), SubResource("Resource_7bmri"), SubResource("Resource_1gtum"), SubResource("Resource_cexdi"), SubResource("Resource_2yj2e")]
 metadata/_custom_type_script = "uid://c6pe4r5xpq803"
 
 [sub_resource type="Resource" id="Resource_ft1py"]
@@ -214,7 +214,7 @@ metadata/_custom_type_script = "uid://bogcblgipf4f7"
 [sub_resource type="Resource" id="Resource_4w0ro"]
 script = ExtResource("2_gpcng")
 HorizontalDistance = 20000
-Conditions = Array[Object]([SubResource("Resource_ft1py"), SubResource("Resource_isow5"), SubResource("Resource_3tjkd"), SubResource("Resource_03ch4"), SubResource("Resource_r8ub0"), SubResource("Resource_x0i8h"), SubResource("Resource_x8uhh"), SubResource("Resource_jb20a"), SubResource("Resource_k7vgb"), SubResource("Resource_at24f"), SubResource("Resource_8nqj8")])
+Conditions = [SubResource("Resource_ft1py"), SubResource("Resource_isow5"), SubResource("Resource_3tjkd"), SubResource("Resource_03ch4"), SubResource("Resource_r8ub0"), SubResource("Resource_x0i8h"), SubResource("Resource_x8uhh"), SubResource("Resource_jb20a"), SubResource("Resource_k7vgb"), SubResource("Resource_at24f"), SubResource("Resource_8nqj8")]
 metadata/_custom_type_script = "uid://c6pe4r5xpq803"
 
 [resource]
